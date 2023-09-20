@@ -1,5 +1,4 @@
-# RiverFlow
+# GitHub HomePage
 
-There're made for practice. So they can include some error.
-
-Above message is testing.
+> This repository made for uploading homepage, contents, or, something.
+> 아무거나 막 올립니다.
