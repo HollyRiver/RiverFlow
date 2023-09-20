@@ -1,6 +1,6 @@
 # GitHub HomePage
 
-**kaggle competitions ** : https://hollyriver.github.io/RiverFlow/
+* kaggle competitions : https://hollyriver.github.io/RiverFlow/
 
 > This repository made for uploading homepage, contents, or, something.
 >
