@@ -1,31 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/posts/welcome/index.html</loc>
-    <lastmod>2023-09-20T12:52:59.152Z</lastmod>
-  </url>
-  <url>
     <loc>https://HollyRiver.github.io/RiverFlow/posts/kaggle_(3) titanic_autogluon/autogluon.html</loc>
-    <lastmod>2023-09-20T12:52:58.352Z</lastmod>
+    <lastmod>2023-09-20T12:55:09.875Z</lastmod>
   </url>
   <url>
     <loc>https://HollyRiver.github.io/RiverFlow/posts/kaggle_(1) titanic_1st_practice/practice.html</loc>
-    <lastmod>2023-09-20T12:52:57.471Z</lastmod>
+    <lastmod>2023-09-20T12:55:08.990Z</lastmod>
   </url>
   <url>
     <loc>https://HollyRiver.github.io/RiverFlow/about.html</loc>
-    <lastmod>2023-09-20T12:52:56.232Z</lastmod>
+    <lastmod>2023-09-20T12:55:07.833Z</lastmod>
   </url>
   <url>
     <loc>https://HollyRiver.github.io/RiverFlow/index.html</loc>
-    <lastmod>2023-09-20T12:52:56.999Z</lastmod>
+    <lastmod>2023-09-20T12:55:08.505Z</lastmod>
   </url>
   <url>
     <loc>https://HollyRiver.github.io/RiverFlow/posts/kaggle_(2) titanic_code by alexis cook/code-by-alexis-cook.html</loc>
-    <lastmod>2023-09-20T12:52:57.910Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/posts/post-with-code/index.html</loc>
-    <lastmod>2023-09-20T12:52:58.744Z</lastmod>
+    <lastmod>2023-09-20T12:55:09.445Z</lastmod>
   </url>
 </urlset>
