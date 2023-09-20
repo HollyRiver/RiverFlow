@@ -2,8 +2,6 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html",
       "/posts/kaggle_(1) titanic_1st_practice/practice.html",
       "/posts/kaggle_(2) titanic_code by alexis cook/code-by-alexis-cook.html",
       "/posts/kaggle_(3) titanic_autogluon/autogluon.html"
