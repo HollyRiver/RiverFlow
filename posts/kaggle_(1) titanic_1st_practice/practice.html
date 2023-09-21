@@ -182,25 +182,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>::: {.cell _cell_guid=‘b1076dfc-b9ad-4769-8c92-a6c4dae69d19’ _uuid=‘8f2839f25d086af736a60e9eeb907d3b93b6e0e5’ execution=‘{“iopub.execute_input”:“2023-09-13T01:35:43.397236Z”,“iopub.status.busy”:“2023-09-13T01:35:43.396771Z”,“iopub.status.idle”:“2023-09-13T01:35:43.696762Z”,“shell.execute_reply”:“2023-09-13T01:35:43.694854Z”,“shell.execute_reply.started”:“2023-09-13T01:35:43.397204Z”}’}</p>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This Python 3 environment comes with many helpful analytics libraries installed</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># It is defined by the kaggle/python Docker image: https://github.com/kaggle/docker-python</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># For example, here's several helpful packages to load</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np <span class="co"># linear algebra</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd <span class="co"># data processing, CSV file I/O (e.g. pd.read_csv)</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Input data files are available in the read-only "../input/" directory</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># For example, running this (by clicking run or pressing Shift+Enter) will list all files under the input directory</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> dirname, _, filenames <span class="kw">in</span> os.walk(<span class="st">'/kaggle/input'</span>):</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> filename <span class="kw">in</span> filenames:</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(os.path.join(dirname, filename))</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># You can write up to 20GB to the current directory (/kaggle/working/) that gets preserved as output when you create a version using "Save &amp; Run All" </span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># You can also write temporary files to /kaggle/temp/, but they won't be saved outside of the current session</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-09-13T01:37:02.536044Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-09-13T01:37:02.535671Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-09-13T01:37:02.559685Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-09-13T01:37:02.558214Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-09-13T01:37:02.536015Z&quot;}">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 캐글에 있는 노트북을 이용하면 가상 컴퓨터에 세 개의 파일들이 직접 들어온다.</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>

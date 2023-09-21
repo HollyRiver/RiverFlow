@@ -182,48 +182,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>::: {.cell _cell_guid=‘b1076dfc-b9ad-4769-8c92-a6c4dae69d19’ _uuid=‘8f2839f25d086af736a60e9eeb907d3b93b6e0e5’ execution=‘{“iopub.execute_input”:“2023-09-13T05:06:05.812807Z”,“iopub.status.busy”:“2023-09-13T05:06:05.811962Z”,“iopub.status.idle”:“2023-09-13T05:06:06.215901Z”,“shell.execute_reply”:“2023-09-13T05:06:06.214820Z”,“shell.execute_reply.started”:“2023-09-13T05:06:05.812767Z”}’}</p>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This Python 3 environment comes with many helpful analytics libraries installed</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># It is defined by the kaggle/python Docker image: https://github.com/kaggle/docker-python</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># For example, here's several helpful packages to load</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np <span class="co"># linear algebra</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd <span class="co"># data processing, CSV file I/O (e.g. pd.read_csv)</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Input data files are available in the read-only "../input/" directory</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># For example, running this (by clicking run or pressing Shift+Enter) will list all files under the input directory</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> dirname, _, filenames <span class="kw">in</span> os.walk(<span class="st">'/kaggle/input'</span>):</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> filename <span class="kw">in</span> filenames:</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(os.path.join(dirname, filename))</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># You can write up to 20GB to the current directory (/kaggle/working/) that gets preserved as output when you create a version using "Save &amp; Run All" </span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># You can also write temporary files to /kaggle/temp/, but they won't be saved outside of the current session</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-09-13T05:08:09.752319Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-09-13T05:08:09.751933Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-09-13T05:11:50.963991Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-09-13T05:11:50.961842Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-09-13T05:08:09.752292Z&quot;}" data-jupyter="{&quot;outputs_hidden&quot;:true}">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pip install autogluon</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell">
+<div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">## tabular(테이블) 형식의 데이터를 다루는 모듈을 다운로드한다.</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> autogluon.tabular <span class="im">import</span> TabularDataset, TabularPredictor</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>C:\Users\hollyriver\anaconda3\envs\ag\lib\site-packages\tqdm\auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm</code></pre>
+</div>
 </div>
 <section id="분석의-절차" class="level2">
 <h2 class="anchored" data-anchor-id="분석의-절차">분석의 절차</h2>
 <section id="a.-데이터" class="level3">
 <h3 class="anchored" data-anchor-id="a.-데이터">A. 데이터</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>tr <span class="op">=</span> TabularDataset(<span class="st">'/kaggle/input/titanic/train.csv'</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>tst <span class="op">=</span> TabularDataset(<span class="st">'/kaggle/input/titanic/test.csv'</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">## tr = pd.read_csv('/kaggle/input/titanic/train.csv')</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">## tst</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tr <span class="op">=</span> TabularDataset(<span class="st">'/kaggle/input/titanic/train.csv'</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>tst <span class="op">=</span> TabularDataset(<span class="st">'/kaggle/input/titanic/test.csv'</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">## tr = pd.read_csv('/kaggle/input/titanic/train.csv')</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">## tst</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="b.-predictor-생성" class="level3">
 <h3 class="anchored" data-anchor-id="b.-predictor-생성">B. Predictor 생성</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>predictor <span class="op">=</span> TabularPredictor(<span class="st">'Survived'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>predictor <span class="op">=</span> TabularPredictor(<span class="st">'Survived'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="c.-적합fit" class="level3">
