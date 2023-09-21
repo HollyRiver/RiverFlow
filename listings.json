@@ -2,9 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/kaggle_(1) titanic_1st_practice/practice.html",
-      "/posts/kaggle_(2) titanic_code by alexis cook/code-by-alexis-cook.html",
-      "/posts/kaggle_(3) titanic_autogluon/autogluon.html"
+      "/posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html",
+      "/posts/Machine Learning in Practice/Titanic/kaggle_(1) titanic_1st_practice/practice.html",
+      "/posts/Machine Learning in Practice/Titanic/kaggle_(2) titanic_code by alexis cook/code-by-alexis-cook.html",
+      "/posts/Machine Learning in Practice/Titanic/kaggle_(3) titanic_autogluon/autogluon.html"
     ]
   }
 ]
