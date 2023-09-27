@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>RiverFlow – quarto-inputb07bac5a</title>
+<title>RiverFlow - 강신성(202014107).html</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -137,53 +137,150 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">강신성(202014107).html</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<p><strong>1. 라이브러리 설치</strong></p>
+
+<p>————————————————homework 2————————————————</p>
+<section id="we-learned-the-following-r-code-in-class.-answer-the-following-questions-using-this-code." class="level2">
+<h2 class="anchored" data-anchor-id="we-learned-the-following-r-code-in-class.-answer-the-following-questions-using-this-code.">We learned the following R code in class. Answer the following questions using this code.</h2>
+<p>————————example: Scatter Plot————————</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>n<span class="ot">&lt;-</span><span class="dv">1000</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="dv">4</span><span class="sc">+</span><span class="fu">rnorm</span>(n,<span class="at">mean=</span><span class="dv">1</span>,<span class="at">sd=</span><span class="dv">5</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>y<span class="ot">&lt;-</span><span class="dv">1</span><span class="sc">+</span><span class="dv">2</span><span class="sc">*</span>x<span class="sc">+</span><span class="fu">rnorm</span>(n,<span class="at">mean=</span><span class="dv">0</span>,<span class="at">sd=</span><span class="dv">4</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.new</span>()</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y, <span class="at">pch=</span><span class="dv">16</span>, <span class="at">col=</span><span class="st">"blue"</span>, </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">"Sampling under "</span>, beta[<span class="dv">0</span>], </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"=1"</span>, <span class="st">" "</span>, <span class="st">"and"</span>, <span class="st">" "</span>, beta[<span class="dv">1</span>], <span class="st">"=2"</span>)))</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">10</span>, <span class="dv">2</span>, <span class="st">"scatter plot"</span>, <span class="at">cex=</span><span class="fl">1.5</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">a=</span><span class="dv">1</span>,<span class="at">b=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">"red"</span>, <span class="at">lwd=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>2. 벡터 지정</strong></p>
+<hr>
+<section id="question-1-compute-the-mean-values-of-x-and-y-using-for-loop" class="level3">
+<h3 class="anchored" data-anchor-id="question-1-compute-the-mean-values-of-x-and-y-using-for-loop"><strong>question 1: Compute the mean values of x and y using “for loop”!</strong></h3>
+<p><strong>Do not use built-in functions!!!</strong></p>
+<ul>
+<li>평균을 내주는 함수 : <code>mean_values()</code> 정의</li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="op">-</span><span class="dv">5</span>,<span class="dv">5</span>,<span class="fl">0.1</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>y1 <span class="op">=</span> np.sin(x)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>y2 <span class="op">=</span> np.sin(<span class="dv">2</span><span class="op">*</span>x) <span class="op">+</span> <span class="dv">2</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>y3 <span class="op">=</span> np.sin(<span class="dv">4</span><span class="op">*</span>x) <span class="op">+</span> <span class="dv">4</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>y4 <span class="op">=</span> np.sin(<span class="dv">8</span><span class="op">*</span>x) <span class="op">+</span> <span class="dv">6</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><strong>3. 그래프 산출</strong></p>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1694004919166,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:620,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="b6c17046-11b2-4d3e-b538-f2c8c9bb28d9">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>plt.plot(x,y1,<span class="st">'--'</span>,color <span class="op">=</span> <span class="st">'#ff3333'</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>plt.plot(x,y2,<span class="st">'--'</span>,color <span class="op">=</span> <span class="st">'#128912'</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>plt.plot(x,y3,<span class="st">'--b'</span>)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>plt.plot(x,y4,<span class="st">'--'</span>,color <span class="op">=</span> <span class="st">'#ca2eca'</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="강신성(202014107)_2_files/figure-html/cell-4-output-1.png" class="img-fluid"></p>
-</div>
-</div>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1694493459775,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:3621,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="42fb5b4c-04b1-42b4-a8b6-183f5fd87253" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>shell</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>jupyter nbconvert <span class="op">--</span>to html <span class="op">/</span>content<span class="op">/</span>강신성_데이터시각화_01wk_2.ipynb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>mean_values <span class="ot">&lt;-</span> <span class="cf">function</span>(values) {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  output <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> values) {</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    output <span class="ot">&lt;-</span> output <span class="sc">+</span> i</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  output <span class="sc">/</span> <span class="fu">length</span>(values)   <span class="do">## 평균을 구하기 위해 자료의 수(length)로 나누어준다.</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">mean_values</span>(x)   <span class="do">## x의 평균을 계산</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[NbConvertApp] Converting notebook /content/강신성_데이터시각화_01wk_2.ipynb to html
-[NbConvertApp] Writing 645143 bytes to /content/강신성_데이터시각화_01wk_2.html</code></pre>
+<pre><code>[1] 5.063285</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="1">
-<pre><code></code></pre>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean_values</span>(y)   <span class="do">## y의 평균을 계산</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 11.18455</code></pre>
+</div>
+</div>
+</section>
+<section id="question-2-compute-the-covariance-between-x-and-y-using-for-loop" class="level3">
+<h3 class="anchored" data-anchor-id="question-2-compute-the-covariance-between-x-and-y-using-for-loop"><strong>question 2: Compute the covariance between x and y using “for loop”!</strong></h3>
+<p><strong>Do not use built-in functions!!!</strong></p>
+<ul>
+<li>공분산을 내주는 함수 : <code>cov_values()</code> 정의</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>cov_values <span class="ot">&lt;-</span> <span class="cf">function</span>(data_1, data_2) {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  x_diff <span class="ot">&lt;-</span> data_1 <span class="sc">-</span> <span class="fu">mean_values</span>(data_1)   <span class="do">## 위에서 정의했던 함수 "mean_values()" 사용</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  y_diff <span class="ot">&lt;-</span> data_2 <span class="sc">-</span> <span class="fu">mean_values</span>(data_2)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  xy_product <span class="ot">&lt;-</span> x_diff <span class="sc">*</span> y_diff</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  product_sum <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> xy_product) {</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    product_sum <span class="ot">&lt;-</span> product_sum <span class="sc">+</span> i</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  cov <span class="ot">=</span> product_sum <span class="sc">/</span> <span class="fu">length</span>(xy_product)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  cov</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="fu">cov_values</span>(x,y)   <span class="do">## output</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 47.40633</code></pre>
+</div>
+</div>
+</section>
+<section id="question-3-compute-the-variance-x-using-for-loop" class="level3">
+<h3 class="anchored" data-anchor-id="question-3-compute-the-variance-x-using-for-loop"><strong>question 3: Compute the variance x using “for loop”!</strong></h3>
+<p><strong>Do not use built-in functions!!!</strong></p>
+<ul>
+<li>분산을 내어주는 함수 : var_values() 정의</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>var_values <span class="ot">&lt;-</span> <span class="cf">function</span>(values) {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  x_diff_sq <span class="ot">&lt;-</span> (values <span class="sc">-</span> <span class="fu">mean_values</span>(values))<span class="sc">^</span><span class="dv">2</span>   <span class="do">## 위에서 정의했던 함수 "mean_values()" 사용하여 차의 제곱 행렬 생성</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  sum_x_sq <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> x_diff_sq) {</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    sum_x_sq <span class="ot">&lt;-</span> sum_x_sq <span class="sc">+</span> i</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  var_x <span class="ot">&lt;-</span> sum_x_sq <span class="sc">/</span> <span class="fu">length</span>(values)  <span class="do">## 자료의 수로 나누어 분산 산출</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  var_x</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="fu">var_values</span>(x)     <span class="do">## output</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 23.59972</code></pre>
+</div>
+</div>
+</section>
+<section id="question-4-compute-the-parameter-beta1-slope-of-the-regression-line" class="level3">
+<h3 class="anchored" data-anchor-id="question-4-compute-the-parameter-beta1-slope-of-the-regression-line"><strong>question 4: Compute the parameter beta[1] (slope of the regression line)!</strong></h3>
+<ul>
+<li>최소제곱법으로 beta[1]의 값을 추정해보자</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>beta_1_hat <span class="ot">&lt;-</span> <span class="fu">cov_values</span>(x, y) <span class="sc">/</span> <span class="fu">var_values</span>(x)  <span class="do">## 위에서 정의한 함수를 사용 : x와 y의 공분산 / x의 분산</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>beta_1_hat  <span class="do">## output</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.008767</code></pre>
 </div>
 </div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

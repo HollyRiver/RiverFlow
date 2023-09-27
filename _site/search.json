@@ -77,20 +77,6 @@
     "text": "B. train - 스스로 풀어보고 채점할 수 있음\n\ndf = pd.DataFrame({'surv' : [1,0,1,1,0], 'sex' : ['f','m','f','m','m']})\n\n\ndf.surv\n\n\ndf.sex\n\n\n(df.sex == 'f')*1\n\n\npd.DataFrame({'real' : df.surv, 'estimate' : (df.sex == 'f')*1})\n\n\nprint((df.surv == (df.sex == 'f')*1).sum()/5)\nprint((df.surv == (df.sex == 'f')*1).mean())\n\n실제 자료의 accuracy를 구해보자.\n\n(tr.Survived == (tr.Sex == 'female')).mean()\n\n\n개념\n캐글 대회는 시험과 비슷하다. * 캐글대회를 여는 사람은 보통 (1) 모의고사문제+답 (training set) (2) 실제시험문제 (test set)를 준다. * (1)의 자료에서는 문제(X,독립변수,설명변수)와 답(y,종속변수,반응변수)이 함께 주어진다. * (2)의 자료에서는 문제(X,독립변수,설명변수)만 주어진다. * 우리는 (1)을 이용하여 문제(X,독립변수,설명변수)와 답(y,종속변수,반응변수)사이의 관계를 찾아내는 훈련을 한다. * 그리고 그 훈련이 잘 되었는지를 평가하기 위해서 (2)를 풀어보고 그 결과를 제출한다.\n- trainning set\n\ntr.iloc[0] ## 첫 번째 사람의 정보, trainning set\n\n- test set\n\ntst.iloc[0]"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "RiverFlow",
-    "section": "",
-    "text": "[문제 풀이] 특정 단어를 포함하는 열 선택\n\n\n\n\n\n\n\npython\n\n\ndata visualization\n\n\n\n\n\n\n\n\n\n\n\nSep 21, 2023\n\n\n강신성\n\n\n\n\n\n\n  \n\n\n\n\n[Kaggle] - 1, titanic_1st practice\n\n\n\n\n\n\n\npython\n\n\nanalisis\n\n\ntitanic\n\n\n\n\n\n\n\n\n\n\n\nSep 13, 2023\n\n\n강신성\n\n\n\n\n\n\n  \n\n\n\n\n[Kaggle] - 2, titanic_code by alexis cook\n\n\n\n\n\n\n\npython\n\n\nanalysis\n\n\ntitanic\n\n\n\n\n\n\n\n\n\n\n\nSep 13, 2023\n\n\n강신성\n\n\n\n\n\n\n  \n\n\n\n\n[Kaggle] - 3, titanic_autogluon\n\n\n\n\n\n\n\npython\n\n\nanalysis\n\n\ntitanic\n\n\n\n\n\n\n\n\n\n\n\nSep 13, 2023\n\n\n강신성\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog"
-  },
-  {
     "objectID": "posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html",
     "href": "posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html",
     "title": "[문제 풀이] 특정 단어를 포함하는 열 선택",
@@ -119,6 +105,48 @@
     "text": "3. 결과\n\ndf.loc[:, ['actor' in i.split('_') for i in df.columns]]\n\n\n\n\n\n\n\n\nactor_3_facebook_likes\nactor_2_name\nactor_1_facebook_likes\nactor_1_name\nactor_3_name\nactor_2_facebook_likes\n\n\n\n\n0\n855.0\nJoel David Moore\n1000.0\nCCH Pounder\nWes Studi\n936.0\n\n\n1\n1000.0\nOrlando Bloom\n40000.0\nJohnny Depp\nJack Davenport\n5000.0\n\n\n2\n161.0\nRory Kinnear\n11000.0\nChristoph Waltz\nStephanie Sigman\n393.0\n\n\n3\n23000.0\nChristian Bale\n27000.0\nTom Hardy\nJoseph Gordon-Levitt\n23000.0\n\n\n4\nNaN\nRob Walker\n131.0\nDoug Walker\nNaN\n12.0\n\n\n...\n...\n...\n...\n...\n...\n...\n\n\n4911\n318.0\nDaphne Zuniga\n637.0\nEric Mabius\nCrystal Lowe\n470.0\n\n\n4912\n319.0\nValorie Curry\n841.0\nNatalie Zea\nSam Underwood\n593.0\n\n\n4913\n0.0\nMaxwell Moody\n0.0\nEva Boehnke\nDavid Chandler\n0.0\n\n\n4914\n489.0\nDaniel Henney\n946.0\nAlan Ruck\nEliza Coupe\n719.0\n\n\n4915\n16.0\nBrian Herzlinger\n86.0\nJohn August\nJon Gunn\n23.0\n\n\n\n\n4916 rows × 6 columns\n\n\n\n완료"
   },
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "RiverFlow",
+    "section": "",
+    "text": "강신성(202014107)_hw1.html\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n강신성(202014107).html\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n[문제 풀이] 데이터프레임 : 특정 열의 재가공\n\n\n\n\n\n\n\npython\n\n\ndata visualization\n\n\n\n\n\n\n\n\n\n\n\nSep 25, 2023\n\n\n강신성\n\n\n\n\n\n\n  \n\n\n\n\n[문제 풀이] 특정 단어를 포함하는 열 선택\n\n\n\n\n\n\n\npython\n\n\ndata visualization\n\n\n\n\n\n\n\n\n\n\n\nSep 21, 2023\n\n\n강신성\n\n\n\n\n\n\n  \n\n\n\n\n[Kaggle] - 1, titanic_1st practice\n\n\n\n\n\n\n\npython\n\n\nanalisis\n\n\ntitanic\n\n\n\n\n\n\n\n\n\n\n\nSep 13, 2023\n\n\n강신성\n\n\n\n\n\n\n  \n\n\n\n\n[Kaggle] - 2, titanic_code by alexis cook\n\n\n\n\n\n\n\npython\n\n\nanalysis\n\n\ntitanic\n\n\n\n\n\n\n\n\n\n\n\nSep 13, 2023\n\n\n강신성\n\n\n\n\n\n\n  \n\n\n\n\n[Kaggle] - 3, titanic_autogluon\n\n\n\n\n\n\n\npython\n\n\nanalysis\n\n\ntitanic\n\n\n\n\n\n\n\n\n\n\n\nSep 13, 2023\n\n\n강신성\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/Data Visualization/Solution Assemble/특정 열의 재가공.html",
+    "href": "posts/Data Visualization/Solution Assemble/특정 열의 재가공.html",
+    "title": "[문제 풀이] 데이터프레임 : 특정 열의 재가공",
+    "section": "",
+    "text": "주어진 자료에서 입학년도를 추가하고 싶다면 어떻게 해야 할까?"
+  },
+  {
+    "objectID": "posts/Data Visualization/Solution Assemble/특정 열의 재가공.html#사전작업",
+    "href": "posts/Data Visualization/Solution Assemble/특정 열의 재가공.html#사전작업",
+    "title": "[문제 풀이] 데이터프레임 : 특정 열의 재가공",
+    "section": "1. 사전작업",
+    "text": "1. 사전작업\n\n라이브러리 설치\n\n\nimport numpy as np\nimport pandas as pd\n\n\n자료 받아오기 및 확인\n\n\nnp.random.seed(43052)\natt = np.random.choice(np.arange(10,21)*5,20)\nrep = np.random.choice(np.arange(5,21)*5,20)\nmid = np.random.choice(np.arange(0,21)*5,20)\nfin = np.random.choice(np.arange(0,21)*5,20)\nstudent_id = [ '2023-12362', '2022-12471', '2023-12333', '2022-12400', '2022-12377',\n               '2022-12469', '2023-12314', '2022-12363', '2023-12445', '2023-12336',\n               '2023-12426', '2022-12380', '2023-12422', '2022-12488', '2022-12370',\n               '2023-12443', '2022-12463', '2023-12491', '2023-12340', '2022-12312' ]\ndf = pd.DataFrame({'student_id':student_id,'att':att,'rep':rep,'mid':mid,'fin':fin})\ndf.head()\n\n\n\n\n\n\n\n\nstudent_id\natt\nrep\nmid\nfin\n\n\n\n\n0\n2023-12362\n65\n55\n50\n40\n\n\n1\n2022-12471\n95\n100\n50\n80\n\n\n2\n2023-12333\n65\n90\n60\n30\n\n\n3\n2022-12400\n55\n80\n75\n80\n\n\n4\n2022-12377\n80\n30\n30\n100\n\n\n\n\n\n\n\n\n학번(student_id)에서 앞 네자리에 해당하는 숫자를 빼내어 새로운 열로 저장하면 좋을 것 같다."
+  },
+  {
+    "objectID": "posts/Data Visualization/Solution Assemble/특정 열의 재가공.html#가공",
+    "href": "posts/Data Visualization/Solution Assemble/특정 열의 재가공.html#가공",
+    "title": "[문제 풀이] 데이터프레임 : 특정 열의 재가공",
+    "section": "2. 가공",
+    "text": "2. 가공\n\n아래의 코드는 student_id 열을 '-'를 기준으로 앞뒤로 나누고 첫번째 것을 취한다. 숫자형으로 바꾼 뒤, 리스트로 산출한다.\n\n\n[int(i.split('-')[0]) for i in df.student_id]\n\n[2023,\n 2022,\n 2023,\n 2022,\n 2022,\n 2022,\n 2023,\n 2022,\n 2023,\n 2023,\n 2023,\n 2022,\n 2023,\n 2022,\n 2022,\n 2023,\n 2022,\n 2023,\n 2023,\n 2022]\n\n\n\nlambda를 이용해 가공할 수도 있다.\n\n\nlist(map((lambda x : int(x.split('-')[0])), df.student_id))\n\n[2023,\n 2022,\n 2023,\n 2022,\n 2022,\n 2022,\n 2023,\n 2022,\n 2023,\n 2023,\n 2023,\n 2022,\n 2023,\n 2022,\n 2022,\n 2023,\n 2022,\n 2023,\n 2023,\n 2022]\n\n\n\n첫번째 코드와 똑같은 결과를 산출한다."
+  },
+  {
+    "objectID": "posts/Data Visualization/Solution Assemble/특정 열의 재가공.html#출력",
+    "href": "posts/Data Visualization/Solution Assemble/특정 열의 재가공.html#출력",
+    "title": "[문제 풀이] 데이터프레임 : 특정 열의 재가공",
+    "section": "3. 출력",
+    "text": "3. 출력\n\n상기의 코드를 df에 새로운 열 year에 삽입한다.\n\n\ndf.assign(year = [int(i.split('-')[0]) for i in df.student_id])\n\n\n\n\n\n\n\n\nstudent_id\natt\nrep\nmid\nfin\nyear\n\n\n\n\n0\n2023-12362\n65\n55\n50\n40\n2023\n\n\n1\n2022-12471\n95\n100\n50\n80\n2022\n\n\n2\n2023-12333\n65\n90\n60\n30\n2023\n\n\n3\n2022-12400\n55\n80\n75\n80\n2022\n\n\n4\n2022-12377\n80\n30\n30\n100\n2022\n\n\n5\n2022-12469\n75\n40\n100\n15\n2022\n\n\n6\n2023-12314\n65\n45\n45\n90\n2023\n\n\n7\n2022-12363\n60\n60\n25\n0\n2022\n\n\n8\n2023-12445\n95\n65\n20\n10\n2023\n\n\n9\n2023-12336\n90\n80\n80\n20\n2023\n\n\n10\n2023-12426\n55\n75\n35\n25\n2023\n\n\n11\n2022-12380\n95\n95\n45\n0\n2022\n\n\n12\n2023-12422\n95\n55\n15\n35\n2023\n\n\n13\n2022-12488\n50\n80\n40\n30\n2022\n\n\n14\n2022-12370\n50\n55\n15\n85\n2022\n\n\n15\n2023-12443\n95\n30\n30\n95\n2023\n\n\n16\n2022-12463\n50\n50\n45\n10\n2022\n\n\n17\n2023-12491\n65\n55\n15\n45\n2023\n\n\n18\n2023-12340\n70\n70\n40\n35\n2023\n\n\n19\n2022-12312\n90\n90\n80\n90\n2022\n\n\n\n\n\n\n\n완료\n-감사합니다-"
+  },
+  {
     "objectID": "posts/Machine Learning in Practice/Titanic/kaggle_(2) titanic_code by alexis cook/code-by-alexis-cook.html",
     "href": "posts/Machine Learning in Practice/Titanic/kaggle_(2) titanic_code by alexis cook/code-by-alexis-cook.html",
     "title": "[Kaggle] - 2, titanic_code by alexis cook",
@@ -145,5 +173,26 @@
     "title": "1. 사전작업",
     "section": "",
     "text": "숙제 | mpg데이터를 이용하여 아래와 같은 그림을 그려라.\n\n라이브러리 설치\n\n\n#!pip install plotnine\n\n\nimport pandas as pd\nimport numpy as np\n\nfrom plotnine import *\nimport plotnine\n\n\nfigure 사이즈 설정\n\n\nplotnine.options.dpi= 150\nplotnine.options.figure_size = (6, 5)\n\n\n데이터 가져오기\n\n\ndf = pd.read_csv('https://raw.githubusercontent.com/guebin/DV2022/master/posts/mpg.csv')\ndf.head()\n\n\n  \n    \n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\nclass\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact\n\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n\n  \n\n\n    \n        \n    \n\n  \n\n\n\n  \n\n    \n  \n\n\n\n2. 데이터 전처리\n\nmpg = df.assign(cyl_cut = pd.cut(df.cyl, bins = 2))   ## cyl : 실린더 수에 해당하는 열을 두 층으로 분해한다.\nmpg.head()\n\n\n  \n    \n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\nclass\ncyl_cut\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n(3.996, 6.0]\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n(3.996, 6.0]\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n(3.996, 6.0]\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n(3.996, 6.0]\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact\n(3.996, 6.0]\n\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n\n  \n\n\n    \n        \n    \n\n  \n\n\n\n  \n\n    \n  \n\n\n\n필요한 자료는 cyl, displ, cty이다.\n\n\nx축에 displ, y축에 cty, 그리고 cyl을 두 구간으로 나눈 cyl_cut을 두 색상으로 구분하여 산출하여야 한다.\n\n\n\n3. 그래프 산출\n\nfig = ggplot(mpg)\npoint = geom_point(aes(x = 'displ', y = 'cty', color = 'cyl_cut'))\nsmooth = geom_smooth(aes(x = 'displ', y = 'cty', color = 'cyl_cut'))\n\n\n따라서 아래와 같은 결과를 산출시킨다.\n\n\nfig + point + smooth\n\n/usr/local/lib/python3.10/dist-packages/plotnine/stats/smoothers.py:330: PlotnineWarning: Confidence intervals are not yet implemented for lowess smoothings.\n/usr/local/lib/python3.10/dist-packages/plotnine/stats/smoothers.py:330: PlotnineWarning: Confidence intervals are not yet implemented for lowess smoothings.\n\n\n\n\n\n&lt;Figure Size: (900 x 750)&gt;"
+  },
+  {
+    "objectID": "posts/R Programming/Economatrics_hw1.html",
+    "href": "posts/R Programming/Economatrics_hw1.html",
+    "title": "강신성(202014107)_hw1.html",
+    "section": "",
+    "text": "수열문제 a.\n\nx = 0   ## x와 i의 초기값 설정\ni = 0\n\nwhile (i &lt;= 21) {\n  x = x + 1/(2 * (-2)^(i))    ## 분모에 (-2)^i 제곱을 하여 부호 변경\n  i = i + 1\n  \n  if (i == 20) {    ## 반복문이 종료될 때 결과값(x) 산출\n    print(x)    ## output : 0.333333\n  }\n}\n\n[1] 0.333333\n\n\n\n\n수열문제 b.\n\ny = 1   ## y와 i의 초기값 설정\nj = 1\n\nwhile (j &lt;= 19) {\n  y = y + 1/((j+1)*j)\n  j = j + 1\n  \n  if (j == 19) {\n    print(y)    ## output : 1.967368\n  }\n}\n\n[1] 1.947368"
+  },
+  {
+    "objectID": "posts/R Programming/Economatrics_hw2.html",
+    "href": "posts/R Programming/Economatrics_hw2.html",
+    "title": "강신성(202014107).html",
+    "section": "",
+    "text": "————————————————homework 2————————————————"
+  },
+  {
+    "objectID": "posts/R Programming/Economatrics_hw2.html#we-learned-the-following-r-code-in-class.-answer-the-following-questions-using-this-code.",
+    "href": "posts/R Programming/Economatrics_hw2.html#we-learned-the-following-r-code-in-class.-answer-the-following-questions-using-this-code.",
+    "title": "강신성(202014107).html",
+    "section": "We learned the following R code in class. Answer the following questions using this code.",
+    "text": "We learned the following R code in class. Answer the following questions using this code.\n————————example: Scatter Plot————————\n\nn&lt;-1000\nx&lt;-4+rnorm(n,mean=1,sd=5)\ny&lt;-1+2*x+rnorm(n,mean=0,sd=4)\n\ndev.new()\nplot(x,y, pch=16, col=\"blue\", \n     main=expression(paste(\"Sampling under \", beta[0], \n                           \"=1\", \" \", \"and\", \" \", beta[1], \"=2\")))\ntext(10, 2, \"scatter plot\", cex=1.5)\nabline(a=1,b=2, col=\"red\", lwd=3)\n\n\n\nquestion 1: Compute the mean values of x and y using “for loop”!\nDo not use built-in functions!!!\n\n평균을 내주는 함수 : mean_values() 정의\n\n\nmean_values &lt;- function(values) {\n  output &lt;- 0\n  \n  for (i in values) {\n    output &lt;- output + i\n  }\n\n  output / length(values)   ## 평균을 구하기 위해 자료의 수(length)로 나누어준다.\n}\n\nmean_values(x)   ## x의 평균을 계산\n\n[1] 5.063285\n\nmean_values(y)   ## y의 평균을 계산\n\n[1] 11.18455\n\n\n\n\nquestion 2: Compute the covariance between x and y using “for loop”!\nDo not use built-in functions!!!\n\n공분산을 내주는 함수 : cov_values() 정의\n\n\ncov_values &lt;- function(data_1, data_2) {\n  x_diff &lt;- data_1 - mean_values(data_1)   ## 위에서 정의했던 함수 \"mean_values()\" 사용\n  y_diff &lt;- data_2 - mean_values(data_2)\n\n  xy_product &lt;- x_diff * y_diff\n  \n  product_sum &lt;- 0\n  \n  for (i in xy_product) {\n    product_sum &lt;- product_sum + i\n  }\n  \n  cov = product_sum / length(xy_product)\n  \n  cov\n}\n\ncov_values(x,y)   ## output\n\n[1] 47.40633\n\n\n\n\nquestion 3: Compute the variance x using “for loop”!\nDo not use built-in functions!!!\n\n분산을 내어주는 함수 : var_values() 정의\n\n\nvar_values &lt;- function(values) {\n  x_diff_sq &lt;- (values - mean_values(values))^2   ## 위에서 정의했던 함수 \"mean_values()\" 사용하여 차의 제곱 행렬 생성\n  \n  sum_x_sq &lt;- 0\n  \n  for (i in x_diff_sq) {\n    sum_x_sq &lt;- sum_x_sq + i\n  }\n  \n  var_x &lt;- sum_x_sq / length(values)  ## 자료의 수로 나누어 분산 산출\n  \n  var_x\n}\n\nvar_values(x)     ## output\n\n[1] 23.59972\n\n\n\n\nquestion 4: Compute the parameter beta[1] (slope of the regression line)!\n\n최소제곱법으로 beta[1]의 값을 추정해보자\n\n\nbeta_1_hat &lt;- cov_values(x, y) / var_values(x)  ## 위에서 정의한 함수를 사용 : x와 y의 공분산 / x의 분산\n\nbeta_1_hat  ## output\n\n[1] 2.008767"
   }
 ]
