@@ -7,9 +7,9 @@ website:
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/HollyRiver?tab=repositories
+      - icon: naver
+        href: https://blog.naver.com/hc_ssk2800
 format:
   html:
     theme: minty

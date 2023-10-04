@@ -1,122 +1,66 @@
 [
   {
-    "objectID": "unrefined file/datavisuallization/강신성(202014107)_6.html",
-    "href": "unrefined file/datavisuallization/강신성(202014107)_6.html",
-    "title": "[문제 풀이] 특정 단어를 포함하는 열 선택",
+    "objectID": "unrefined file/r_practice/Regression Analysis.html",
+    "href": "unrefined file/r_practice/Regression Analysis.html",
+    "title": "R Notebook",
     "section": "",
-    "text": "데이터프레임 df의 열이름에 actor라는 단어가 포함된 column만을 선택하는 코드를 작성하라"
+    "text": "options(repr.plot.width = 15, repr.plot.height = 8)  ## 플롯 크기 설정\n\n\nx &lt;- rnorm(100) ## rnorm() / dnorm() / pnorm() / qnorm()\nhist(x)\n\n\n\n\n\ndefault는 표준정규분포이다. (n, mean = 0, sd = 1)\n\n\nx &lt;- seq(-5, 5, 0.01)\nplot(x, dnorm(x), type = 'l', lwd = 2,\n     main = \"표준정규분포의 확률밀도함수\",\n     cex.main = 1,  ## character expansion.main : title\n     cex.lab = 1)   ## character expansion.lab : label\n\n\n\n\n\npnorm(q, mean, sd) | probability, cdf\n\n\nprint(pnorm(1.96))\n\n[1] 0.9750021\n\nprint(pnorm(4, 3, 1))\n\n[1] 0.8413447\n\nprint(pnorm(4, mean = 3, sd = 1))\n\n[1] 0.8413447\n\n\n\np_value를 구할 수 없다면 백분위수(quantile value)를 구해야 한다.\n\n\nprint(qnorm(0.95))\n\n[1] 1.644854\n\nprint(qnorm(0.975))\n\n[1] 1.959964\n\nprint(qnorm(0.995))\n\n[1] 2.575829\n\n\n\n\n\n\n자유도가 중요한 분포이다. &gt; 자유도 : t분포의 모양을 결정하는 것. parameter는 아니다. 그냥 아는 값.\n\n\n표본의 분포가 아닌 표본 통계량의 분포에 해당한다.\n\n\nx &lt;- rt(1000, 3)  ## 자유도가 3인 t분포에서의 샘플 1000개\nhist(x, cex.main = 1, cex.lab = 1)\n\n\n\n\n\n원리는 정규분포와 동일하다. rt(), pt(), dt(), qt()\n\n\nt분포의 확률밀도함수(probability Density function)\n\n\nx &lt;- seq(-5, 5, 0.01)\n\nplot(x, dt(x, 3), type = 'l',\n     main = \"t분포의 확률밀도함수\")\n\n\n\n\n\n여러 개의 확률밀도함수를 같이 그려보자.\n\n\nx &lt;- seq(-5, 5, 0.01)\n\nplot(x, dnorm(x), type = 'l', main = 't분포와 정규분포의 확률밀도함수'  ## , lty = 1\n     )\n\nlines(x, dt(x, 1), col = 'red', lty = 2)\nlines(x, dt(x, 3), col = 'blue', lty = 3)\nlines(x, dt(x, 30), col = 'green', lty = 4)\n\nlegend('topleft', c('N(0,1)', 't(1)', 't(3)', 't(30)'), ## query 문법처럼 사용가능한듯.\n       lty = 1:4, col = c('black', 'red', 'blue', 'green'))\n\n\n\n\n\n자유도 n이 커질 수록 표준정규분포의 확률밀도함수와 유사해진다.\n\n\\(T\\) ~ \\(t(df), ~~~ P(T≤t)\\)\n\\(T_0\\) ~ \\(t(df), ~~~ t_a(df) : P(T &gt; t_a(df)) = a\\)\n\nprint(pt(2, 3))  ## probability distribution function\n\n[1] 0.930337\n\nprint(qt(0.95, 3))  ## quantile\n\n[1] 2.353363\n\nprint(dt(0, 3))   ## probability density function\n\n[1] 0.3675526\n\n\n\n우측검정 시, 오른쪽 영역의 확률을 알고 싶을 경우\n\nStudent T distribution practice\n\npt(1,3, lower.tail = FALSE)   ## 낮은 값의 꼬리쪽으로 산출?\n\n[1] 0.1955011\n\nqt(0.05, 3, lower.tail = FALSE) ## 오른쪽에서의 a = 0.05인 quantile 값\n\n[1] 2.353363\n\nqt(0.95, 3)\n\n[1] 2.353363\n\n\n\n\n\n\nx &lt;- rchisq(1000, 4)\nhist(x)\n\n\n\n\n\\(x &gt; 0\\) 에서의 오른쪽으로 치우쳐진 분포가 나온다.\n\nx &lt;- seq(0, 20, 0.01)\nplot(x, dchisq(x, 5), type = 'l', lwd = 2,\n     main = '자유도가 5인 카이제곱분포의 확률밀도함수',\n     cex.main = 1, cex.lab = 1)\n\n\n\n\n\nx &lt;- seq(0, 200, 0.01)\nplot(x, dchisq(x, 100), type = 'l', lwd = 2,\n     main = '자유도가 100인 카이제곱분포의 확률밀도함수')\n\n\n\n\n자유도가 높을 수록 정규분포와 비슷한 모양을 띈다.\n- 이외 코드는 위와 유사하다…(t분포)\n\npchisq(100, 100)\n\n[1] 0.5188083\n\nqchisq(0.95, 100)\n\n[1] 124.3421\n\ndchisq(50, 50)\n\n[1] 0.03976148\n\n\n\n\n\n\nx &lt;- rf(1000, 4, 6)  ## n=100, 분자의 자유도(df1) = 4, 분모의 자유도(df2) = 6\nhist(x, breaks = 50)\n\n\n\n\n\nx &lt;- seq(0, 15, 0.01)\nplot(x, df(x, 4, 6), type = 'l', lwd = 2,\n     main = \"F분포의 확률밀도함수\")\nlines(x, df(x, 6, 4), col = 'red')\n\nlegend(\"topright\", c(\"F(4,6)\", \"F(6,4)\"), lty = 1:2, col = c('black', 'red'))\n\n\n\n\n\n활용 방법은 비슷하다.\n\n\nqf(0.95, 4, 6)\n\n[1] 4.533677\n\n\n\n\n\n\n\n예제) 비누공장데이터 : 9.0, 9.1, 8.8, 9.1, 9.0, 9.4, 9.2, 8.8, 8.6 (n=9)\n\n\nx &lt;- c(9.0, 9.1, 8.8, 9.1, 9.0, 9.4, 9.2, 8.8, 8.6)\n\nbar_x = mean(x); bar_x\n\n[1] 9\n\nS_x = var(x); S_x\n\n[1] 0.0575\n\ns_x = sd(x); s_x\n\n[1] 0.2397916\n\n\n\nlower_x = bar_x - qt(0.975, 8)*s_x/sqrt(9)  ## 자료의 수가 9이므로 자유도 8인 t분포\nupper_x = bar_x + qt(0.975, 8)*s_x/sqrt(9)\n\nc(lower_x, upper_x)\n\n[1] 8.81568 9.18432\n\n\n\n95% 신뢰구간이다.\nquantile 값이 0.975면 우측 확률이 0.025인 t_a와 같으니까…\n\n\n\n\nls(t.test(x))\n\n [1] \"alternative\" \"conf.int\"    \"data.name\"   \"estimate\"    \"method\"     \n [6] \"null.value\"  \"p.value\"     \"parameter\"   \"statistic\"   \"stderr\"     \n\n\n\nt.test(x)$conf.int  ## 해당 모듈의 하위 모듈인 conf.int : 신뢰구간 산출\n\n[1] 8.81568 9.18432\nattr(,\"conf.level\")\n[1] 0.95\n\n\n\nt.test(x, conf.level = 0.99)$conf.int ## 99% 신뢰구간, 디폴트는 95%\n\n[1] 8.731802 9.268198\nattr(,\"conf.level\")\n[1] 0.99\n\n\n\n\n\n\n\n\n\n예제) 공정온도에서의 제품의 강도(\\(N(73.7, 1)\\))\n\n두 가지 방법 : \\(p-value\\)와 \\(\\alpha\\)값 비교, 기각역과 관측값 비교\n\n가설 : \\(H_0 : \\mu = 73.7 ~ vs. ~ H_1 :\\mu &gt; 73.7\\)\n\n\\(\\bar{x} = 75.1, ~ n = 16, ~ \\alpha = 0.05\\)\n\nmu &lt;- 73.7; xbar &lt;- 75.1; sigma &lt;- 1; n &lt;- 16\n\n\n검정통계량의 관측값 : \\(z_0 = \\frac{\\bar{x} - \\mu_0}{\\frac{\\sigma}{n}}\\)\n\n\nz_0 &lt;- (xbar - mu)/(sigma/sqrt(n)); z_0\n\n[1] 5.6\n\n\n\n기각역\n\n\nqnorm(0.95)\n\n[1] 1.644854\n\n\n\n기각역보다 검정통계량의 관측값이 휠씬 크므로 귀무가설 기각 가능\n\n\n\n\n\n예제 2\n\n\nmu &lt;- 2; x_bar &lt;- 1.96; s &lt;- 0.05; n &lt;- 50\n\n\nt_0 &lt;- (x_bar - mu)/(s/sqrt(50)); t_0\n\n[1] -5.656854\n\n\n\n기각역\n\n\n-qt(0.95, n - 1)\n\n[1] -1.676551\n\n\n\n유의확률(p-value)\n\n\npt(t_0, n-1)\n\n[1] 3.93525e-07\n\n\n\n\n\n\n예제) 일전의 비누공장 데이터, 모분산은 알리가 없음.\n\n\n가설 : \\(H_0 : \\mu = 9.2 ~ vs. ~ H_1 : \\mu ≠ 9.2\\)\n\n\nx &lt;- c(9.0, 9.1, 8.8, 9.1, 9.0, 9.4, 9.2, 8.8, 8.6)\nxbar = mean(x)\nS_x = var(x)  ## r은 데이터 분석 툴이기 때문에 기본적으로 n-1로 나누어준다.\ns_x = sd(x)\n\n\n유의수준 \\(\\alpha = 0.05\\)\n검정통계량의 관측값 : \\(t_0 = \\frac{}{}, \\alpha = 0.05\\)\n\n\nt_0 &lt;- (xbar - 9.2)/(s_x/sqrt(9)); t_0\n\n[1] -2.502173\n\n\n\n기각역\n\n\nqt(0.975, 9-1)\n\n[1] 2.306004\n\n\n\n유의확률(p-balue)\n\n\npt(t_0, 8) + pt(-t_0, 8, lower.tail = FALSE)\n\n[1] 0.03681717\n\n\n\nt.test()\n\n\nt.test(x)\n\n\n    One Sample t-test\n\ndata:  x\nt = 112.6, df = 8, p-value = 4.325e-14\nalternative hypothesis: true mean is not equal to 0\n95 percent confidence interval:\n 8.81568 9.18432\nsample estimates:\nmean of x \n        9 \n\n\n\ndefault는 \\(\\mu = 0\\)이기 때문에 귀무가설을 입력해줘햐 한다.\n\n6.1\n\nt.test(x, mu = 9.2, conf.level = 0.95, alternative = 'two.sided')\n\n\n    One Sample t-test\n\ndata:  x\nt = -2.5022, df = 8, p-value = 0.03682\nalternative hypothesis: true mean is not equal to 9.2\n95 percent confidence interval:\n 8.81568 9.18432\nsample estimates:\nmean of x \n        9 \n\n## two.sided(de), less, greater"
   },
   {
-    "objectID": "unrefined file/datavisuallization/강신성(202014107)_6.html#사전작업",
-    "href": "unrefined file/datavisuallization/강신성(202014107)_6.html#사전작업",
-    "title": "[문제 풀이] 특정 단어를 포함하는 열 선택",
-    "section": "1. 사전작업",
-    "text": "1. 사전작업\n\n라이브러리 설치\n\n\nimport pandas as pd\nimport numpy as np\n\n\n데이터 불러오기 및 확인\n\n\ndf=pd.read_csv('https://raw.githubusercontent.com/PacktPublishing/Pandas-Cookbook/master/data/movie.csv')\ndf.head()\n\n\n\n\n\n\n\n\ncolor\ndirector_name\nnum_critic_for_reviews\nduration\ndirector_facebook_likes\nactor_3_facebook_likes\nactor_2_name\nactor_1_facebook_likes\ngross\ngenres\n...\nnum_user_for_reviews\nlanguage\ncountry\ncontent_rating\nbudget\ntitle_year\nactor_2_facebook_likes\nimdb_score\naspect_ratio\nmovie_facebook_likes\n\n\n\n\n0\nColor\nJames Cameron\n723.0\n178.0\n0.0\n855.0\nJoel David Moore\n1000.0\n760505847.0\nAction|Adventure|Fantasy|Sci-Fi\n...\n3054.0\nEnglish\nUSA\nPG-13\n237000000.0\n2009.0\n936.0\n7.9\n1.78\n33000\n\n\n1\nColor\nGore Verbinski\n302.0\n169.0\n563.0\n1000.0\nOrlando Bloom\n40000.0\n309404152.0\nAction|Adventure|Fantasy\n...\n1238.0\nEnglish\nUSA\nPG-13\n300000000.0\n2007.0\n5000.0\n7.1\n2.35\n0\n\n\n2\nColor\nSam Mendes\n602.0\n148.0\n0.0\n161.0\nRory Kinnear\n11000.0\n200074175.0\nAction|Adventure|Thriller\n...\n994.0\nEnglish\nUK\nPG-13\n245000000.0\n2015.0\n393.0\n6.8\n2.35\n85000\n\n\n3\nColor\nChristopher Nolan\n813.0\n164.0\n22000.0\n23000.0\nChristian Bale\n27000.0\n448130642.0\nAction|Thriller\n...\n2701.0\nEnglish\nUSA\nPG-13\n250000000.0\n2012.0\n23000.0\n8.5\n2.35\n164000\n\n\n4\nNaN\nDoug Walker\nNaN\nNaN\n131.0\nNaN\nRob Walker\n131.0\nNaN\nDocumentary\n...\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\n12.0\n7.1\nNaN\n0\n\n\n\n\n5 rows × 28 columns\n\n\n\n\ndf.columns\n\nIndex(['color', 'director_name', 'num_critic_for_reviews', 'duration',\n       'director_facebook_likes', 'actor_3_facebook_likes', 'actor_2_name',\n       'actor_1_facebook_likes', 'gross', 'genres', 'actor_1_name',\n       'movie_title', 'num_voted_users', 'cast_total_facebook_likes',\n       'actor_3_name', 'facenumber_in_poster', 'plot_keywords',\n       'movie_imdb_link', 'num_user_for_reviews', 'language', 'country',\n       'content_rating', 'budget', 'title_year', 'actor_2_facebook_likes',\n       'imdb_score', 'aspect_ratio', 'movie_facebook_likes'],\n      dtype='object')\n\n\n\n열 이름에서 단어의 구분이 모두 '_'로 되어있으므로, 열이름에 split()함수를 적용시킬 수 있을 것 같다."
+    "objectID": "unrefined file/r_practice/Regression Analysis.html#분포",
+    "href": "unrefined file/r_practice/Regression Analysis.html#분포",
+    "title": "R Notebook",
+    "section": "",
+    "text": "options(repr.plot.width = 15, repr.plot.height = 8)  ## 플롯 크기 설정\n\n\nx &lt;- rnorm(100) ## rnorm() / dnorm() / pnorm() / qnorm()\nhist(x)\n\n\n\n\n\ndefault는 표준정규분포이다. (n, mean = 0, sd = 1)\n\n\nx &lt;- seq(-5, 5, 0.01)\nplot(x, dnorm(x), type = 'l', lwd = 2,\n     main = \"표준정규분포의 확률밀도함수\",\n     cex.main = 1,  ## character expansion.main : title\n     cex.lab = 1)   ## character expansion.lab : label\n\n\n\n\n\npnorm(q, mean, sd) | probability, cdf\n\n\nprint(pnorm(1.96))\n\n[1] 0.9750021\n\nprint(pnorm(4, 3, 1))\n\n[1] 0.8413447\n\nprint(pnorm(4, mean = 3, sd = 1))\n\n[1] 0.8413447\n\n\n\np_value를 구할 수 없다면 백분위수(quantile value)를 구해야 한다.\n\n\nprint(qnorm(0.95))\n\n[1] 1.644854\n\nprint(qnorm(0.975))\n\n[1] 1.959964\n\nprint(qnorm(0.995))\n\n[1] 2.575829\n\n\n\n\n\n\n자유도가 중요한 분포이다. &gt; 자유도 : t분포의 모양을 결정하는 것. parameter는 아니다. 그냥 아는 값.\n\n\n표본의 분포가 아닌 표본 통계량의 분포에 해당한다.\n\n\nx &lt;- rt(1000, 3)  ## 자유도가 3인 t분포에서의 샘플 1000개\nhist(x, cex.main = 1, cex.lab = 1)\n\n\n\n\n\n원리는 정규분포와 동일하다. rt(), pt(), dt(), qt()\n\n\nt분포의 확률밀도함수(probability Density function)\n\n\nx &lt;- seq(-5, 5, 0.01)\n\nplot(x, dt(x, 3), type = 'l',\n     main = \"t분포의 확률밀도함수\")\n\n\n\n\n\n여러 개의 확률밀도함수를 같이 그려보자.\n\n\nx &lt;- seq(-5, 5, 0.01)\n\nplot(x, dnorm(x), type = 'l', main = 't분포와 정규분포의 확률밀도함수'  ## , lty = 1\n     )\n\nlines(x, dt(x, 1), col = 'red', lty = 2)\nlines(x, dt(x, 3), col = 'blue', lty = 3)\nlines(x, dt(x, 30), col = 'green', lty = 4)\n\nlegend('topleft', c('N(0,1)', 't(1)', 't(3)', 't(30)'), ## query 문법처럼 사용가능한듯.\n       lty = 1:4, col = c('black', 'red', 'blue', 'green'))\n\n\n\n\n\n자유도 n이 커질 수록 표준정규분포의 확률밀도함수와 유사해진다.\n\n\\(T\\) ~ \\(t(df), ~~~ P(T≤t)\\)\n\\(T_0\\) ~ \\(t(df), ~~~ t_a(df) : P(T &gt; t_a(df)) = a\\)\n\nprint(pt(2, 3))  ## probability distribution function\n\n[1] 0.930337\n\nprint(qt(0.95, 3))  ## quantile\n\n[1] 2.353363\n\nprint(dt(0, 3))   ## probability density function\n\n[1] 0.3675526\n\n\n\n우측검정 시, 오른쪽 영역의 확률을 알고 싶을 경우\n\nStudent T distribution practice\n\npt(1,3, lower.tail = FALSE)   ## 낮은 값의 꼬리쪽으로 산출?\n\n[1] 0.1955011\n\nqt(0.05, 3, lower.tail = FALSE) ## 오른쪽에서의 a = 0.05인 quantile 값\n\n[1] 2.353363\n\nqt(0.95, 3)\n\n[1] 2.353363\n\n\n\n\n\n\nx &lt;- rchisq(1000, 4)\nhist(x)\n\n\n\n\n\\(x &gt; 0\\) 에서의 오른쪽으로 치우쳐진 분포가 나온다.\n\nx &lt;- seq(0, 20, 0.01)\nplot(x, dchisq(x, 5), type = 'l', lwd = 2,\n     main = '자유도가 5인 카이제곱분포의 확률밀도함수',\n     cex.main = 1, cex.lab = 1)\n\n\n\n\n\nx &lt;- seq(0, 200, 0.01)\nplot(x, dchisq(x, 100), type = 'l', lwd = 2,\n     main = '자유도가 100인 카이제곱분포의 확률밀도함수')\n\n\n\n\n자유도가 높을 수록 정규분포와 비슷한 모양을 띈다.\n- 이외 코드는 위와 유사하다…(t분포)\n\npchisq(100, 100)\n\n[1] 0.5188083\n\nqchisq(0.95, 100)\n\n[1] 124.3421\n\ndchisq(50, 50)\n\n[1] 0.03976148\n\n\n\n\n\n\nx &lt;- rf(1000, 4, 6)  ## n=100, 분자의 자유도(df1) = 4, 분모의 자유도(df2) = 6\nhist(x, breaks = 50)\n\n\n\n\n\nx &lt;- seq(0, 15, 0.01)\nplot(x, df(x, 4, 6), type = 'l', lwd = 2,\n     main = \"F분포의 확률밀도함수\")\nlines(x, df(x, 6, 4), col = 'red')\n\nlegend(\"topright\", c(\"F(4,6)\", \"F(6,4)\"), lty = 1:2, col = c('black', 'red'))\n\n\n\n\n\n활용 방법은 비슷하다.\n\n\nqf(0.95, 4, 6)\n\n[1] 4.533677"
   },
   {
-    "objectID": "unrefined file/datavisuallization/강신성(202014107)_6.html#풀이",
-    "href": "unrefined file/datavisuallization/강신성(202014107)_6.html#풀이",
-    "title": "[문제 풀이] 특정 단어를 포함하는 열 선택",
-    "section": "2. 풀이",
-    "text": "2. 풀이\n\nfor 문을 이용하여 풀이해보자.\n\n\n['actor' in i.split('_') for i in df.columns]\n\n[False,\n False,\n False,\n False,\n False,\n True,\n True,\n True,\n False,\n False,\n True,\n False,\n False,\n False,\n True,\n False,\n False,\n False,\n False,\n False,\n False,\n False,\n False,\n False,\n True,\n False,\n False,\n False]"
+    "objectID": "unrefined file/r_practice/Regression Analysis.html#신뢰구간",
+    "href": "unrefined file/r_practice/Regression Analysis.html#신뢰구간",
+    "title": "R Notebook",
+    "section": "",
+    "text": "예제) 비누공장데이터 : 9.0, 9.1, 8.8, 9.1, 9.0, 9.4, 9.2, 8.8, 8.6 (n=9)\n\n\nx &lt;- c(9.0, 9.1, 8.8, 9.1, 9.0, 9.4, 9.2, 8.8, 8.6)\n\nbar_x = mean(x); bar_x\n\n[1] 9\n\nS_x = var(x); S_x\n\n[1] 0.0575\n\ns_x = sd(x); s_x\n\n[1] 0.2397916\n\n\n\nlower_x = bar_x - qt(0.975, 8)*s_x/sqrt(9)  ## 자료의 수가 9이므로 자유도 8인 t분포\nupper_x = bar_x + qt(0.975, 8)*s_x/sqrt(9)\n\nc(lower_x, upper_x)\n\n[1] 8.81568 9.18432\n\n\n\n95% 신뢰구간이다.\nquantile 값이 0.975면 우측 확률이 0.025인 t_a와 같으니까…\n\n\n\n\nls(t.test(x))\n\n [1] \"alternative\" \"conf.int\"    \"data.name\"   \"estimate\"    \"method\"     \n [6] \"null.value\"  \"p.value\"     \"parameter\"   \"statistic\"   \"stderr\"     \n\n\n\nt.test(x)$conf.int  ## 해당 모듈의 하위 모듈인 conf.int : 신뢰구간 산출\n\n[1] 8.81568 9.18432\nattr(,\"conf.level\")\n[1] 0.95\n\n\n\nt.test(x, conf.level = 0.99)$conf.int ## 99% 신뢰구간, 디폴트는 95%\n\n[1] 8.731802 9.268198\nattr(,\"conf.level\")\n[1] 0.99"
   },
   {
-    "objectID": "unrefined file/datavisuallization/강신성(202014107)_6.html#결과",
-    "href": "unrefined file/datavisuallization/강신성(202014107)_6.html#결과",
-    "title": "[문제 풀이] 특정 단어를 포함하는 열 선택",
-    "section": "3. 결과",
-    "text": "3. 결과\n\ndf.loc[:, ['actor' in i.split('_') for i in df.columns]]\n\n\n\n\n\n\n\n\nactor_3_facebook_likes\nactor_2_name\nactor_1_facebook_likes\nactor_1_name\nactor_3_name\nactor_2_facebook_likes\n\n\n\n\n0\n855.0\nJoel David Moore\n1000.0\nCCH Pounder\nWes Studi\n936.0\n\n\n1\n1000.0\nOrlando Bloom\n40000.0\nJohnny Depp\nJack Davenport\n5000.0\n\n\n2\n161.0\nRory Kinnear\n11000.0\nChristoph Waltz\nStephanie Sigman\n393.0\n\n\n3\n23000.0\nChristian Bale\n27000.0\nTom Hardy\nJoseph Gordon-Levitt\n23000.0\n\n\n4\nNaN\nRob Walker\n131.0\nDoug Walker\nNaN\n12.0\n\n\n...\n...\n...\n...\n...\n...\n...\n\n\n4911\n318.0\nDaphne Zuniga\n637.0\nEric Mabius\nCrystal Lowe\n470.0\n\n\n4912\n319.0\nValorie Curry\n841.0\nNatalie Zea\nSam Underwood\n593.0\n\n\n4913\n0.0\nMaxwell Moody\n0.0\nEva Boehnke\nDavid Chandler\n0.0\n\n\n4914\n489.0\nDaniel Henney\n946.0\nAlan Ruck\nEliza Coupe\n719.0\n\n\n4915\n16.0\nBrian Herzlinger\n86.0\nJohn August\nJon Gunn\n23.0\n\n\n\n\n4916 rows × 6 columns\n\n\n\n완료"
+    "objectID": "unrefined file/r_practice/Regression Analysis.html#가설검정",
+    "href": "unrefined file/r_practice/Regression Analysis.html#가설검정",
+    "title": "R Notebook",
+    "section": "",
+    "text": "예제) 공정온도에서의 제품의 강도(\\(N(73.7, 1)\\))\n\n두 가지 방법 : \\(p-value\\)와 \\(\\alpha\\)값 비교, 기각역과 관측값 비교\n\n가설 : \\(H_0 : \\mu = 73.7 ~ vs. ~ H_1 :\\mu &gt; 73.7\\)\n\n\\(\\bar{x} = 75.1, ~ n = 16, ~ \\alpha = 0.05\\)\n\nmu &lt;- 73.7; xbar &lt;- 75.1; sigma &lt;- 1; n &lt;- 16\n\n\n검정통계량의 관측값 : \\(z_0 = \\frac{\\bar{x} - \\mu_0}{\\frac{\\sigma}{n}}\\)\n\n\nz_0 &lt;- (xbar - mu)/(sigma/sqrt(n)); z_0\n\n[1] 5.6\n\n\n\n기각역\n\n\nqnorm(0.95)\n\n[1] 1.644854\n\n\n\n기각역보다 검정통계량의 관측값이 휠씬 크므로 귀무가설 기각 가능\n\n\n\n\n\n예제 2\n\n\nmu &lt;- 2; x_bar &lt;- 1.96; s &lt;- 0.05; n &lt;- 50\n\n\nt_0 &lt;- (x_bar - mu)/(s/sqrt(50)); t_0\n\n[1] -5.656854\n\n\n\n기각역\n\n\n-qt(0.95, n - 1)\n\n[1] -1.676551\n\n\n\n유의확률(p-value)\n\n\npt(t_0, n-1)\n\n[1] 3.93525e-07\n\n\n\n\n\n\n예제) 일전의 비누공장 데이터, 모분산은 알리가 없음.\n\n\n가설 : \\(H_0 : \\mu = 9.2 ~ vs. ~ H_1 : \\mu ≠ 9.2\\)\n\n\nx &lt;- c(9.0, 9.1, 8.8, 9.1, 9.0, 9.4, 9.2, 8.8, 8.6)\nxbar = mean(x)\nS_x = var(x)  ## r은 데이터 분석 툴이기 때문에 기본적으로 n-1로 나누어준다.\ns_x = sd(x)\n\n\n유의수준 \\(\\alpha = 0.05\\)\n검정통계량의 관측값 : \\(t_0 = \\frac{}{}, \\alpha = 0.05\\)\n\n\nt_0 &lt;- (xbar - 9.2)/(s_x/sqrt(9)); t_0\n\n[1] -2.502173\n\n\n\n기각역\n\n\nqt(0.975, 9-1)\n\n[1] 2.306004\n\n\n\n유의확률(p-balue)\n\n\npt(t_0, 8) + pt(-t_0, 8, lower.tail = FALSE)\n\n[1] 0.03681717\n\n\n\nt.test()\n\n\nt.test(x)\n\n\n    One Sample t-test\n\ndata:  x\nt = 112.6, df = 8, p-value = 4.325e-14\nalternative hypothesis: true mean is not equal to 0\n95 percent confidence interval:\n 8.81568 9.18432\nsample estimates:\nmean of x \n        9 \n\n\n\ndefault는 \\(\\mu = 0\\)이기 때문에 귀무가설을 입력해줘햐 한다.\n\n6.1\n\nt.test(x, mu = 9.2, conf.level = 0.95, alternative = 'two.sided')\n\n\n    One Sample t-test\n\ndata:  x\nt = -2.5022, df = 8, p-value = 0.03682\nalternative hypothesis: true mean is not equal to 9.2\n95 percent confidence interval:\n 8.81568 9.18432\nsample estimates:\nmean of x \n        9 \n\n## two.sided(de), less, greater"
   },
   {
-    "objectID": "unrefined file/datavisuallization/강신성(202014107)_4.html",
-    "href": "unrefined file/datavisuallization/강신성(202014107)_4.html",
+    "objectID": "unrefined file/datavisuallization/강신성(202014107)_5.html",
+    "href": "unrefined file/datavisuallization/강신성(202014107)_5.html",
     "title": "1. 사전작업",
     "section": "",
-    "text": "라이브러리 설치\n\n\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n\n데이터 파일 불러오기 및 확인\n\n\ndf = pd.read_csv(\"https://raw.githubusercontent.com/guebin/DV2023/main/posts/titanic.csv\")\ndf.head()\n\n\n\n\n\n\n\n\nPassengerId\nSurvived\nPclass\nName\nSex\nAge\nSibSp\nParch\nTicket\nFare\nCabin\nEmbarked\nlogFare\n\n\n\n\n0\n1\n0\n3\nBraund, Mr. Owen Harris\nmale\n22.0\n1\n0\nA/5 21171\n7.2500\nNaN\nS\n1.981001\n\n\n1\n2\n1\n1\nCumings, Mrs. John Bradley (Florence Briggs Th...\nfemale\n38.0\n1\n0\nPC 17599\n71.2833\nC85\nC\n4.266662\n\n\n2\n3\n1\n3\nHeikkinen, Miss. Laina\nfemale\n26.0\n0\n0\nSTON/O2. 3101282\n7.9250\nNaN\nS\n2.070022\n\n\n3\n4\n1\n1\nFutrelle, Mrs. Jacques Heath (Lily May Peel)\nfemale\n35.0\n1\n0\n113803\n53.1000\nC123\nS\n3.972177\n\n\n4\n5\n0\n3\nAllen, Mr. William Henry\nmale\n35.0\n0\n0\n373450\n8.0500\nNaN\nS\n2.085672\n\n\n\n\n\n\n\n\n2. 그래프 산출\n\nplt.hist(df.Age, label = 'AgeDist of All')\nplt.hist(df.Age[df.Survived == 1], label = 'AgeDist of Survivors')\n\nplt.legend()\nplt.show()"
+    "text": "숙제 | mpg데이터를 이용하여 아래와 같은 그림을 그려라.\n\n라이브러리 설치\n\n\n#!pip install plotnine\n\n\nimport pandas as pd\nimport numpy as np\n\nfrom plotnine import *\nimport plotnine\n\n\nfigure 사이즈 설정\n\n\nplotnine.options.dpi= 150\nplotnine.options.figure_size = (6, 5)\n\n\n데이터 가져오기\n\n\ndf = pd.read_csv('https://raw.githubusercontent.com/guebin/DV2022/master/posts/mpg.csv')\ndf.head()\n\n\n  \n    \n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\nclass\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact\n\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n\n  \n\n\n    \n        \n    \n\n  \n\n\n\n  \n\n    \n  \n\n\n\n2. 데이터 전처리\n\nmpg = df.assign(cyl_cut = pd.cut(df.cyl, bins = 2))   ## cyl : 실린더 수에 해당하는 열을 두 층으로 분해한다.\nmpg.head()\n\n\n  \n    \n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\nclass\ncyl_cut\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n(3.996, 6.0]\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n(3.996, 6.0]\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n(3.996, 6.0]\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n(3.996, 6.0]\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact\n(3.996, 6.0]\n\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n\n  \n\n\n    \n        \n    \n\n  \n\n\n\n  \n\n    \n  \n\n\n\n필요한 자료는 cyl, displ, cty이다.\n\n\nx축에 displ, y축에 cty, 그리고 cyl을 두 구간으로 나눈 cyl_cut을 두 색상으로 구분하여 산출하여야 한다.\n\n\n\n3. 그래프 산출\n\nfig = ggplot(mpg)\npoint = geom_point(aes(x = 'displ', y = 'cty', color = 'cyl_cut'))\nsmooth = geom_smooth(aes(x = 'displ', y = 'cty', color = 'cyl_cut'))\n\n\n따라서 아래와 같은 결과를 산출시킨다.\n\n\nfig + point + smooth\n\n/usr/local/lib/python3.10/dist-packages/plotnine/stats/smoothers.py:330: PlotnineWarning: Confidence intervals are not yet implemented for lowess smoothings.\n/usr/local/lib/python3.10/dist-packages/plotnine/stats/smoothers.py:330: PlotnineWarning: Confidence intervals are not yet implemented for lowess smoothings.\n\n\n\n\n\n&lt;Figure Size: (900 x 750)&gt;"
   },
   {
-    "objectID": "unrefined file/datavisuallization/강신성(202014107)_2.html",
-    "href": "unrefined file/datavisuallization/강신성(202014107)_2.html",
+    "objectID": "unrefined file/datavisuallization/강신성(202014107)_3.html",
+    "href": "unrefined file/datavisuallization/강신성(202014107)_3.html",
+    "title": "분할된 그래프 그리기",
+    "section": "",
+    "text": "1. 사전작업\n\n라이브러리 설치\n\n\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport matplotlib\n\n\n그래프 사이즈 및 dpi 설정\n\n\nmatplotlib.rcParams['figure.figsize'] = (3, 2)\nmatplotlib.rcParams['figure.dpi'] = 75\n\n2. x와 y값 입력\n\nx, y = [1,2,3,4], [1,2,4,3]\n\n3. 객체 설정 및 그래프 산출\n\nfig, ((ax1, ax2, ax3),(ax4, ax5, ax6)) = plt.subplots(2,3, figsize = (5,3.5)) ## fig, axes 지정\nax1.plot(x, y, 'or')  ## ax1, marker = 'o', color = 'red'\nax2.plot(x, y, 'og')\nax3.plot(x, y, 'ob')\nax4.plot(x, y, '--or')  ## ax4, marker = 'o', linetype = '--', color = 'red'\nax5.plot(x, y, '--og')\nax6.plot(x, y, '--ob')\n\nfig.tight_layout()\n\n\n\n\n\n%%shell\njupyter nbconvert --to html /content/강신성_데이터시각화_02wk_1_hw.ipynb ## &lt;- file derectory\n\n[NbConvertApp] Converting notebook /content/강신성_데이터시각화_02wk_1_hw.ipynb to html\n[NbConvertApp] Writing 597400 bytes to /content/강신성_데이터시각화_02wk_1_hw.html"
+  },
+  {
+    "objectID": "unrefined file/datavisuallization/강신성(202014107)_1.html",
+    "href": "unrefined file/datavisuallization/강신성(202014107)_1.html",
     "title": "RiverFlow",
     "section": "",
-    "text": "1. 라이브러리 설치\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n2. 벡터 지정\n\nx = np.arange(-5,5,0.1)\ny1 = np.sin(x)\ny2 = np.sin(2*x) + 2\ny3 = np.sin(4*x) + 4\ny4 = np.sin(8*x) + 6\n\n3. 그래프 산출\n\nplt.plot(x,y1,'--',color = '#ff3333')\nplt.plot(x,y2,'--',color = '#128912')\nplt.plot(x,y3,'--b')\nplt.plot(x,y4,'--',color = '#ca2eca')\n\nplt.show()\n\n\n\n\n\n%%shell\njupyter nbconvert --to html /content/강신성_데이터시각화_01wk_2.ipynb\n\n[NbConvertApp] Converting notebook /content/강신성_데이터시각화_01wk_2.ipynb to html\n[NbConvertApp] Writing 645143 bytes to /content/강신성_데이터시각화_01wk_2.html"
+    "text": "라이브러리 설치\n\n\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport cv2\n\n\n파일 불러오기 및 행렬로 저장\n\n\n!wget https://raw.githubusercontent.com/guebin/2021DV/master/_notebooks/hw_img.png\nimg = cv2.imread(\"hw_img.png\")\n!rm hw_img.png\n\n--2023-09-04 11:31:23--  https://raw.githubusercontent.com/guebin/2021DV/master/_notebooks/hw_img.png\nResolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...\nConnecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.\nHTTP request sent, awaiting response... 200 OK\nLength: 120618 (118K) [image/png]\nSaving to: ‘hw_img.png’\n\nhw_img.png            0%[                    ]       0  --.-KB/s               hw_img.png          100%[===================&gt;] 117.79K  --.-KB/s    in 0.003s  \n\n2023-09-04 11:31:23 (45.8 MB/s) - ‘hw_img.png’ saved [120618/120618]\n\n\n\n\nplt.imshow(img);\n\n\n\n\n\nimg.shape\n\n(531, 468, 3)\n\n\n\n색상별 행렬 재분류 및 명도 변환\n\n\nr = img[:,:,0]\ng = img[:,:,1]\nb = img[:,:,2]\n\n\nrr = cv2.equalizeHist(r)\ngg = cv2.equalizeHist(g)\nbb = cv2.equalizeHist(b)\n\n\nimg_equalized = np.stack([rr,gg,bb], axis = -1)\n\n\n결과값 출력 및 비교\n\n\nplt.imshow(img_equalized);\n\n\n\n\n\nplt.imshow(np.concatenate([img, img_equalized], axis = 1));"
   },
   {
-    "objectID": "posts/Machine Learning in Practice/Titanic/kaggle_(3) titanic_autogluon/autogluon.html",
-    "href": "posts/Machine Learning in Practice/Titanic/kaggle_(3) titanic_autogluon/autogluon.html",
-    "title": "[Kaggle] - 3, titanic_autogluon",
+    "objectID": "posts/R Programming/Economatrics_hw1.html",
+    "href": "posts/R Programming/Economatrics_hw1.html",
+    "title": "강신성(202014107)_hw1.html",
     "section": "",
-    "text": "import numpy as np\nimport pandas as pd\npip install autogluon\n## tabular(테이블) 형식의 데이터를 다루는 모듈을 다운로드한다.\nfrom autogluon.tabular import TabularDataset, TabularPredictor\n\nC:\\Users\\hollyriver\\anaconda3\\envs\\ag\\lib\\site-packages\\tqdm\\auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html\n  from .autonotebook import tqdm as notebook_tqdm"
+    "text": "수열문제 a.\n\nx = 0   ## x와 i의 초기값 설정\ni = 0\n\nwhile (i &lt;= 21) {\n  x = x + 1/(2 * (-2)^(i))    ## 분모에 (-2)^i 제곱을 하여 부호 변경\n  i = i + 1\n  \n  if (i == 20) {    ## 반복문이 종료될 때 결과값(x) 산출\n    print(x)    ## output : 0.333333\n  }\n}\n\n[1] 0.333333\n\n\n\n\n수열문제 b.\n\ny = 1   ## y와 i의 초기값 설정\nj = 1\n\nwhile (j &lt;= 19) {\n  y = y + 1/((j+1)*j)\n  j = j + 1\n  \n  if (j == 19) {\n    print(y)    ## output : 1.967368\n  }\n}\n\n[1] 1.947368"
   },
   {
-    "objectID": "posts/Machine Learning in Practice/Titanic/kaggle_(3) titanic_autogluon/autogluon.html#분석의-절차",
-    "href": "posts/Machine Learning in Practice/Titanic/kaggle_(3) titanic_autogluon/autogluon.html#분석의-절차",
-    "title": "[Kaggle] - 3, titanic_autogluon",
-    "section": "분석의 절차",
-    "text": "분석의 절차\n\nA. 데이터\n\ntr = TabularDataset('/kaggle/input/titanic/train.csv')\ntst = TabularDataset('/kaggle/input/titanic/test.csv')\n\n## tr = pd.read_csv('/kaggle/input/titanic/train.csv')\n## tst\n\n\n\nB. Predictor 생성\n\npredictor = TabularPredictor('Survived')\n\n\n\nC. 적합(fit)\n\n학습 과정에 해당\n\n\n\nD. 예측(predict)"
-  },
-  {
-    "objectID": "posts/Machine Learning in Practice/Titanic/kaggle_(1) titanic_1st_practice/practice.html",
-    "href": "posts/Machine Learning in Practice/Titanic/kaggle_(1) titanic_1st_practice/practice.html",
-    "title": "[Kaggle] - 1, titanic_1st practice",
+    "objectID": "posts/Machine Learning in Practice/Titanic/kaggle_(2) titanic_code by alexis cook/code-by-alexis-cook.html",
+    "href": "posts/Machine Learning in Practice/Titanic/kaggle_(2) titanic_code by alexis cook/code-by-alexis-cook.html",
+    "title": "[Kaggle] - 2, titanic_code by alexis cook",
     "section": "",
-    "text": "import numpy as np\nimport pandas as pd\n# 캐글에 있는 노트북을 이용하면 가상 컴퓨터에 세 개의 파일들이 직접 들어온다.\n\ntr = pd.read_csv(\"/kaggle/input/titanic/train.csv\")\ntr.head()\ntst = pd.read_csv('/kaggle/input/titanic/test.csv')\ntst.head()"
-  },
-  {
-    "objectID": "posts/Machine Learning in Practice/Titanic/kaggle_(1) titanic_1st_practice/practice.html#a.test---분석단계에서는-답을-모름-제출해야-알-수-있음",
-    "href": "posts/Machine Learning in Practice/Titanic/kaggle_(1) titanic_1st_practice/practice.html#a.test---분석단계에서는-답을-모름-제출해야-알-수-있음",
-    "title": "[Kaggle] - 1, titanic_1st practice",
-    "section": "A.test - 분석단계에서는 답을 모름, 제출해야 알 수 있음",
-    "text": "A.test - 분석단계에서는 답을 모름, 제출해야 알 수 있음\n-제출 결과는 리더보드에서 확인 가능"
-  },
-  {
-    "objectID": "posts/Machine Learning in Practice/Titanic/kaggle_(1) titanic_1st_practice/practice.html#b.-train---스스로-풀어보고-채점할-수-있음",
-    "href": "posts/Machine Learning in Practice/Titanic/kaggle_(1) titanic_1st_practice/practice.html#b.-train---스스로-풀어보고-채점할-수-있음",
-    "title": "[Kaggle] - 1, titanic_1st practice",
-    "section": "B. train - 스스로 풀어보고 채점할 수 있음",
-    "text": "B. train - 스스로 풀어보고 채점할 수 있음\n\ndf = pd.DataFrame({'surv' : [1,0,1,1,0], 'sex' : ['f','m','f','m','m']})\n\n\ndf.surv\n\n\ndf.sex\n\n\n(df.sex == 'f')*1\n\n\npd.DataFrame({'real' : df.surv, 'estimate' : (df.sex == 'f')*1})\n\n\nprint((df.surv == (df.sex == 'f')*1).sum()/5)\nprint((df.surv == (df.sex == 'f')*1).mean())\n\n실제 자료의 accuracy를 구해보자.\n\n(tr.Survived == (tr.Sex == 'female')).mean()\n\n\n개념\n캐글 대회는 시험과 비슷하다. * 캐글대회를 여는 사람은 보통 (1) 모의고사문제+답 (training set) (2) 실제시험문제 (test set)를 준다. * (1)의 자료에서는 문제(X,독립변수,설명변수)와 답(y,종속변수,반응변수)이 함께 주어진다. * (2)의 자료에서는 문제(X,독립변수,설명변수)만 주어진다. * 우리는 (1)을 이용하여 문제(X,독립변수,설명변수)와 답(y,종속변수,반응변수)사이의 관계를 찾아내는 훈련을 한다. * 그리고 그 훈련이 잘 되었는지를 평가하기 위해서 (2)를 풀어보고 그 결과를 제출한다.\n- trainning set\n\ntr.iloc[0] ## 첫 번째 사람의 정보, trainning set\n\n- test set\n\ntst.iloc[0]"
-  },
-  {
-    "objectID": "posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html",
-    "href": "posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html",
-    "title": "[문제 풀이] 특정 단어를 포함하는 열 선택",
-    "section": "",
-    "text": "데이터프레임 df의 열이름에 actor라는 단어가 포함된 column만을 선택하는 코드를 작성하라"
-  },
-  {
-    "objectID": "posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html#사전작업",
-    "href": "posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html#사전작업",
-    "title": "[문제 풀이] 특정 단어를 포함하는 열 선택",
-    "section": "1. 사전작업",
-    "text": "1. 사전작업\n\n라이브러리 설치\n\n\nimport pandas as pd\nimport numpy as np\n\n\n데이터 불러오기 및 확인\n\n\ndf=pd.read_csv('https://raw.githubusercontent.com/PacktPublishing/Pandas-Cookbook/master/data/movie.csv')\ndf.head()\n\n\n\n\n\n\n\n\ncolor\ndirector_name\nnum_critic_for_reviews\nduration\ndirector_facebook_likes\nactor_3_facebook_likes\nactor_2_name\nactor_1_facebook_likes\ngross\ngenres\n...\nnum_user_for_reviews\nlanguage\ncountry\ncontent_rating\nbudget\ntitle_year\nactor_2_facebook_likes\nimdb_score\naspect_ratio\nmovie_facebook_likes\n\n\n\n\n0\nColor\nJames Cameron\n723.0\n178.0\n0.0\n855.0\nJoel David Moore\n1000.0\n760505847.0\nAction|Adventure|Fantasy|Sci-Fi\n...\n3054.0\nEnglish\nUSA\nPG-13\n237000000.0\n2009.0\n936.0\n7.9\n1.78\n33000\n\n\n1\nColor\nGore Verbinski\n302.0\n169.0\n563.0\n1000.0\nOrlando Bloom\n40000.0\n309404152.0\nAction|Adventure|Fantasy\n...\n1238.0\nEnglish\nUSA\nPG-13\n300000000.0\n2007.0\n5000.0\n7.1\n2.35\n0\n\n\n2\nColor\nSam Mendes\n602.0\n148.0\n0.0\n161.0\nRory Kinnear\n11000.0\n200074175.0\nAction|Adventure|Thriller\n...\n994.0\nEnglish\nUK\nPG-13\n245000000.0\n2015.0\n393.0\n6.8\n2.35\n85000\n\n\n3\nColor\nChristopher Nolan\n813.0\n164.0\n22000.0\n23000.0\nChristian Bale\n27000.0\n448130642.0\nAction|Thriller\n...\n2701.0\nEnglish\nUSA\nPG-13\n250000000.0\n2012.0\n23000.0\n8.5\n2.35\n164000\n\n\n4\nNaN\nDoug Walker\nNaN\nNaN\n131.0\nNaN\nRob Walker\n131.0\nNaN\nDocumentary\n...\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\n12.0\n7.1\nNaN\n0\n\n\n\n\n5 rows × 28 columns\n\n\n\n\ndf.columns\n\nIndex(['color', 'director_name', 'num_critic_for_reviews', 'duration',\n       'director_facebook_likes', 'actor_3_facebook_likes', 'actor_2_name',\n       'actor_1_facebook_likes', 'gross', 'genres', 'actor_1_name',\n       'movie_title', 'num_voted_users', 'cast_total_facebook_likes',\n       'actor_3_name', 'facenumber_in_poster', 'plot_keywords',\n       'movie_imdb_link', 'num_user_for_reviews', 'language', 'country',\n       'content_rating', 'budget', 'title_year', 'actor_2_facebook_likes',\n       'imdb_score', 'aspect_ratio', 'movie_facebook_likes'],\n      dtype='object')\n\n\n\n열 이름에서 단어의 구분이 모두 '_'로 되어있으므로, 열이름에 split()함수를 적용시킬 수 있을 것 같다."
-  },
-  {
-    "objectID": "posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html#풀이",
-    "href": "posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html#풀이",
-    "title": "[문제 풀이] 특정 단어를 포함하는 열 선택",
-    "section": "2. 풀이",
-    "text": "2. 풀이\n\nfor 문을 이용하여 풀이해보자.\n\n\n['actor' in i.split('_') for i in df.columns]\n\n[False,\n False,\n False,\n False,\n False,\n True,\n True,\n True,\n False,\n False,\n True,\n False,\n False,\n False,\n True,\n False,\n False,\n False,\n False,\n False,\n False,\n False,\n False,\n False,\n True,\n False,\n False,\n False]"
-  },
-  {
-    "objectID": "posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html#결과",
-    "href": "posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html#결과",
-    "title": "[문제 풀이] 특정 단어를 포함하는 열 선택",
-    "section": "3. 결과",
-    "text": "3. 결과\n\ndf.loc[:, ['actor' in i.split('_') for i in df.columns]]\n\n\n\n\n\n\n\n\nactor_3_facebook_likes\nactor_2_name\nactor_1_facebook_likes\nactor_1_name\nactor_3_name\nactor_2_facebook_likes\n\n\n\n\n0\n855.0\nJoel David Moore\n1000.0\nCCH Pounder\nWes Studi\n936.0\n\n\n1\n1000.0\nOrlando Bloom\n40000.0\nJohnny Depp\nJack Davenport\n5000.0\n\n\n2\n161.0\nRory Kinnear\n11000.0\nChristoph Waltz\nStephanie Sigman\n393.0\n\n\n3\n23000.0\nChristian Bale\n27000.0\nTom Hardy\nJoseph Gordon-Levitt\n23000.0\n\n\n4\nNaN\nRob Walker\n131.0\nDoug Walker\nNaN\n12.0\n\n\n...\n...\n...\n...\n...\n...\n...\n\n\n4911\n318.0\nDaphne Zuniga\n637.0\nEric Mabius\nCrystal Lowe\n470.0\n\n\n4912\n319.0\nValorie Curry\n841.0\nNatalie Zea\nSam Underwood\n593.0\n\n\n4913\n0.0\nMaxwell Moody\n0.0\nEva Boehnke\nDavid Chandler\n0.0\n\n\n4914\n489.0\nDaniel Henney\n946.0\nAlan Ruck\nEliza Coupe\n719.0\n\n\n4915\n16.0\nBrian Herzlinger\n86.0\nJohn August\nJon Gunn\n23.0\n\n\n\n\n4916 rows × 6 columns\n\n\n\n완료"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "RiverFlow",
-    "section": "",
-    "text": "강신성(202014107)_hw1.html\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n강신성(202014107).html\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n[문제 풀이] 데이터프레임 : 특정 열의 재가공\n\n\n\n\n\n\n\npython\n\n\ndata visualization\n\n\n\n\n\n\n\n\n\n\n\nSep 25, 2023\n\n\n강신성\n\n\n\n\n\n\n  \n\n\n\n\n[문제 풀이] 특정 단어를 포함하는 열 선택\n\n\n\n\n\n\n\npython\n\n\ndata visualization\n\n\n\n\n\n\n\n\n\n\n\nSep 21, 2023\n\n\n강신성\n\n\n\n\n\n\n  \n\n\n\n\n[Kaggle] - 1, titanic_1st practice\n\n\n\n\n\n\n\npython\n\n\nanalisis\n\n\ntitanic\n\n\n\n\n\n\n\n\n\n\n\nSep 13, 2023\n\n\n강신성\n\n\n\n\n\n\n  \n\n\n\n\n[Kaggle] - 2, titanic_code by alexis cook\n\n\n\n\n\n\n\npython\n\n\nanalysis\n\n\ntitanic\n\n\n\n\n\n\n\n\n\n\n\nSep 13, 2023\n\n\n강신성\n\n\n\n\n\n\n  \n\n\n\n\n[Kaggle] - 3, titanic_autogluon\n\n\n\n\n\n\n\npython\n\n\nanalysis\n\n\ntitanic\n\n\n\n\n\n\n\n\n\n\n\nSep 13, 2023\n\n\n강신성\n\n\n\n\n\n\nNo matching items"
+    "text": "import pandas as pd\nimport numpy as np\n\n\ntrain_data = pd.read_csv(\"/kaggle/input/titanic/train.csv\")\ntrain_data.head()\n\n\ntest_data = pd.read_csv(\"/kaggle/input/titanic/test.csv\")\ntest_data.head()\n\n\nwomen = train_data.loc[train_data.Sex == 'female'][\"Survived\"]\nrate_women = sum(women)/len(women)\n\nprint(\"% of women who survived:\", rate_women)\n\n\nmen = train_data.loc[train_data.Sex == 'male'][\"Survived\"]\nrate_men = sum(men)/len(men)\n\nprint(\"% of men who survived:\", rate_men)\n\n\nfrom sklearn.ensemble import RandomForestClassifier\n\ny = train_data[\"Survived\"]\n\nfeatures = [\"Pclass\", \"Sex\", \"SibSp\", \"Parch\"]\nX = pd.get_dummies(train_data[features])\nX_test = pd.get_dummies(test_data[features])\n\nmodel = RandomForestClassifier(n_estimators=100, max_depth=5, random_state=1)\nmodel.fit(X, y)\npredictions = model.predict(X_test)\n\noutput = pd.DataFrame({'PassengerId': test_data.PassengerId, 'Survived': predictions})\noutput.to_csv('submission.csv', index=False)\nprint(\"Your submission was successfully saved!\")\n\n\noutput\n\n-일단 해당 버전을 저장하도록 하자."
   },
   {
     "objectID": "posts/Data Visualization/Solution Assemble/특정 열의 재가공.html",
@@ -147,39 +91,81 @@
     "text": "3. 출력\n\n상기의 코드를 df에 새로운 열 year에 삽입한다.\n\n\ndf.assign(year = [int(i.split('-')[0]) for i in df.student_id])\n\n\n\n\n\n\n\n\nstudent_id\natt\nrep\nmid\nfin\nyear\n\n\n\n\n0\n2023-12362\n65\n55\n50\n40\n2023\n\n\n1\n2022-12471\n95\n100\n50\n80\n2022\n\n\n2\n2023-12333\n65\n90\n60\n30\n2023\n\n\n3\n2022-12400\n55\n80\n75\n80\n2022\n\n\n4\n2022-12377\n80\n30\n30\n100\n2022\n\n\n5\n2022-12469\n75\n40\n100\n15\n2022\n\n\n6\n2023-12314\n65\n45\n45\n90\n2023\n\n\n7\n2022-12363\n60\n60\n25\n0\n2022\n\n\n8\n2023-12445\n95\n65\n20\n10\n2023\n\n\n9\n2023-12336\n90\n80\n80\n20\n2023\n\n\n10\n2023-12426\n55\n75\n35\n25\n2023\n\n\n11\n2022-12380\n95\n95\n45\n0\n2022\n\n\n12\n2023-12422\n95\n55\n15\n35\n2023\n\n\n13\n2022-12488\n50\n80\n40\n30\n2022\n\n\n14\n2022-12370\n50\n55\n15\n85\n2022\n\n\n15\n2023-12443\n95\n30\n30\n95\n2023\n\n\n16\n2022-12463\n50\n50\n45\n10\n2022\n\n\n17\n2023-12491\n65\n55\n15\n45\n2023\n\n\n18\n2023-12340\n70\n70\n40\n35\n2023\n\n\n19\n2022-12312\n90\n90\n80\n90\n2022\n\n\n\n\n\n\n\n완료\n-감사합니다-"
   },
   {
-    "objectID": "posts/Machine Learning in Practice/Titanic/kaggle_(2) titanic_code by alexis cook/code-by-alexis-cook.html",
-    "href": "posts/Machine Learning in Practice/Titanic/kaggle_(2) titanic_code by alexis cook/code-by-alexis-cook.html",
-    "title": "[Kaggle] - 2, titanic_code by alexis cook",
-    "section": "",
-    "text": "import pandas as pd\nimport numpy as np\n\n\ntrain_data = pd.read_csv(\"/kaggle/input/titanic/train.csv\")\ntrain_data.head()\n\n\ntest_data = pd.read_csv(\"/kaggle/input/titanic/test.csv\")\ntest_data.head()\n\n\nwomen = train_data.loc[train_data.Sex == 'female'][\"Survived\"]\nrate_women = sum(women)/len(women)\n\nprint(\"% of women who survived:\", rate_women)\n\n\nmen = train_data.loc[train_data.Sex == 'male'][\"Survived\"]\nrate_men = sum(men)/len(men)\n\nprint(\"% of men who survived:\", rate_men)\n\n\nfrom sklearn.ensemble import RandomForestClassifier\n\ny = train_data[\"Survived\"]\n\nfeatures = [\"Pclass\", \"Sex\", \"SibSp\", \"Parch\"]\nX = pd.get_dummies(train_data[features])\nX_test = pd.get_dummies(test_data[features])\n\nmodel = RandomForestClassifier(n_estimators=100, max_depth=5, random_state=1)\nmodel.fit(X, y)\npredictions = model.predict(X_test)\n\noutput = pd.DataFrame({'PassengerId': test_data.PassengerId, 'Survived': predictions})\noutput.to_csv('submission.csv', index=False)\nprint(\"Your submission was successfully saved!\")\n\n\noutput\n\n-일단 해당 버전을 저장하도록 하자."
-  },
-  {
-    "objectID": "unrefined file/datavisuallization/강신성(202014107)_1.html",
-    "href": "unrefined file/datavisuallization/강신성(202014107)_1.html",
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "RiverFlow",
     "section": "",
-    "text": "라이브러리 설치\n\n\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport cv2\n\n\n파일 불러오기 및 행렬로 저장\n\n\n!wget https://raw.githubusercontent.com/guebin/2021DV/master/_notebooks/hw_img.png\nimg = cv2.imread(\"hw_img.png\")\n!rm hw_img.png\n\n--2023-09-04 11:31:23--  https://raw.githubusercontent.com/guebin/2021DV/master/_notebooks/hw_img.png\nResolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...\nConnecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.\nHTTP request sent, awaiting response... 200 OK\nLength: 120618 (118K) [image/png]\nSaving to: ‘hw_img.png’\n\nhw_img.png            0%[                    ]       0  --.-KB/s               hw_img.png          100%[===================&gt;] 117.79K  --.-KB/s    in 0.003s  \n\n2023-09-04 11:31:23 (45.8 MB/s) - ‘hw_img.png’ saved [120618/120618]\n\n\n\n\nplt.imshow(img);\n\n\n\n\n\nimg.shape\n\n(531, 468, 3)\n\n\n\n색상별 행렬 재분류 및 명도 변환\n\n\nr = img[:,:,0]\ng = img[:,:,1]\nb = img[:,:,2]\n\n\nrr = cv2.equalizeHist(r)\ngg = cv2.equalizeHist(g)\nbb = cv2.equalizeHist(b)\n\n\nimg_equalized = np.stack([rr,gg,bb], axis = -1)\n\n\n결과값 출력 및 비교\n\n\nplt.imshow(img_equalized);\n\n\n\n\n\nplt.imshow(np.concatenate([img, img_equalized], axis = 1));"
+    "text": "강신성(202014107).html\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n[문제 풀이] while을 이용한 간단한 문제풀이\n\n\n\n\n\n\n\nR\n\n\n\n\n\n\n\n\n\n\n\nSep 26, 2023\n\n\n강신성\n\n\n\n\n\n\n  \n\n\n\n\n[문제 풀이] 데이터프레임 : 특정 열의 재가공\n\n\n\n\n\n\n\npython\n\n\ndata visualization\n\n\n\n\n\n\n\n\n\n\n\nSep 25, 2023\n\n\n강신성\n\n\n\n\n\n\n  \n\n\n\n\n[문제 풀이] 특정 단어를 포함하는 열 선택\n\n\n\n\n\n\n\npython\n\n\ndata visualization\n\n\n\n\n\n\n\n\n\n\n\nSep 21, 2023\n\n\n강신성\n\n\n\n\n\n\n  \n\n\n\n\n[Kaggle] - 1, titanic_1st practice\n\n\n\n\n\n\n\npython\n\n\nanalisis\n\n\ntitanic\n\n\n\n\n\n\n\n\n\n\n\nSep 13, 2023\n\n\n강신성\n\n\n\n\n\n\n  \n\n\n\n\n[Kaggle] - 2, titanic_code by alexis cook\n\n\n\n\n\n\n\npython\n\n\nanalysis\n\n\ntitanic\n\n\n\n\n\n\n\n\n\n\n\nSep 13, 2023\n\n\n강신성\n\n\n\n\n\n\n  \n\n\n\n\n[Kaggle] - 3, titanic_autogluon\n\n\n\n\n\n\n\npython\n\n\nanalysis\n\n\ntitanic\n\n\n\n\n\n\n\n\n\n\n\nSep 13, 2023\n\n\n강신성\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "unrefined file/datavisuallization/강신성(202014107)_3.html",
-    "href": "unrefined file/datavisuallization/강신성(202014107)_3.html",
-    "title": "분할된 그래프 그리기",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "1. 사전작업\n\n라이브러리 설치\n\n\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport matplotlib\n\n\n그래프 사이즈 및 dpi 설정\n\n\nmatplotlib.rcParams['figure.figsize'] = (3, 2)\nmatplotlib.rcParams['figure.dpi'] = 75\n\n2. x와 y값 입력\n\nx, y = [1,2,3,4], [1,2,4,3]\n\n3. 객체 설정 및 그래프 산출\n\nfig, ((ax1, ax2, ax3),(ax4, ax5, ax6)) = plt.subplots(2,3, figsize = (5,3.5)) ## fig, axes 지정\nax1.plot(x, y, 'or')  ## ax1, marker = 'o', color = 'red'\nax2.plot(x, y, 'og')\nax3.plot(x, y, 'ob')\nax4.plot(x, y, '--or')  ## ax4, marker = 'o', linetype = '--', color = 'red'\nax5.plot(x, y, '--og')\nax6.plot(x, y, '--ob')\n\nfig.tight_layout()\n\n\n\n\n\n%%shell\njupyter nbconvert --to html /content/강신성_데이터시각화_02wk_1_hw.ipynb ## &lt;- file derectory\n\n[NbConvertApp] Converting notebook /content/강신성_데이터시각화_02wk_1_hw.ipynb to html\n[NbConvertApp] Writing 597400 bytes to /content/강신성_데이터시각화_02wk_1_hw.html"
+    "text": "About this blog"
   },
   {
-    "objectID": "unrefined file/datavisuallization/강신성(202014107)_5.html",
-    "href": "unrefined file/datavisuallization/강신성(202014107)_5.html",
-    "title": "1. 사전작업",
+    "objectID": "posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html",
+    "href": "posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html",
+    "title": "[문제 풀이] 특정 단어를 포함하는 열 선택",
     "section": "",
-    "text": "숙제 | mpg데이터를 이용하여 아래와 같은 그림을 그려라.\n\n라이브러리 설치\n\n\n#!pip install plotnine\n\n\nimport pandas as pd\nimport numpy as np\n\nfrom plotnine import *\nimport plotnine\n\n\nfigure 사이즈 설정\n\n\nplotnine.options.dpi= 150\nplotnine.options.figure_size = (6, 5)\n\n\n데이터 가져오기\n\n\ndf = pd.read_csv('https://raw.githubusercontent.com/guebin/DV2022/master/posts/mpg.csv')\ndf.head()\n\n\n  \n    \n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\nclass\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact\n\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n\n  \n\n\n    \n        \n    \n\n  \n\n\n\n  \n\n    \n  \n\n\n\n2. 데이터 전처리\n\nmpg = df.assign(cyl_cut = pd.cut(df.cyl, bins = 2))   ## cyl : 실린더 수에 해당하는 열을 두 층으로 분해한다.\nmpg.head()\n\n\n  \n    \n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\nclass\ncyl_cut\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n(3.996, 6.0]\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n(3.996, 6.0]\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n(3.996, 6.0]\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n(3.996, 6.0]\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact\n(3.996, 6.0]\n\n\n\n\n\n\n    \n\n  \n    \n\n  \n    \n  \n    \n\n  \n\n    \n  \n\n\n\n  \n\n\n    \n        \n    \n\n  \n\n\n\n  \n\n    \n  \n\n\n\n필요한 자료는 cyl, displ, cty이다.\n\n\nx축에 displ, y축에 cty, 그리고 cyl을 두 구간으로 나눈 cyl_cut을 두 색상으로 구분하여 산출하여야 한다.\n\n\n\n3. 그래프 산출\n\nfig = ggplot(mpg)\npoint = geom_point(aes(x = 'displ', y = 'cty', color = 'cyl_cut'))\nsmooth = geom_smooth(aes(x = 'displ', y = 'cty', color = 'cyl_cut'))\n\n\n따라서 아래와 같은 결과를 산출시킨다.\n\n\nfig + point + smooth\n\n/usr/local/lib/python3.10/dist-packages/plotnine/stats/smoothers.py:330: PlotnineWarning: Confidence intervals are not yet implemented for lowess smoothings.\n/usr/local/lib/python3.10/dist-packages/plotnine/stats/smoothers.py:330: PlotnineWarning: Confidence intervals are not yet implemented for lowess smoothings.\n\n\n\n\n\n&lt;Figure Size: (900 x 750)&gt;"
+    "text": "데이터프레임 df의 열이름에 actor라는 단어가 포함된 column만을 선택하는 코드를 작성하라"
   },
   {
-    "objectID": "posts/R Programming/Economatrics_hw1.html",
-    "href": "posts/R Programming/Economatrics_hw1.html",
-    "title": "강신성(202014107)_hw1.html",
+    "objectID": "posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html#사전작업",
+    "href": "posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html#사전작업",
+    "title": "[문제 풀이] 특정 단어를 포함하는 열 선택",
+    "section": "1. 사전작업",
+    "text": "1. 사전작업\n\n라이브러리 설치\n\n\nimport pandas as pd\nimport numpy as np\n\n\n데이터 불러오기 및 확인\n\n\ndf=pd.read_csv('https://raw.githubusercontent.com/PacktPublishing/Pandas-Cookbook/master/data/movie.csv')\ndf.head()\n\n\n\n\n\n\n\n\ncolor\ndirector_name\nnum_critic_for_reviews\nduration\ndirector_facebook_likes\nactor_3_facebook_likes\nactor_2_name\nactor_1_facebook_likes\ngross\ngenres\n...\nnum_user_for_reviews\nlanguage\ncountry\ncontent_rating\nbudget\ntitle_year\nactor_2_facebook_likes\nimdb_score\naspect_ratio\nmovie_facebook_likes\n\n\n\n\n0\nColor\nJames Cameron\n723.0\n178.0\n0.0\n855.0\nJoel David Moore\n1000.0\n760505847.0\nAction|Adventure|Fantasy|Sci-Fi\n...\n3054.0\nEnglish\nUSA\nPG-13\n237000000.0\n2009.0\n936.0\n7.9\n1.78\n33000\n\n\n1\nColor\nGore Verbinski\n302.0\n169.0\n563.0\n1000.0\nOrlando Bloom\n40000.0\n309404152.0\nAction|Adventure|Fantasy\n...\n1238.0\nEnglish\nUSA\nPG-13\n300000000.0\n2007.0\n5000.0\n7.1\n2.35\n0\n\n\n2\nColor\nSam Mendes\n602.0\n148.0\n0.0\n161.0\nRory Kinnear\n11000.0\n200074175.0\nAction|Adventure|Thriller\n...\n994.0\nEnglish\nUK\nPG-13\n245000000.0\n2015.0\n393.0\n6.8\n2.35\n85000\n\n\n3\nColor\nChristopher Nolan\n813.0\n164.0\n22000.0\n23000.0\nChristian Bale\n27000.0\n448130642.0\nAction|Thriller\n...\n2701.0\nEnglish\nUSA\nPG-13\n250000000.0\n2012.0\n23000.0\n8.5\n2.35\n164000\n\n\n4\nNaN\nDoug Walker\nNaN\nNaN\n131.0\nNaN\nRob Walker\n131.0\nNaN\nDocumentary\n...\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\n12.0\n7.1\nNaN\n0\n\n\n\n\n5 rows × 28 columns\n\n\n\n\ndf.columns\n\nIndex(['color', 'director_name', 'num_critic_for_reviews', 'duration',\n       'director_facebook_likes', 'actor_3_facebook_likes', 'actor_2_name',\n       'actor_1_facebook_likes', 'gross', 'genres', 'actor_1_name',\n       'movie_title', 'num_voted_users', 'cast_total_facebook_likes',\n       'actor_3_name', 'facenumber_in_poster', 'plot_keywords',\n       'movie_imdb_link', 'num_user_for_reviews', 'language', 'country',\n       'content_rating', 'budget', 'title_year', 'actor_2_facebook_likes',\n       'imdb_score', 'aspect_ratio', 'movie_facebook_likes'],\n      dtype='object')\n\n\n\n열 이름에서 단어의 구분이 모두 '_'로 되어있으므로, 열이름에 split()함수를 적용시킬 수 있을 것 같다."
+  },
+  {
+    "objectID": "posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html#풀이",
+    "href": "posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html#풀이",
+    "title": "[문제 풀이] 특정 단어를 포함하는 열 선택",
+    "section": "2. 풀이",
+    "text": "2. 풀이\n\nfor 문을 이용하여 풀이해보자.\n\n\n['actor' in i.split('_') for i in df.columns]\n\n[False,\n False,\n False,\n False,\n False,\n True,\n True,\n True,\n False,\n False,\n True,\n False,\n False,\n False,\n True,\n False,\n False,\n False,\n False,\n False,\n False,\n False,\n False,\n False,\n True,\n False,\n False,\n False]"
+  },
+  {
+    "objectID": "posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html#결과",
+    "href": "posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html#결과",
+    "title": "[문제 풀이] 특정 단어를 포함하는 열 선택",
+    "section": "3. 결과",
+    "text": "3. 결과\n\ndf.loc[:, ['actor' in i.split('_') for i in df.columns]]\n\n\n\n\n\n\n\n\nactor_3_facebook_likes\nactor_2_name\nactor_1_facebook_likes\nactor_1_name\nactor_3_name\nactor_2_facebook_likes\n\n\n\n\n0\n855.0\nJoel David Moore\n1000.0\nCCH Pounder\nWes Studi\n936.0\n\n\n1\n1000.0\nOrlando Bloom\n40000.0\nJohnny Depp\nJack Davenport\n5000.0\n\n\n2\n161.0\nRory Kinnear\n11000.0\nChristoph Waltz\nStephanie Sigman\n393.0\n\n\n3\n23000.0\nChristian Bale\n27000.0\nTom Hardy\nJoseph Gordon-Levitt\n23000.0\n\n\n4\nNaN\nRob Walker\n131.0\nDoug Walker\nNaN\n12.0\n\n\n...\n...\n...\n...\n...\n...\n...\n\n\n4911\n318.0\nDaphne Zuniga\n637.0\nEric Mabius\nCrystal Lowe\n470.0\n\n\n4912\n319.0\nValorie Curry\n841.0\nNatalie Zea\nSam Underwood\n593.0\n\n\n4913\n0.0\nMaxwell Moody\n0.0\nEva Boehnke\nDavid Chandler\n0.0\n\n\n4914\n489.0\nDaniel Henney\n946.0\nAlan Ruck\nEliza Coupe\n719.0\n\n\n4915\n16.0\nBrian Herzlinger\n86.0\nJohn August\nJon Gunn\n23.0\n\n\n\n\n4916 rows × 6 columns\n\n\n\n완료"
+  },
+  {
+    "objectID": "posts/Machine Learning in Practice/Titanic/kaggle_(1) titanic_1st_practice/practice.html",
+    "href": "posts/Machine Learning in Practice/Titanic/kaggle_(1) titanic_1st_practice/practice.html",
+    "title": "[Kaggle] - 1, titanic_1st practice",
     "section": "",
-    "text": "수열문제 a.\n\nx = 0   ## x와 i의 초기값 설정\ni = 0\n\nwhile (i &lt;= 21) {\n  x = x + 1/(2 * (-2)^(i))    ## 분모에 (-2)^i 제곱을 하여 부호 변경\n  i = i + 1\n  \n  if (i == 20) {    ## 반복문이 종료될 때 결과값(x) 산출\n    print(x)    ## output : 0.333333\n  }\n}\n\n[1] 0.333333\n\n\n\n\n수열문제 b.\n\ny = 1   ## y와 i의 초기값 설정\nj = 1\n\nwhile (j &lt;= 19) {\n  y = y + 1/((j+1)*j)\n  j = j + 1\n  \n  if (j == 19) {\n    print(y)    ## output : 1.967368\n  }\n}\n\n[1] 1.947368"
+    "text": "import numpy as np\nimport pandas as pd\n# 캐글에 있는 노트북을 이용하면 가상 컴퓨터에 세 개의 파일들이 직접 들어온다.\n\ntr = pd.read_csv(\"/kaggle/input/titanic/train.csv\")\ntr.head()\ntst = pd.read_csv('/kaggle/input/titanic/test.csv')\ntst.head()"
+  },
+  {
+    "objectID": "posts/Machine Learning in Practice/Titanic/kaggle_(1) titanic_1st_practice/practice.html#a.test---분석단계에서는-답을-모름-제출해야-알-수-있음",
+    "href": "posts/Machine Learning in Practice/Titanic/kaggle_(1) titanic_1st_practice/practice.html#a.test---분석단계에서는-답을-모름-제출해야-알-수-있음",
+    "title": "[Kaggle] - 1, titanic_1st practice",
+    "section": "A.test - 분석단계에서는 답을 모름, 제출해야 알 수 있음",
+    "text": "A.test - 분석단계에서는 답을 모름, 제출해야 알 수 있음\n-제출 결과는 리더보드에서 확인 가능"
+  },
+  {
+    "objectID": "posts/Machine Learning in Practice/Titanic/kaggle_(1) titanic_1st_practice/practice.html#b.-train---스스로-풀어보고-채점할-수-있음",
+    "href": "posts/Machine Learning in Practice/Titanic/kaggle_(1) titanic_1st_practice/practice.html#b.-train---스스로-풀어보고-채점할-수-있음",
+    "title": "[Kaggle] - 1, titanic_1st practice",
+    "section": "B. train - 스스로 풀어보고 채점할 수 있음",
+    "text": "B. train - 스스로 풀어보고 채점할 수 있음\n\ndf = pd.DataFrame({'surv' : [1,0,1,1,0], 'sex' : ['f','m','f','m','m']})\n\n\ndf.surv\n\n\ndf.sex\n\n\n(df.sex == 'f')*1\n\n\npd.DataFrame({'real' : df.surv, 'estimate' : (df.sex == 'f')*1})\n\n\nprint((df.surv == (df.sex == 'f')*1).sum()/5)\nprint((df.surv == (df.sex == 'f')*1).mean())\n\n실제 자료의 accuracy를 구해보자.\n\n(tr.Survived == (tr.Sex == 'female')).mean()\n\n\n개념\n캐글 대회는 시험과 비슷하다. * 캐글대회를 여는 사람은 보통 (1) 모의고사문제+답 (training set) (2) 실제시험문제 (test set)를 준다. * (1)의 자료에서는 문제(X,독립변수,설명변수)와 답(y,종속변수,반응변수)이 함께 주어진다. * (2)의 자료에서는 문제(X,독립변수,설명변수)만 주어진다. * 우리는 (1)을 이용하여 문제(X,독립변수,설명변수)와 답(y,종속변수,반응변수)사이의 관계를 찾아내는 훈련을 한다. * 그리고 그 훈련이 잘 되었는지를 평가하기 위해서 (2)를 풀어보고 그 결과를 제출한다.\n- trainning set\n\ntr.iloc[0] ## 첫 번째 사람의 정보, trainning set\n\n- test set\n\ntst.iloc[0]"
+  },
+  {
+    "objectID": "posts/Machine Learning in Practice/Titanic/kaggle_(3) titanic_autogluon/autogluon.html",
+    "href": "posts/Machine Learning in Practice/Titanic/kaggle_(3) titanic_autogluon/autogluon.html",
+    "title": "[Kaggle] - 3, titanic_autogluon",
+    "section": "",
+    "text": "import numpy as np\nimport pandas as pd\npip install autogluon\n## tabular(테이블) 형식의 데이터를 다루는 모듈을 다운로드한다.\nfrom autogluon.tabular import TabularDataset, TabularPredictor\n\nC:\\Users\\hollyriver\\anaconda3\\envs\\ag\\lib\\site-packages\\tqdm\\auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html\n  from .autonotebook import tqdm as notebook_tqdm"
+  },
+  {
+    "objectID": "posts/Machine Learning in Practice/Titanic/kaggle_(3) titanic_autogluon/autogluon.html#분석의-절차",
+    "href": "posts/Machine Learning in Practice/Titanic/kaggle_(3) titanic_autogluon/autogluon.html#분석의-절차",
+    "title": "[Kaggle] - 3, titanic_autogluon",
+    "section": "분석의 절차",
+    "text": "분석의 절차\n\nA. 데이터\n\ntr = TabularDataset('/kaggle/input/titanic/train.csv')\ntst = TabularDataset('/kaggle/input/titanic/test.csv')\n\n## tr = pd.read_csv('/kaggle/input/titanic/train.csv')\n## tst\n\n\n\nB. Predictor 생성\n\npredictor = TabularPredictor('Survived')\n\n\n\nC. 적합(fit)\n\n학습 과정에 해당\n\n\n\nD. 예측(predict)"
   },
   {
     "objectID": "posts/R Programming/Economatrics_hw2.html",
@@ -194,5 +180,47 @@
     "title": "강신성(202014107).html",
     "section": "We learned the following R code in class. Answer the following questions using this code.",
     "text": "We learned the following R code in class. Answer the following questions using this code.\n————————example: Scatter Plot————————\n\nn&lt;-1000\nx&lt;-4+rnorm(n,mean=1,sd=5)\ny&lt;-1+2*x+rnorm(n,mean=0,sd=4)\n\ndev.new()\nplot(x,y, pch=16, col=\"blue\", \n     main=expression(paste(\"Sampling under \", beta[0], \n                           \"=1\", \" \", \"and\", \" \", beta[1], \"=2\")))\ntext(10, 2, \"scatter plot\", cex=1.5)\nabline(a=1,b=2, col=\"red\", lwd=3)\n\n\n\nquestion 1: Compute the mean values of x and y using “for loop”!\nDo not use built-in functions!!!\n\n평균을 내주는 함수 : mean_values() 정의\n\n\nmean_values &lt;- function(values) {\n  output &lt;- 0\n  \n  for (i in values) {\n    output &lt;- output + i\n  }\n\n  output / length(values)   ## 평균을 구하기 위해 자료의 수(length)로 나누어준다.\n}\n\nmean_values(x)   ## x의 평균을 계산\n\n[1] 5.063285\n\nmean_values(y)   ## y의 평균을 계산\n\n[1] 11.18455\n\n\n\n\nquestion 2: Compute the covariance between x and y using “for loop”!\nDo not use built-in functions!!!\n\n공분산을 내주는 함수 : cov_values() 정의\n\n\ncov_values &lt;- function(data_1, data_2) {\n  x_diff &lt;- data_1 - mean_values(data_1)   ## 위에서 정의했던 함수 \"mean_values()\" 사용\n  y_diff &lt;- data_2 - mean_values(data_2)\n\n  xy_product &lt;- x_diff * y_diff\n  \n  product_sum &lt;- 0\n  \n  for (i in xy_product) {\n    product_sum &lt;- product_sum + i\n  }\n  \n  cov = product_sum / length(xy_product)\n  \n  cov\n}\n\ncov_values(x,y)   ## output\n\n[1] 47.40633\n\n\n\n\nquestion 3: Compute the variance x using “for loop”!\nDo not use built-in functions!!!\n\n분산을 내어주는 함수 : var_values() 정의\n\n\nvar_values &lt;- function(values) {\n  x_diff_sq &lt;- (values - mean_values(values))^2   ## 위에서 정의했던 함수 \"mean_values()\" 사용하여 차의 제곱 행렬 생성\n  \n  sum_x_sq &lt;- 0\n  \n  for (i in x_diff_sq) {\n    sum_x_sq &lt;- sum_x_sq + i\n  }\n  \n  var_x &lt;- sum_x_sq / length(values)  ## 자료의 수로 나누어 분산 산출\n  \n  var_x\n}\n\nvar_values(x)     ## output\n\n[1] 23.59972\n\n\n\n\nquestion 4: Compute the parameter beta[1] (slope of the regression line)!\n\n최소제곱법으로 beta[1]의 값을 추정해보자\n\n\nbeta_1_hat &lt;- cov_values(x, y) / var_values(x)  ## 위에서 정의한 함수를 사용 : x와 y의 공분산 / x의 분산\n\nbeta_1_hat  ## output\n\n[1] 2.008767"
+  },
+  {
+    "objectID": "unrefined file/datavisuallization/강신성(202014107)_2.html",
+    "href": "unrefined file/datavisuallization/강신성(202014107)_2.html",
+    "title": "RiverFlow",
+    "section": "",
+    "text": "1. 라이브러리 설치\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n2. 벡터 지정\n\nx = np.arange(-5,5,0.1)\ny1 = np.sin(x)\ny2 = np.sin(2*x) + 2\ny3 = np.sin(4*x) + 4\ny4 = np.sin(8*x) + 6\n\n3. 그래프 산출\n\nplt.plot(x,y1,'--',color = '#ff3333')\nplt.plot(x,y2,'--',color = '#128912')\nplt.plot(x,y3,'--b')\nplt.plot(x,y4,'--',color = '#ca2eca')\n\nplt.show()\n\n\n\n\n\n%%shell\njupyter nbconvert --to html /content/강신성_데이터시각화_01wk_2.ipynb\n\n[NbConvertApp] Converting notebook /content/강신성_데이터시각화_01wk_2.ipynb to html\n[NbConvertApp] Writing 645143 bytes to /content/강신성_데이터시각화_01wk_2.html"
+  },
+  {
+    "objectID": "unrefined file/datavisuallization/강신성(202014107)_4.html",
+    "href": "unrefined file/datavisuallization/강신성(202014107)_4.html",
+    "title": "1. 사전작업",
+    "section": "",
+    "text": "라이브러리 설치\n\n\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n\n데이터 파일 불러오기 및 확인\n\n\ndf = pd.read_csv(\"https://raw.githubusercontent.com/guebin/DV2023/main/posts/titanic.csv\")\ndf.head()\n\n\n\n\n\n\n\n\nPassengerId\nSurvived\nPclass\nName\nSex\nAge\nSibSp\nParch\nTicket\nFare\nCabin\nEmbarked\nlogFare\n\n\n\n\n0\n1\n0\n3\nBraund, Mr. Owen Harris\nmale\n22.0\n1\n0\nA/5 21171\n7.2500\nNaN\nS\n1.981001\n\n\n1\n2\n1\n1\nCumings, Mrs. John Bradley (Florence Briggs Th...\nfemale\n38.0\n1\n0\nPC 17599\n71.2833\nC85\nC\n4.266662\n\n\n2\n3\n1\n3\nHeikkinen, Miss. Laina\nfemale\n26.0\n0\n0\nSTON/O2. 3101282\n7.9250\nNaN\nS\n2.070022\n\n\n3\n4\n1\n1\nFutrelle, Mrs. Jacques Heath (Lily May Peel)\nfemale\n35.0\n1\n0\n113803\n53.1000\nC123\nS\n3.972177\n\n\n4\n5\n0\n3\nAllen, Mr. William Henry\nmale\n35.0\n0\n0\n373450\n8.0500\nNaN\nS\n2.085672\n\n\n\n\n\n\n\n\n2. 그래프 산출\n\nplt.hist(df.Age, label = 'AgeDist of All')\nplt.hist(df.Age[df.Survived == 1], label = 'AgeDist of Survivors')\n\nplt.legend()\nplt.show()"
+  },
+  {
+    "objectID": "unrefined file/datavisuallization/강신성(202014107)_6.html",
+    "href": "unrefined file/datavisuallization/강신성(202014107)_6.html",
+    "title": "[문제 풀이] 특정 단어를 포함하는 열 선택",
+    "section": "",
+    "text": "데이터프레임 df의 열이름에 actor라는 단어가 포함된 column만을 선택하는 코드를 작성하라"
+  },
+  {
+    "objectID": "unrefined file/datavisuallization/강신성(202014107)_6.html#사전작업",
+    "href": "unrefined file/datavisuallization/강신성(202014107)_6.html#사전작업",
+    "title": "[문제 풀이] 특정 단어를 포함하는 열 선택",
+    "section": "1. 사전작업",
+    "text": "1. 사전작업\n\n라이브러리 설치\n\n\nimport pandas as pd\nimport numpy as np\n\n\n데이터 불러오기 및 확인\n\n\ndf=pd.read_csv('https://raw.githubusercontent.com/PacktPublishing/Pandas-Cookbook/master/data/movie.csv')\ndf.head()\n\n\n\n\n\n\n\n\ncolor\ndirector_name\nnum_critic_for_reviews\nduration\ndirector_facebook_likes\nactor_3_facebook_likes\nactor_2_name\nactor_1_facebook_likes\ngross\ngenres\n...\nnum_user_for_reviews\nlanguage\ncountry\ncontent_rating\nbudget\ntitle_year\nactor_2_facebook_likes\nimdb_score\naspect_ratio\nmovie_facebook_likes\n\n\n\n\n0\nColor\nJames Cameron\n723.0\n178.0\n0.0\n855.0\nJoel David Moore\n1000.0\n760505847.0\nAction|Adventure|Fantasy|Sci-Fi\n...\n3054.0\nEnglish\nUSA\nPG-13\n237000000.0\n2009.0\n936.0\n7.9\n1.78\n33000\n\n\n1\nColor\nGore Verbinski\n302.0\n169.0\n563.0\n1000.0\nOrlando Bloom\n40000.0\n309404152.0\nAction|Adventure|Fantasy\n...\n1238.0\nEnglish\nUSA\nPG-13\n300000000.0\n2007.0\n5000.0\n7.1\n2.35\n0\n\n\n2\nColor\nSam Mendes\n602.0\n148.0\n0.0\n161.0\nRory Kinnear\n11000.0\n200074175.0\nAction|Adventure|Thriller\n...\n994.0\nEnglish\nUK\nPG-13\n245000000.0\n2015.0\n393.0\n6.8\n2.35\n85000\n\n\n3\nColor\nChristopher Nolan\n813.0\n164.0\n22000.0\n23000.0\nChristian Bale\n27000.0\n448130642.0\nAction|Thriller\n...\n2701.0\nEnglish\nUSA\nPG-13\n250000000.0\n2012.0\n23000.0\n8.5\n2.35\n164000\n\n\n4\nNaN\nDoug Walker\nNaN\nNaN\n131.0\nNaN\nRob Walker\n131.0\nNaN\nDocumentary\n...\nNaN\nNaN\nNaN\nNaN\nNaN\nNaN\n12.0\n7.1\nNaN\n0\n\n\n\n\n5 rows × 28 columns\n\n\n\n\ndf.columns\n\nIndex(['color', 'director_name', 'num_critic_for_reviews', 'duration',\n       'director_facebook_likes', 'actor_3_facebook_likes', 'actor_2_name',\n       'actor_1_facebook_likes', 'gross', 'genres', 'actor_1_name',\n       'movie_title', 'num_voted_users', 'cast_total_facebook_likes',\n       'actor_3_name', 'facenumber_in_poster', 'plot_keywords',\n       'movie_imdb_link', 'num_user_for_reviews', 'language', 'country',\n       'content_rating', 'budget', 'title_year', 'actor_2_facebook_likes',\n       'imdb_score', 'aspect_ratio', 'movie_facebook_likes'],\n      dtype='object')\n\n\n\n열 이름에서 단어의 구분이 모두 '_'로 되어있으므로, 열이름에 split()함수를 적용시킬 수 있을 것 같다."
+  },
+  {
+    "objectID": "unrefined file/datavisuallization/강신성(202014107)_6.html#풀이",
+    "href": "unrefined file/datavisuallization/강신성(202014107)_6.html#풀이",
+    "title": "[문제 풀이] 특정 단어를 포함하는 열 선택",
+    "section": "2. 풀이",
+    "text": "2. 풀이\n\nfor 문을 이용하여 풀이해보자.\n\n\n['actor' in i.split('_') for i in df.columns]\n\n[False,\n False,\n False,\n False,\n False,\n True,\n True,\n True,\n False,\n False,\n True,\n False,\n False,\n False,\n True,\n False,\n False,\n False,\n False,\n False,\n False,\n False,\n False,\n False,\n True,\n False,\n False,\n False]"
+  },
+  {
+    "objectID": "unrefined file/datavisuallization/강신성(202014107)_6.html#결과",
+    "href": "unrefined file/datavisuallization/강신성(202014107)_6.html#결과",
+    "title": "[문제 풀이] 특정 단어를 포함하는 열 선택",
+    "section": "3. 결과",
+    "text": "3. 결과\n\ndf.loc[:, ['actor' in i.split('_') for i in df.columns]]\n\n\n\n\n\n\n\n\nactor_3_facebook_likes\nactor_2_name\nactor_1_facebook_likes\nactor_1_name\nactor_3_name\nactor_2_facebook_likes\n\n\n\n\n0\n855.0\nJoel David Moore\n1000.0\nCCH Pounder\nWes Studi\n936.0\n\n\n1\n1000.0\nOrlando Bloom\n40000.0\nJohnny Depp\nJack Davenport\n5000.0\n\n\n2\n161.0\nRory Kinnear\n11000.0\nChristoph Waltz\nStephanie Sigman\n393.0\n\n\n3\n23000.0\nChristian Bale\n27000.0\nTom Hardy\nJoseph Gordon-Levitt\n23000.0\n\n\n4\nNaN\nRob Walker\n131.0\nDoug Walker\nNaN\n12.0\n\n\n...\n...\n...\n...\n...\n...\n...\n\n\n4911\n318.0\nDaphne Zuniga\n637.0\nEric Mabius\nCrystal Lowe\n470.0\n\n\n4912\n319.0\nValorie Curry\n841.0\nNatalie Zea\nSam Underwood\n593.0\n\n\n4913\n0.0\nMaxwell Moody\n0.0\nEva Boehnke\nDavid Chandler\n0.0\n\n\n4914\n489.0\nDaniel Henney\n946.0\nAlan Ruck\nEliza Coupe\n719.0\n\n\n4915\n16.0\nBrian Herzlinger\n86.0\nJohn August\nJon Gunn\n23.0\n\n\n\n\n4916 rows × 6 columns\n\n\n\n완료"
   }
 ]
