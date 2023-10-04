@@ -71,9 +71,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -124,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://blog.naver.com/hc_ssk2800" rel="" target=""><i class="bi bi-naver" role="img">
+    <a class="nav-link" href="https://blog.naver.com/hc_ssk2800" rel="" target=""><i class="bi bi-book" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -167,21 +167,21 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
      <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
      <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
        <option value="" disabled="" selected="" hidden="">Order By</option>
        <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
          <option value="listing-date-sort" data-direction="asc">
           Date - Oldest
         </option>
          <option value="listing-date-sort" data-direction="desc">
           Date - Newest
-        </option>
-         <option value="listing-title-sort" data-direction="asc">
-          Title
         </option>
          <option value="listing-author" data-direction="asc">
           Author
@@ -193,102 +193,263 @@ ul.task-list li input[type="checkbox"] {
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1695717636128" data-listing-reading-time-sort="2">
+<div class="thumbnail">
+<p><a href="./posts/R Programming/Economatrics_hw2.html"> <img src="sprout.png" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/R Programming/Economatrics_hw2.html">
+<h3 class="no-anchor listing-title">
+강신성(202014107).html
+</h3>
+<div class="listing-subtitle">
 
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
-</th>
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-<th>
-<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-listing-file-modified-sort="1695717636128" data-listing-reading-time-sort="2" data-listing-title-sort="강신성(202014107).html" data-listing-filename-sort="Economatrics_hw2.Rmd">
-<td>
-<span class="listing-date">undefined</span>
-</td>
-<td>
-<a href="./posts/R Programming/Economatrics_hw2.html" class="title listing-title">강신성(202014107).html</a>
-</td>
-<td>
-<span class="listing-author"></span>
-</td>
-</tr>
-<tr data-index="1" data-categories="R" data-listing-date-sort="1695654000000" data-listing-file-modified-sort="1695718517079" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="[문제 풀이] while을 이용한 간단한 문제풀이" data-listing-filename-sort="Economatrics_hw1.Rmd">
-<td>
-<span class="listing-date">Sep 26, 2023</span>
-</td>
-<td>
-<a href="./posts/R Programming/Economatrics_hw1.html" class="title listing-title">[문제 풀이] while을 이용한 간단한 문제풀이</a>
-</td>
-<td>
-<span class="listing-author">강신성 </span>
-</td>
-</tr>
-<tr data-index="2" data-categories="python,data visualization" data-listing-date-sort="1695567600000" data-listing-file-modified-sort="1695646476505" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="[문제 풀이] 데이터프레임 : 특정 열의 재가공" data-listing-filename-sort="특정 열의 재가공.ipynb">
-<td>
-<span class="listing-date">Sep 25, 2023</span>
-</td>
-<td>
-<a href="./posts/Data Visualization/Solution Assemble/특정 열의 재가공.html" class="title listing-title">[문제 풀이] 데이터프레임 : 특정 열의 재가공</a>
-</td>
-<td>
-<span class="listing-author">강신성 </span>
-</td>
-</tr>
-<tr data-index="3" data-categories="python,data visualization" data-listing-date-sort="1695222000000" data-listing-file-modified-sort="1695284470663" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="[문제 풀이] 특정 단어를 포함하는 열 선택" data-listing-filename-sort="특정 단어를 포함하는 열 선택.ipynb">
-<td>
-<span class="listing-date">Sep 21, 2023</span>
-</td>
-<td>
-<a href="./posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html" class="title listing-title">[문제 풀이] 특정 단어를 포함하는 열 선택</a>
-</td>
-<td>
-<span class="listing-author">강신성 </span>
-</td>
-</tr>
-<tr data-index="4" data-categories="python,analisis,titanic" data-listing-date-sort="1694530800000" data-listing-file-modified-sort="1695280979133" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="[Kaggle] - 1, titanic_1st practice" data-listing-filename-sort="practice.ipynb">
-<td>
-<span class="listing-date">Sep 13, 2023</span>
-</td>
-<td>
-<a href="./posts/Machine Learning in Practice/Titanic/kaggle_(1) titanic_1st_practice/practice.html" class="title listing-title">[Kaggle] - 1, titanic_1st practice</a>
-</td>
-<td>
-<span class="listing-author">강신성 </span>
-</td>
-</tr>
-<tr data-index="5" data-categories="python,analysis,titanic" data-listing-date-sort="1694530800000" data-listing-file-modified-sort="1695280847466" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="[Kaggle] - 2, titanic_code by alexis cook" data-listing-filename-sort="code-by-alexis-cook.ipynb">
-<td>
-<span class="listing-date">Sep 13, 2023</span>
-</td>
-<td>
-<a href="./posts/Machine Learning in Practice/Titanic/kaggle_(2) titanic_code by alexis cook/code-by-alexis-cook.html" class="title listing-title">[Kaggle] - 2, titanic_code by alexis cook</a>
-</td>
-<td>
-<span class="listing-author">강신성 </span>
-</td>
-</tr>
-<tr data-index="6" data-categories="python,analysis,titanic" data-listing-date-sort="1694530800000" data-listing-file-modified-sort="1695280797954" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="[Kaggle] - 3, titanic_autogluon" data-listing-filename-sort="autogluon.ipynb">
-<td>
-<span class="listing-date">Sep 13, 2023</span>
-</td>
-<td>
-<a href="./posts/Machine Learning in Practice/Titanic/kaggle_(3) titanic_autogluon/autogluon.html" class="title listing-title">[Kaggle] - 3, titanic_autogluon</a>
-</td>
-<td>
-<span class="listing-author">강신성 </span>
-</td>
-</tr>
-</tbody>
+</div>
+<div class="listing-description">
+————————————————homework 2————————————————
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/R Programming/Economatrics_hw2.html"> </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="R" data-listing-date-sort="1695654000000" data-listing-file-modified-sort="1695718517079" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./posts/R Programming/Economatrics_hw1.html"> <img src="sprout.png" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/R Programming/Economatrics_hw1.html">
+<h3 class="no-anchor listing-title">
+[문제 풀이] while을 이용한 간단한 문제풀이
+</h3>
+<div class="listing-subtitle">
 
-</table>
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+</div>
+<a href="./posts/R Programming/Economatrics_hw1.html">
+<div class="listing-description">
+
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/R Programming/Economatrics_hw1.html">
+<div class="listing-date">
+Sep 26, 2023
+</div>
+<div class="listing-author">
+강신성
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="python,data visualization" data-listing-date-sort="1695567600000" data-listing-file-modified-sort="1695646476505" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./posts/Data Visualization/Solution Assemble/특정 열의 재가공.html"> <img src="sprout.png" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/Data Visualization/Solution Assemble/특정 열의 재가공.html">
+<h3 class="no-anchor listing-title">
+[문제 풀이] 데이터프레임 : 특정 열의 재가공
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
+python
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('data visualization'); return false;">
+data visualization
+</div>
+</div>
+<a href="./posts/Data Visualization/Solution Assemble/특정 열의 재가공.html">
+<div class="listing-description">
+주어진 자료에서 입학년도를 추가하고 싶다면 어떻게 해야 할까?
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/Data Visualization/Solution Assemble/특정 열의 재가공.html">
+<div class="listing-date">
+Sep 25, 2023
+</div>
+<div class="listing-author">
+강신성
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="python,data visualization" data-listing-date-sort="1695222000000" data-listing-file-modified-sort="1695284470663" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html"> <img src="sprout.png" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html">
+<h3 class="no-anchor listing-title">
+[문제 풀이] 특정 단어를 포함하는 열 선택
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
+python
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('data visualization'); return false;">
+data visualization
+</div>
+</div>
+<a href="./posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html">
+<div class="listing-description">
+데이터프레임 <code>df</code>의 열이름에 <code>actor</code>라는 단어가 포함된 <code>column</code>만을 선택하는 코드를 작성하라
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html">
+<div class="listing-date">
+Sep 21, 2023
+</div>
+<div class="listing-author">
+강신성
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="python,analysis,titanic" data-listing-date-sort="1694530800000" data-listing-file-modified-sort="1695280797954" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./posts/Machine Learning in Practice/Titanic/kaggle_(3) titanic_autogluon/autogluon.html"> <img src="./posts/Machine Learning in Practice/Titanic/kaggle_(3) titanic_autogluon/automatic.jpg" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/Machine Learning in Practice/Titanic/kaggle_(3) titanic_autogluon/autogluon.html">
+<h3 class="no-anchor listing-title">
+[Kaggle] - 3, titanic_autogluon
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
+python
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
+analysis
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('titanic'); return false;">
+titanic
+</div>
+</div>
+<a href="./posts/Machine Learning in Practice/Titanic/kaggle_(3) titanic_autogluon/autogluon.html">
+<div class="listing-description">
+학습 과정에 해당
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/Machine Learning in Practice/Titanic/kaggle_(3) titanic_autogluon/autogluon.html">
+<div class="listing-date">
+Sep 13, 2023
+</div>
+<div class="listing-author">
+강신성
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="python,analysis,titanic" data-listing-date-sort="1694530800000" data-listing-file-modified-sort="1695280847466" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./posts/Machine Learning in Practice/Titanic/kaggle_(2) titanic_code by alexis cook/code-by-alexis-cook.html"> <img src="./posts/Machine Learning in Practice/Titanic/kaggle_(2) titanic_code by alexis cook/coop.png" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/Machine Learning in Practice/Titanic/kaggle_(2) titanic_code by alexis cook/code-by-alexis-cook.html">
+<h3 class="no-anchor listing-title">
+[Kaggle] - 2, titanic_code by alexis cook
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
+python
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
+analysis
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('titanic'); return false;">
+titanic
+</div>
+</div>
+<a href="./posts/Machine Learning in Practice/Titanic/kaggle_(2) titanic_code by alexis cook/code-by-alexis-cook.html">
+<div class="listing-description">
+<code>-</code>일단 해당 버전을 저장하도록 하자.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/Machine Learning in Practice/Titanic/kaggle_(2) titanic_code by alexis cook/code-by-alexis-cook.html">
+<div class="listing-date">
+Sep 13, 2023
+</div>
+<div class="listing-author">
+강신성
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-categories="python,analisis,titanic" data-listing-date-sort="1694530800000" data-listing-file-modified-sort="1695280979133" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./posts/Machine Learning in Practice/Titanic/kaggle_(1) titanic_1st_practice/practice.html"> <img src="./posts/Machine Learning in Practice/Titanic/kaggle_(1) titanic_1st_practice/start.jpg" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/Machine Learning in Practice/Titanic/kaggle_(1) titanic_1st_practice/practice.html">
+<h3 class="no-anchor listing-title">
+[Kaggle] - 1, titanic_1st practice
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
+python
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('analisis'); return false;">
+analisis
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('titanic'); return false;">
+titanic
+</div>
+</div>
+<a href="./posts/Machine Learning in Practice/Titanic/kaggle_(1) titanic_1st_practice/practice.html">
+<div class="listing-description">
+<code>-</code>제출 결과는 리더보드에서 확인 가능
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/Machine Learning in Practice/Titanic/kaggle_(1) titanic_1st_practice/practice.html">
+<div class="listing-date">
+Sep 13, 2023
+</div>
+<div class="listing-author">
+강신성
+</div>
+</a>
+</div>
+</div>
+</div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
