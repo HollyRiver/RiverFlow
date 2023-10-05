@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>RiverFlow – quarto-input0cf52708</title>
+<title>RiverFlow – quarto-input62e3008d</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -149,7 +149,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li>라이브러리 설치</li>
 </ol>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1693827071709,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:299,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-execution_count="9">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:299,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1693827071709,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cv2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -157,7 +157,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol start="2" type="1">
 <li>파일 불러오기 및 행렬로 저장</li>
 </ol>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1693827082546,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:285,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="9f07abb7-e172-4fba-b9a7-9620091db91a" data-execution_count="10">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:285,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1693827082546,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="9f07abb7-e172-4fba-b9a7-9620091db91a" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>wget https:<span class="op">//</span>raw.githubusercontent.com<span class="op">/</span>guebin<span class="op">/</span><span class="dv">2021</span><span class="er">DV</span><span class="op">/</span>master<span class="op">/</span>_notebooks<span class="op">/</span>hw_img.png</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>img <span class="op">=</span> cv2.imread(<span class="st">"hw_img.png"</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>rm hw_img.png</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -175,13 +175,13 @@ hw_img.png            0%[                    ]       0  --.-KB/s               h
 </code></pre>
 </div>
 </div>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1693827107020,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:1879,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="d790c787-02f4-4e22-e309-880654ab0454" data-execution_count="12">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:1879,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1693827107020,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="d790c787-02f4-4e22-e309-880654ab0454" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>plt.imshow(img)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="강신성(202014107)_1_files/figure-html/cell-4-output-1.png" class="img-fluid"></p>
 </div>
 </div>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1693827123633,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:292,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="134436cd-4291-4520-803c-2f6cc6d8729d" data-execution_count="14">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:292,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1693827123633,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="134436cd-4291-4520-803c-2f6cc6d8729d" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>img.shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="14">
 <pre><code>(531, 468, 3)</code></pre>
@@ -190,29 +190,29 @@ hw_img.png            0%[                    ]       0  --.-KB/s               h
 <ol start="3" type="1">
 <li>색상별 행렬 재분류 및 명도 변환</li>
 </ol>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1693827204086,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:312,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-execution_count="15">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:312,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1693827204086,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> img[:,:,<span class="dv">0</span>]</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> img[:,:,<span class="dv">1</span>]</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> img[:,:,<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1693827484485,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:280,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-execution_count="16">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:280,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1693827484485,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>rr <span class="op">=</span> cv2.equalizeHist(r)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>gg <span class="op">=</span> cv2.equalizeHist(g)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>bb <span class="op">=</span> cv2.equalizeHist(b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1693827638951,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-execution_count="19">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1693827638951,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>img_equalized <span class="op">=</span> np.stack([rr,gg,bb], axis <span class="op">=</span> <span class="op">-</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="4" type="1">
 <li>결과값 출력 및 비교</li>
 </ol>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1693827646288,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:1214,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="0d739216-14be-4943-8718-67f54658b30f" data-execution_count="21">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:1214,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1693827646288,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="0d739216-14be-4943-8718-67f54658b30f" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>plt.imshow(img_equalized)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="강신성(202014107)_1_files/figure-html/cell-9-output-1.png" class="img-fluid"></p>
 </div>
 </div>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1693827730781,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:1591,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="3e6a896e-8a0c-4aab-8c88-b34cd7cdf48e" data-execution_count="23">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:1591,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1693827730781,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="3e6a896e-8a0c-4aab-8c88-b34cd7cdf48e" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>plt.imshow(np.concatenate([img, img_equalized], axis <span class="op">=</span> <span class="dv">1</span>))<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="강신성(202014107)_1_files/figure-html/cell-10-output-1.png" class="img-fluid"></p>
