@@ -1,9 +1,13 @@
 ---
 title: "RiverFlow"
 listing:
-  contents: posts
-  sort: "date desc"
-  type: table
+  contents:
+     - "posts/"
+  sort:
+     - "date desc"
+     - "title desc"
+  type: default
+  image-placeholder: sprout.png
   categories: true
   sort-ui: true
   filter-ui: true
