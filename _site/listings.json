@@ -3,13 +3,14 @@
     "listing": "/index.html",
     "items": [
       "/posts/R Programming/Economatrics_hw2.html",
+      "/posts/Data Visualization/Review/2. 꺾은선, 산점도, 객체지향화.html",
       "/posts/Data Visualization/Review/1. Introduction(그래프, 이미지 이퀼라이징).html",
       "/posts/R Programming/Economatrics_hw1.html",
       "/posts/Data Visualization/Solution Assemble/특정 열의 재가공.html",
       "/posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html",
-      "/posts/Machine Learning in Practice/Titanic/kaggle_(3) titanic_autogluon/autogluon.html",
-      "/posts/Machine Learning in Practice/Titanic/kaggle_(2) titanic_code by alexis cook/code-by-alexis-cook.html",
-      "/posts/Machine Learning in Practice/Titanic/kaggle_(1) titanic_1st_practice/practice.html"
+      "/posts/Machine Learning in Practice/Titanic/2. code-by-alexis-cook.html",
+      "/posts/Machine Learning in Practice/Titanic/3. autogluon.html",
+      "/posts/Machine Learning in Practice/Titanic/1. practice.html"
     ]
   }
 ]
