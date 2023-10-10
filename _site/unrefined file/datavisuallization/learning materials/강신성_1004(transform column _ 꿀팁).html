@@ -166,7 +166,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696402840642,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:729,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-execution_count="1">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:729,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696402840642,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> <span class="op">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -186,11 +186,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>라고 하자.</p>
 </blockquote>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696403071786,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:331,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-execution_count="2">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:331,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696403071786,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/DV2022/master/posts/FIFA23_official_data.csv'</span>)   <span class="co">## DataFrame</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> df.Height   <span class="co">## Series</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696403189693,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:465,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="c93adec3-2c00-4780-9b4d-e3747c705b65" data-execution_count="4">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:465,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696403189693,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="c93adec3-2c00-4780-9b4d-e3747c705b65" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>s</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>0        189cm
@@ -210,7 +210,7 @@ Name: Height, Length: 17660, dtype: object</code></pre>
 <blockquote class="blockquote">
 <p>뒤에 cm가 붙어있는 범주형 자료로 저장되어있음.</p>
 </blockquote>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696403539225,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:1,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="2e710e08-0971-47d2-99fe-47fef1c421a7" data-execution_count="13">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:1,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696403539225,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="2e710e08-0971-47d2-99fe-47fef1c421a7" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>s.<span class="bu">apply</span>(<span class="kw">lambda</span> x : <span class="bu">int</span>(x[:<span class="dv">3</span>])) <span class="co">## 집계함수가 아닌 변환함수만 적용할 수 있음. 각 원소에 함수 적용.</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">##s.apply(lambda x : x[:3]).apply(int)    ## 연쇄적으로</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">##s.apply(lambda x : x[:3]).astype('int64')   ## astype() 이용</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -235,17 +235,17 @@ Name: Height, Length: 17660, dtype: int64</code></pre>
 </section>
 <section id="d.-s.str-idx.str" class="level3">
 <h3 class="anchored" data-anchor-id="d.-s.str-idx.str"><strong>D. <code>s.str</code>, <code>idx.str</code></strong></h3>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696403697501,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-execution_count="14">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696403697501,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/DV2022/master/posts/FIFA23_official_data.csv'</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> df.Height</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696403735489,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:3,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="69b353ab-cbff-45bd-bb7f-506ebfce9343" data-execution_count="15">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696403735489,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="69b353ab-cbff-45bd-bb7f-506ebfce9343" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">"180cm"</span>[:<span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
 <pre><code>'180'</code></pre>
 </div>
 </div>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696403806457,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:3,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="3087d74a-7e08-4dad-f5f1-327b2a665877" data-execution_count="17">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696403806457,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="3087d74a-7e08-4dad-f5f1-327b2a665877" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">'180cm'</span>.replace(<span class="st">'cm'</span>,<span class="st">''</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
 <pre><code>'180'</code></pre>
@@ -254,7 +254,7 @@ Name: Height, Length: 17660, dtype: int64</code></pre>
 <blockquote class="blockquote">
 <p>위와 같은 연산을 시리즈에 적용시키고 싶다.</p>
 </blockquote>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696403862250,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:414,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="eddcbfd6-27d1-435d-8ab1-0122cd9b6a79" data-execution_count="18">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:414,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696403862250,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="eddcbfd6-27d1-435d-8ab1-0122cd9b6a79" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>s.<span class="bu">str</span>[:<span class="dv">3</span>]</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co">##s.str.replace('cm', '')   ## 개별 문자열과 동일하게 메소드를 적용시켜도 된다.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="18">
@@ -276,7 +276,7 @@ Name: Height, Length: 17660, dtype: object</code></pre>
 <p>문자열의 메소드를 그대로 적용 가능</p>
 </blockquote>
 <p>- 예시2 : 원소별로 isupper를 수행(대문자인지 판별)</p>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696403889507,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="0b5aac80-b68b-4c65-d405-ea7175718b2f" data-execution_count="19">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696403889507,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="0b5aac80-b68b-4c65-d405-ea7175718b2f" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>_s <span class="op">=</span> pd.Series([<span class="st">'A'</span>,<span class="st">'B'</span>,<span class="st">'C'</span>,<span class="st">'d'</span>,<span class="st">'e'</span>,<span class="st">'F'</span>])</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>_s</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="19">
@@ -289,7 +289,7 @@ Name: Height, Length: 17660, dtype: object</code></pre>
 dtype: object</code></pre>
 </div>
 </div>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696403895591,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:3,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="1eae2d35-2a7e-4ce1-aa39-1fdf7ea44af6" data-execution_count="20">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696403895591,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="1eae2d35-2a7e-4ce1-aa39-1fdf7ea44af6" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>_s.<span class="bu">str</span>.isupper()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="20">
 <pre><code>0     True
@@ -302,11 +302,11 @@ dtype: bool</code></pre>
 </div>
 </div>
 <p>- 예시3 : 원소별로 공백 제거(pd.Serise 뿐만 아니라 pd.index 자료형에도 사용가능)</p>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696403912737,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:1,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-execution_count="21">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:1,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696403912737,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/DV2022/master/posts/FIFA23_official_data.csv'</span>)</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>idx <span class="op">=</span> df.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696403924419,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:313,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="55f24d0a-f3d3-4dc4-c0b4-1d491a76bd9a" data-execution_count="22">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:313,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696403924419,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="55f24d0a-f3d3-4dc4-c0b4-1d491a76bd9a" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>idx.<span class="bu">str</span>.replace(<span class="st">' '</span>, <span class="st">''</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="22">
 <pre><code>Index(['ID', 'Name', 'Age', 'Photo', 'Nationality', 'Flag', 'Overall',
@@ -321,7 +321,7 @@ dtype: bool</code></pre>
 </section>
 <section id="e.-s.astype" class="level3">
 <h3 class="anchored" data-anchor-id="e.-s.astype">**E. <code>s.astype()</code></h3>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696404004363,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="00729efa-9da4-4ad1-cf54-b654fb18330b" data-execution_count="23">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696404004363,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="00729efa-9da4-4ad1-cf54-b654fb18330b" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> pd.Series(<span class="bu">list</span>(<span class="st">'12345'</span>))</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>s</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="23">
@@ -333,7 +333,7 @@ dtype: bool</code></pre>
 dtype: object</code></pre>
 </div>
 </div>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696404030150,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="94bfd736-80ec-4c20-9689-bd1d38e2ebb1" data-execution_count="24">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696404030150,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="94bfd736-80ec-4c20-9689-bd1d38e2ebb1" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>s.astype(<span class="bu">int</span>)</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co">##s.apply(int)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="24">
@@ -346,11 +346,11 @@ dtype: int64</code></pre>
 </div>
 </div>
 <p>- 예시2 : 원소의 타입을 변환한 이후 브로드캐스팅</p>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696404113531,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:1,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-execution_count="26">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:1,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696404113531,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>s1 <span class="op">=</span> pd.Series(<span class="bu">list</span>(<span class="st">'12345'</span>))</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>s2 <span class="op">=</span> pd.Series([<span class="op">-</span><span class="dv">1</span>,<span class="op">-</span><span class="dv">2</span>,<span class="op">-</span><span class="dv">3</span>,<span class="op">-</span><span class="dv">4</span>,<span class="op">-</span><span class="dv">5</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;error&quot;,&quot;timestamp&quot;:1696404124277,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:3,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="5376c3de-38de-4a2e-db01-45c087d979a6" data-execution_count="27">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;error&quot;,&quot;timestamp&quot;:1696404124277,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="5376c3de-38de-4a2e-db01-45c087d979a6" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>s1<span class="op">+</span>s2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <pre><code>TypeError: ignored</code></pre>
@@ -359,7 +359,7 @@ dtype: int64</code></pre>
 <blockquote class="blockquote">
 <p>형식이 달라 불가능</p>
 </blockquote>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696404153406,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:3,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="7bf70562-c92f-45de-9d8d-3ec367980656" data-execution_count="28">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696404153406,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="7bf70562-c92f-45de-9d8d-3ec367980656" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>s1.astype(<span class="bu">int</span>) <span class="op">+</span> s2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="28">
 <pre><code>0    0
@@ -370,7 +370,7 @@ dtype: int64</code></pre>
 dtype: int64</code></pre>
 </div>
 </div>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696404168740,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="9b57ef87-bfba-47c4-cc3e-4ccb7bf4354d" data-execution_count="29">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696404168740,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="9b57ef87-bfba-47c4-cc3e-4ccb7bf4354d" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>s2.astype(<span class="bu">str</span>) <span class="op">+</span> s1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="29">
 <pre><code>0    -11
@@ -382,7 +382,7 @@ dtype: object</code></pre>
 </div>
 </div>
 <p>- 예시3 : 원소의 타입을 변환한 이후 브로드캐스팅(str)</p>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696404197607,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:4,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="8e9a1a1a-ede8-42a5-ce63-536af1e4d2cc" data-execution_count="30">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:4,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696404197607,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="8e9a1a1a-ede8-42a5-ce63-536af1e4d2cc" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"https://raw.githubusercontent.com/guebin/DV2023/main/posts/titanic.csv"</span>)[:<span class="dv">5</span>]</span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="30">
@@ -739,7 +739,7 @@ dtype: object</code></pre>
 </tbody>
 </table>
 <p>둘다 문자열이면 단순히 +를 이용해 브로드캐스팅하면 되지만, 타입이 달라 불가하다.</p>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696404332527,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="66b852ac-c6ba-49ae-f063-e4a4766ebbb0" data-execution_count="33">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696404332527,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="66b852ac-c6ba-49ae-f063-e4a4766ebbb0" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>df.Embarked <span class="op">+</span> df.Pclass.<span class="bu">apply</span>(<span class="bu">str</span>)</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="co">##df.Embarked + df.Pclass.astype(str)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="33">
@@ -755,7 +755,7 @@ dtype: object</code></pre>
 <section id="f.-컴프리헨션-lambda-map을-무시하지-말-것" class="level3">
 <h3 class="anchored" data-anchor-id="f.-컴프리헨션-lambda-map을-무시하지-말-것">**F. 컴프리헨션, <code>lambda + map</code>을 무시하지 말 것</h3>
 <p>- 예시1</p>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696404370147,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:3,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="1dfa04d1-5249-4383-c5b5-ad139eee3dd0" data-execution_count="34">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696404370147,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="1dfa04d1-5249-4383-c5b5-ad139eee3dd0" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"https://raw.githubusercontent.com/guebin/DV2023/main/posts/titanic.csv"</span>)[:<span class="dv">5</span>]</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="34">
@@ -1082,13 +1082,13 @@ f(\text{sex}, \text{sibsp}) =
 0.2 + 0.15 \times \text{sibsp} &amp; \text{otherwise}
 \end{cases}
 \]</span></p>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696404575658,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="d68b653f-fd15-4e2c-9f3a-d7da39d397f3" data-execution_count="38">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696404575658,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="d68b653f-fd15-4e2c-9f3a-d7da39d397f3" data-execution_count="38">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> sex, sibsp : <span class="fl">0.7</span><span class="op">+</span><span class="fl">0.25</span><span class="op">*</span>sibsp <span class="cf">if</span> sex <span class="op">==</span> <span class="st">'female'</span> <span class="cf">else</span> <span class="fl">0.2</span><span class="op">+</span><span class="fl">0.15</span><span class="op">*</span>sibsp, df.Sex, df.SibSp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="38">
 <pre><code>[0.35, 0.95, 0.7, 0.95, 0.2]</code></pre>
 </div>
 </div>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696404672838,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:4,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="50416ad3-6e19-4f3e-d241-6c946933cb52" data-execution_count="39">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:4,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696404672838,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="50416ad3-6e19-4f3e-d241-6c946933cb52" data-execution_count="39">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>df.assign(Probablity <span class="op">=</span> <span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> sex, sibsp : <span class="fl">0.7</span><span class="op">+</span><span class="fl">0.25</span><span class="op">*</span>sibsp <span class="cf">if</span> sex <span class="op">==</span> <span class="st">'female'</span> <span class="cf">else</span> <span class="fl">0.2</span><span class="op">+</span><span class="fl">0.15</span><span class="op">*</span>sibsp, df.Sex, df.SibSp)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="39">
 
@@ -1413,7 +1413,7 @@ f(\text{sex}, \text{sibsp}) =
 </div>
 </div>
 <p>- 예시2</p>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696404691343,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:3,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="185a2312-8af3-4b5f-b44e-6dc87879d137" data-execution_count="40">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696404691343,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="185a2312-8af3-4b5f-b44e-6dc87879d137" data-execution_count="40">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"https://raw.githubusercontent.com/guebin/DV2023/main/posts/titanic.csv"</span>)[:<span class="dv">5</span>]</span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="40">
@@ -1769,7 +1769,7 @@ f(\text{sex}, \text{sibsp}) =
 </tr>
 </tbody>
 </table>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;error&quot;,&quot;timestamp&quot;:1696405139153,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:3,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="5130a371-675f-4ea8-faed-209d7fb4e85e" data-execution_count="53">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;error&quot;,&quot;timestamp&quot;:1696405139153,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="5130a371-675f-4ea8-faed-209d7fb4e85e" data-execution_count="53">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>_lst <span class="op">=</span> [[title,<span class="ss">f'</span><span class="sc">{</span>first_name<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>last_name<span class="sc">}</span><span class="ss">'</span>] <span class="cf">for</span> last_name, title, first_name <span class="kw">in</span> df.Name.<span class="bu">str</span>.replace(<span class="st">', '</span>,<span class="st">'/'</span>).<span class="bu">str</span>.replace(<span class="st">'. '</span>,<span class="st">'/'</span>).<span class="bu">str</span>.split(<span class="st">'/'</span>)]</span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(_lst, columns<span class="op">=</span>[<span class="st">'title'</span>,<span class="st">'Name2'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -1779,7 +1779,7 @@ f(\text{sex}, \text{sibsp}) =
 <pre><code>ValueError: ignored</code></pre>
 </div>
 </div>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696405163430,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="34488e40-8d8b-4568-aabf-28bf7b494ec1" data-execution_count="54">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696405163430,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="34488e40-8d8b-4568-aabf-28bf7b494ec1" data-execution_count="54">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>df.Name.<span class="bu">str</span>.replace(<span class="st">', '</span>,<span class="st">'/'</span>).<span class="bu">str</span>.replace(<span class="st">'. '</span>,<span class="st">'/'</span>).<span class="bu">str</span>.split(<span class="st">'/'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>FutureWarning: The default value of regex will change from True to False in a future version.</code></pre>
@@ -1797,7 +1797,7 @@ Name: Name, dtype: object</code></pre>
 <section id="fifa23-시각화" class="level2">
 <h2 class="anchored" data-anchor-id="fifa23-시각화">3. FIFA23 시각화</h2>
 <p><code># DV2022-중간고사-4-(2)의 변형</code>:</p>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696405223187,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:619,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="07045f45-6f8d-48f2-e08e-dcb430a7d871" data-execution_count="55">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:619,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696405223187,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="07045f45-6f8d-48f2-e08e-dcb430a7d871" data-execution_count="55">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/DV2021/master/_notebooks/2021-10-25-FIFA22_official_data.csv'</span>)</span>
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="55">
@@ -2170,7 +2170,7 @@ Name: Name, dtype: object</code></pre>
 <p><strong>A</strong>. Column의 이름에서 공백을 제거하라.</p>
 <p><strong>B</strong>. 결측치가 50%이상인 컬럼을 찾고 이를 제거하라. 그 뒤에 <code>.dropna()</code>를 사용하여 결측치가 포함된 행을 제거하라.</p>
 <p><strong>C</strong>. <code>position_dict</code>를 이용하여 <code>df.Position</code>을 적절하게 변환하라. 변환된 값을 <code>df.Position</code>에 저장하라.</p>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696405854541,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="f9448c2f-42af-474f-fc2e-0f406b7fd6ad" data-execution_count="62">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696405854541,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="f9448c2f-42af-474f-fc2e-0f406b7fd6ad" data-execution_count="62">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>position_dict <span class="op">=</span> {</span>
 <span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'GOALKEEPER'</span>:{<span class="st">'GK'</span>},</span>
 <span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'DEFENDER'</span>:{<span class="st">'CB'</span>,<span class="st">'RCB'</span>,<span class="st">'LCB'</span>,<span class="st">'RB'</span>,<span class="st">'LB'</span>,<span class="st">'RWB'</span>,<span class="st">'LWB'</span>},</span>
@@ -2201,7 +2201,7 @@ Name: Name, dtype: object</code></pre>
 </div>
 <section id="a.-열의-이름에서-공백-제거" class="level3">
 <h3 class="anchored" data-anchor-id="a.-열의-이름에서-공백-제거">A. 열의 이름에서 공백 제거</h3>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696405447191,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="bb36d176-0f06-47f6-f430-a41785879219" data-execution_count="59">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696405447191,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="bb36d176-0f06-47f6-f430-a41785879219" data-execution_count="59">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>_df <span class="op">=</span> df.set_axis(df.columns.<span class="bu">str</span>.replace(<span class="st">' '</span>, <span class="st">''</span>),axis <span class="op">=</span> <span class="dv">1</span>)</span>
 <span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>_df.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="59">
@@ -2225,7 +2225,7 @@ Name: Name, dtype: object</code></pre>
 </section>
 <section id="b.-결측치-제거" class="level3">
 <h3 class="anchored" data-anchor-id="b.-결측치-제거">B. 결측치 제거</h3>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696405506117,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:3,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="33d2de8a-07e5-4967-edde-63c18467e5af" data-execution_count="60">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696405506117,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="33d2de8a-07e5-4967-edde-63c18467e5af" data-execution_count="60">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>__df <span class="op">=</span> _df.loc[:, <span class="kw">lambda</span> __df : __df.isna().mean() <span class="op">&lt;</span> <span class="fl">0.5</span>].dropna()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="60">
 
@@ -2739,12 +2739,12 @@ Name: Name, dtype: object</code></pre>
 </section>
 <section id="c.-position-칼럼의-변환" class="level3">
 <h3 class="anchored" data-anchor-id="c.-position-칼럼의-변환">C. position 칼럼의 변환</h3>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696405902034,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:326,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-execution_count="64">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:326,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696405902034,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="64">
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>temp <span class="op">=</span> df.set_axis(df.columns.<span class="bu">str</span>.replace(<span class="st">' '</span>,<span class="st">''</span>),axis<span class="op">=</span><span class="dv">1</span>)<span class="op">\</span></span>
 <span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>.loc[:,<span class="kw">lambda</span> _df: _df.isna().mean() <span class="op">&lt;</span><span class="fl">0.5</span>].dropna()<span class="op">\</span></span>
 <span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>.assign(Position <span class="op">=</span> <span class="kw">lambda</span> _df: _df.Position.<span class="bu">str</span>.split(<span class="st">'&gt;'</span>).<span class="bu">str</span>[<span class="op">-</span><span class="dv">1</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: [k <span class="cf">for</span> k,v <span class="kw">in</span> position_dict.items() <span class="cf">if</span> x <span class="kw">in</span> v][<span class="dv">0</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696405908606,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:436,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;}}" data-outputid="884ef657-c000-44c1-c9f4-96c0985b773d" data-execution_count="65">
+<div class="cell" data-executioninfo="{&quot;elapsed&quot;:436,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1696405908606,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="884ef657-c000-44c1-c9f4-96c0985b773d" data-execution_count="65">
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>temp.Position</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="65">
 <pre><code>0        MIDFIELDER
