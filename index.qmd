@@ -2,7 +2,7 @@
 title: "RiverFlow"
 listing:
   contents:
-     - "posts/"
+     - "post/"
   sort:
      - "date desc"
      - "title desc"
