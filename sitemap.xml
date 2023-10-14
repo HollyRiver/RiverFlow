@@ -1,99 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/unrefined file/r_practice/Regression Analysis.html</loc>
-    <lastmod>2023-10-10T14:06:50.978Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/unrefined file/datavisuallization/강신성(202014107)_5.html</loc>
-    <lastmod>2023-10-10T14:06:45.502Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/unrefined file/datavisuallization/강신성(202014107)_3.html</loc>
-    <lastmod>2023-10-10T14:06:44.184Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/unrefined file/datavisuallization/강신성(202014107)_1.html</loc>
-    <lastmod>2023-10-10T14:06:43.190Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/unrefined file/datavisuallization/learning materials/exam_practice.html</loc>
-    <lastmod>2023-10-10T14:06:40.830Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/unrefined file/datavisuallization/learning materials/6. Pandas, 데이터프레임 핸들링.html</loc>
-    <lastmod>2023-10-10T14:06:39.874Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/posts/R Programming/Economatrics_hw1.html</loc>
-    <lastmod>2023-10-10T14:06:30.048Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/posts/Machine Learning in Practice/Titanic/2. code-by-alexis-cook.html</loc>
-    <lastmod>2023-10-10T14:06:28.937Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/posts/Data Visualization/Solution Assemble/특정 열의 재가공.html</loc>
-    <lastmod>2023-10-10T14:06:27.872Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/posts/Data Visualization/Review/5. Pandas의 기본.html</loc>
-    <lastmod>2023-10-10T14:06:26.331Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/posts/Data Visualization/Review/2. 꺾은선, 산점도, 객체지향화.html</loc>
-    <lastmod>2023-10-10T14:06:24.030Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/index.html</loc>
-    <lastmod>2023-10-10T14:06:21.786Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/about.html</loc>
-    <lastmod>2023-10-10T14:06:20.454Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/posts/Data Visualization/Review/1. Introduction(그래프, 이미지 이퀼라이징).html</loc>
-    <lastmod>2023-10-10T14:06:22.673Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/posts/Data Visualization/Review/3. Seaborn.html</loc>
-    <lastmod>2023-10-10T14:06:24.861Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html</loc>
-    <lastmod>2023-10-10T14:06:27.053Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/posts/Machine Learning in Practice/Titanic/1. practice.html</loc>
-    <lastmod>2023-10-10T14:06:28.436Z</lastmod>
+    <loc>https://HollyRiver.github.io/RiverFlow/posts/R Programming/Economatrics_hw2.html</loc>
+    <lastmod>2023-10-14T06:53:03.859Z</lastmod>
   </url>
   <url>
     <loc>https://HollyRiver.github.io/RiverFlow/posts/Machine Learning in Practice/Titanic/3. autogluon.html</loc>
-    <lastmod>2023-10-10T14:06:29.397Z</lastmod>
+    <lastmod>2023-10-14T06:53:01.698Z</lastmod>
   </url>
   <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/posts/R Programming/Economatrics_hw2.html</loc>
-    <lastmod>2023-10-10T14:06:30.770Z</lastmod>
+    <loc>https://HollyRiver.github.io/RiverFlow/posts/Machine Learning in Practice/Titanic/1. practice.html</loc>
+    <lastmod>2023-10-14T06:53:00.278Z</lastmod>
   </url>
   <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/unrefined file/datavisuallization/learning materials/code summation.html</loc>
-    <lastmod>2023-10-10T14:06:40.365Z</lastmod>
+    <loc>https://HollyRiver.github.io/RiverFlow/posts/Data Visualization/Solution Assemble/특정 단어를 포함하는 열 선택.html</loc>
+    <lastmod>2023-10-14T06:52:58.394Z</lastmod>
   </url>
   <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/unrefined file/datavisuallization/learning materials/강신성_1004(transform column _ 꿀팁).html</loc>
-    <lastmod>2023-10-10T14:06:42.672Z</lastmod>
+    <loc>https://HollyRiver.github.io/RiverFlow/posts/Data Visualization/Review/6. Pandas, 데이터프레임 핸들링.html</loc>
+    <lastmod>2023-10-14T06:52:55.071Z</lastmod>
   </url>
   <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/unrefined file/datavisuallization/강신성(202014107)_2.html</loc>
-    <lastmod>2023-10-10T14:06:43.648Z</lastmod>
+    <loc>https://HollyRiver.github.io/RiverFlow/posts/Data Visualization/Review/3. Seaborn.html</loc>
+    <lastmod>2023-10-14T06:52:40.810Z</lastmod>
   </url>
   <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/unrefined file/datavisuallization/강신성(202014107)_4.html</loc>
-    <lastmod>2023-10-10T14:06:44.774Z</lastmod>
+    <loc>https://HollyRiver.github.io/RiverFlow/posts/Data Visualization/Review/1. Introduction(그래프, 이미지 이퀼라이징).html</loc>
+    <lastmod>2023-10-14T06:52:38.196Z</lastmod>
   </url>
   <url>
-    <loc>https://HollyRiver.github.io/RiverFlow/unrefined file/datavisuallization/강신성(202014107)_6.html</loc>
-    <lastmod>2023-10-10T14:06:46.319Z</lastmod>
+    <loc>https://HollyRiver.github.io/RiverFlow/about.html</loc>
+    <lastmod>2023-10-14T06:52:35.358Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HollyRiver.github.io/RiverFlow/index.html</loc>
+    <lastmod>2023-10-14T06:52:37.075Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HollyRiver.github.io/RiverFlow/posts/Data Visualization/Review/2. 꺾은선, 산점도, 객체지향화.html</loc>
+    <lastmod>2023-10-14T06:52:39.901Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HollyRiver.github.io/RiverFlow/posts/Data Visualization/Review/5. Pandas의 기본.html</loc>
+    <lastmod>2023-10-14T06:52:42.499Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HollyRiver.github.io/RiverFlow/posts/Data Visualization/Review/7. Pandas 팁.html</loc>
+    <lastmod>2023-10-14T06:52:57.088Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HollyRiver.github.io/RiverFlow/posts/Data Visualization/Solution Assemble/특정 열의 재가공.html</loc>
+    <lastmod>2023-10-14T06:52:59.493Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HollyRiver.github.io/RiverFlow/posts/Machine Learning in Practice/Titanic/2. code-by-alexis-cook.html</loc>
+    <lastmod>2023-10-14T06:53:01.023Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HollyRiver.github.io/RiverFlow/posts/R Programming/Economatrics_hw1.html</loc>
+    <lastmod>2023-10-14T06:53:02.827Z</lastmod>
   </url>
 </urlset>
