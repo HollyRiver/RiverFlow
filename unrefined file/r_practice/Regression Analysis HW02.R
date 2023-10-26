@@ -20,6 +20,9 @@ confint(res, level = 0.95)  ## confident leven of integer values
 
 anova(res)
 
+2.1626 + 2.365*sqrt(anova(res)[2,3]/sum((x - mean(x))^2))
+
+
 cor(x,y)
 
 qf(0.95, 1, 7)
