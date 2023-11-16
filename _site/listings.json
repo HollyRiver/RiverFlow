@@ -1,18 +1,12 @@
 [
   {
-    "listing": "/index.html",
-    "items": []
-  },
-  {
     "listing": "/2023_DV.html",
     "items": [
-      "/2023_DV/Review/12. merge와 concat.html",
-      "/2023_DV/Review/강신성_1108.html",
-      "/2023_DV/Review/강신성_1113.html",
       "/2023_DV/Review/15. Folium과 월드맵.html",
       "/2023_DV/Review/13. 훌륭한 시각화.html",
       "/2023_DV/Review/14. Plotly 시작.html",
       "/2023_DV/Review/11. tidydata 심화실습.html",
+      "/2023_DV/Review/12. merge와 concat.html",
       "/2023_DV/Review/10. tidydata, 시각화.html",
       "/2023_DV/Review/9. 집단 간 비교_심슨의 역설.html",
       "/2023_DV/Review/8. 실습_FIFA23.html",
@@ -44,5 +38,9 @@
       "/2023_MP/Titanic/2. code-by-alexis-cook.html",
       "/2023_MP/Titanic/1. practice.html"
     ]
+  },
+  {
+    "listing": "/index.html",
+    "items": []
   }
 ]
