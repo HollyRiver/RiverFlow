@@ -4,6 +4,9 @@ project:
 website:
   title: "RiverFlow"
   navbar:
+    left:
+      - 2023_MP.qmd
+      - 2023_DV.qmd
     right:
       - about.qmd
       - icon: github
