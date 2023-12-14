@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.521">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -24,7 +24,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -59,7 +59,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -81,7 +81,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -90,13 +96,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -109,9 +116,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">RiverFlow</span>
     </a>
@@ -123,33 +130,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../2023_MP.html" rel="" target="">
- <span class="menu-text">2023 MP</span></a>
+    <a class="nav-link" href="../../2023_MP.html"> 
+<span class="menu-text">2023 MP</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../2023_DV.html" rel="" target="">
- <span class="menu-text">2023 DV</span></a>
+    <a class="nav-link" href="../../2023_DV.html"> 
+<span class="menu-text">2023 DV</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/HollyRiver?tab=repositories" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/HollyRiver?tab=repositories"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://blog.naver.com/hc_ssk2800" rel="" target=""><i class="bi bi-book" role="img">
+    <a class="nav-link" href="https://blog.naver.com/hc_ssk2800"> <i class="bi bi-book" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -191,7 +198,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
+
 
 <blockquote class="blockquote">
 <p><code>pandas</code>에서 행과 열을 선택하는 기술에 대해서 알아보도록 하자!</p>
@@ -201,7 +210,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="라이브러리-import" class="level2">
 <h2 class="anchored" data-anchor-id="라이브러리-import">1. 라이브러리 import</h2>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:313,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695193357837,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="1">
+<div id="cell-4" class="cell" data-executioninfo="{&quot;elapsed&quot;:313,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695193357837,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -209,7 +218,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="pandas-행과-열의-선택" class="level2">
 <h2 class="anchored" data-anchor-id="pandas-행과-열의-선택">2. <code>pandas</code> : 행과 열의 선택</h2>
 <p><code>-</code> 같은 자료, 다른 두 형태의 데이터프레임</p>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:440,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695193365778,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="16ddc0ce-384e-4a3d-ce2b-4c166672c29d" data-execution_count="2">
+<div id="cell-7" class="cell" data-executioninfo="{&quot;elapsed&quot;:440,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695193365778,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="16ddc0ce-384e-4a3d-ce2b-4c166672c29d" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">'date'</span>: [<span class="st">'12/30'</span>,<span class="st">'12/31'</span>,<span class="st">'01/01'</span>,<span class="st">'01/02'</span>,<span class="st">'01/03'</span>], <span class="st">'X1'</span>: [<span class="dv">65</span>,<span class="dv">95</span>,<span class="dv">65</span>,<span class="dv">55</span>,<span class="dv">80</span>], <span class="st">'X2'</span>: [<span class="dv">55</span>,<span class="dv">100</span>,<span class="dv">90</span>,<span class="dv">80</span>,<span class="dv">30</span>], <span class="st">'X3'</span>: [<span class="dv">50</span>,<span class="dv">50</span>,<span class="dv">60</span>,<span class="dv">75</span>,<span class="dv">30</span>], <span class="st">'X4'</span>: [<span class="dv">40</span>,<span class="dv">80</span>,<span class="dv">30</span>,<span class="dv">80</span>,<span class="dv">100</span>]})</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
@@ -277,7 +286,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>얘는 인덱스는 그저 숫자의 의미이고</p>
 </blockquote>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695193426756,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="be28d7c8-4d5c-4a4b-801c-4aa1661aeb3f" data-execution_count="4">
+<div id="cell-9" class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695193426756,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="be28d7c8-4d5c-4a4b-801c-4aa1661aeb3f" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ts <span class="op">=</span> pd.DataFrame({<span class="st">'X1'</span>: [<span class="dv">65</span>,<span class="dv">95</span>,<span class="dv">65</span>,<span class="dv">55</span>,<span class="dv">80</span>], <span class="st">'X2'</span>: [<span class="dv">55</span>,<span class="dv">100</span>,<span class="dv">90</span>,<span class="dv">80</span>,<span class="dv">30</span>], <span class="st">'X3'</span>: [<span class="dv">50</span>,<span class="dv">50</span>,<span class="dv">60</span>,<span class="dv">75</span>,<span class="dv">30</span>], <span class="st">'X4'</span>: [<span class="dv">40</span>,<span class="dv">80</span>,<span class="dv">30</span>,<span class="dv">80</span>,<span class="dv">100</span>]}, index<span class="op">=</span>[<span class="st">'12/30'</span>,<span class="st">'12/31'</span>,<span class="st">'01/01'</span>,<span class="st">'01/02'</span>,<span class="st">'01/03'</span>])</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>ts  <span class="co">## 중요한 코드는 아님, 근데 그냥 index 지정해주는 거잖아</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
@@ -339,7 +348,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>얘는 인덱스에 시계열적 표현이 있다.</p>
 </blockquote>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695193558065,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="9954adea-78b1-40fb-f3e9-770de08f5dd5" data-execution_count="9">
+<div id="cell-11" class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695193558065,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="9954adea-78b1-40fb-f3e9-770de08f5dd5" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ts.reset_index()  <span class="co">## 결국 이렇게 하는 게 다루기 편하다.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 
@@ -401,7 +410,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-
 
 </div>
     <div class="colab-df-buttons">
@@ -618,7 +626,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>1번째 방법 : <code>df.ㆍ</code></p>
 <p><span style="color:red">! 치명적인 단점</span> : 변수 이름에 공백 등이 있으면 불러올 수 없음.</p></li>
 </ul>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695193596539,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="64eceea0-99ce-4cd5-d111-06c88f394ae3" data-execution_count="10">
+<div id="cell-15" class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695193596539,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="64eceea0-99ce-4cd5-d111-06c88f394ae3" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df.X1   <span class="co">## df 또한 하나의 object이므로</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>0    65
@@ -632,7 +640,7 @@ Name: X1, dtype: int64</code></pre>
 <ul>
 <li>2번째 방법 : <code>df['ㆍ']</code>, <code>df[['ㆍ']]</code></li>
 </ul>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695193609563,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="bfbb1d8a-1d4d-4b4f-e988-e578353a15af" data-execution_count="11">
+<div id="cell-17" class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695193609563,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="bfbb1d8a-1d4d-4b4f-e988-e578353a15af" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'X1'</span>]  <span class="co">## df를 일종의 딕셔너리처럼 취급하는 방법</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
 <pre><code>0    65
@@ -647,20 +655,20 @@ Name: X1, dtype: int64</code></pre>
 <p>Series로 불러온다.</p>
 </blockquote>
 <p><code>dictionary</code>?</p>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695193683691,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="d1d7650e-ab06-449c-fe6f-8bf973aa1c32" data-execution_count="15">
+<div id="cell-19" class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695193683691,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="d1d7650e-ab06-449c-fe6f-8bf973aa1c32" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>dct <span class="op">=</span> <span class="bu">dict</span>({<span class="st">'date'</span>: [<span class="st">'12/30'</span>,<span class="st">'12/31'</span>,<span class="st">'01/01'</span>,<span class="st">'01/02'</span>,<span class="st">'01/03'</span>], <span class="st">'X1'</span>: [<span class="dv">65</span>,<span class="dv">95</span>,<span class="dv">65</span>,<span class="dv">55</span>,<span class="dv">80</span>], <span class="st">'X2'</span>: [<span class="dv">55</span>,<span class="dv">100</span>,<span class="dv">90</span>,<span class="dv">80</span>,<span class="dv">30</span>], <span class="st">'X3'</span>: [<span class="dv">50</span>,<span class="dv">50</span>,<span class="dv">60</span>,<span class="dv">75</span>,<span class="dv">30</span>], <span class="st">'X4'</span>: [<span class="dv">40</span>,<span class="dv">80</span>,<span class="dv">30</span>,<span class="dv">80</span>,<span class="dv">100</span>]})</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>dct[<span class="st">'X1'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
 <pre><code>[65, 95, 65, 55, 80]</code></pre>
 </div>
 </div>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:382,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695193763523,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="9726c658-5475-4867-fd4d-200f80bf8697" data-execution_count="18">
+<div id="cell-20" class="cell" data-executioninfo="{&quot;elapsed&quot;:382,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695193763523,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="9726c658-5475-4867-fd4d-200f80bf8697" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df.keys()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="18">
 <pre><code>Index(['date', 'X1', 'X2', 'X3', 'X4'], dtype='object')</code></pre>
 </div>
 </div>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695193768471,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="990fdb32-4766-4830-eeff-e9ae1fdf7c71" data-execution_count="19">
+<div id="cell-21" class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695193768471,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="990fdb32-4766-4830-eeff-e9ae1fdf7c71" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>dct.keys()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="19">
 <pre><code>dict_keys(['date', 'X1', 'X2', 'X3', 'X4'])</code></pre>
@@ -669,7 +677,7 @@ Name: X1, dtype: int64</code></pre>
 <blockquote class="blockquote">
 <p>key와 value가 있는 것처럼 column의 한 값(key)에 대한 데이터(value)가 있는 모습이다.</p>
 </blockquote>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:5,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695193870883,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="5e149ed5-7f0d-465e-e9d2-1b94fc9cd475" data-execution_count="21">
+<div id="cell-23" class="cell" data-executioninfo="{&quot;elapsed&quot;:5,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695193870883,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="5e149ed5-7f0d-465e-e9d2-1b94fc9cd475" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df[[<span class="st">'X1'</span>]]  <span class="co">## 프레임으로 산출</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="21">
 
@@ -707,7 +715,6 @@ Name: X1, dtype: int64</code></pre>
 </tr>
 </tbody>
 </table>
-
 
 </div>
     <div class="colab-df-buttons">
@@ -915,7 +922,7 @@ Name: X1, dtype: int64</code></pre>
   </div>
 </div>
 </div>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695193887781,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="b412ef7a-052b-4b40-9a38-408572b2325d" data-execution_count="23">
+<div id="cell-24" class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695193887781,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="b412ef7a-052b-4b40-9a38-408572b2325d" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>df[[<span class="st">'X1'</span>, <span class="st">'X2'</span>]]  <span class="co">## 2개 이상 산출 가능</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="23">
 
@@ -959,7 +966,6 @@ Name: X1, dtype: int64</code></pre>
 </tr>
 </tbody>
 </table>
-
 
 </div>
     <div class="colab-df-buttons">
@@ -1170,7 +1176,7 @@ Name: X1, dtype: int64</code></pre>
 <ul>
 <li>3번째 방법 : <code>df.iloc[:, ㆍ]</code> &gt; 통째로 np.array와 같다고 보면 된다.</li>
 </ul>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695194084492,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="4bfaf774-e93b-4f79-8a67-5c21f9dea395" data-execution_count="24">
+<div id="cell-26" class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695194084492,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="4bfaf774-e93b-4f79-8a67-5c21f9dea395" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>df.iloc[:, <span class="dv">0</span>] <span class="co">## numpy에서 행렬을 다루는 것과 완전히 같게 사용 가능.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="24">
 <pre><code>0    12/30
@@ -1181,7 +1187,7 @@ Name: X1, dtype: int64</code></pre>
 Name: date, dtype: object</code></pre>
 </div>
 </div>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695194220140,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="812dde82-35dd-4051-cde8-6b6e3b07b32b" data-execution_count="18">
+<div id="cell-27" class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695194220140,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="812dde82-35dd-4051-cde8-6b6e3b07b32b" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#df.iloc[:,0] ## int - 0번째 행 | [0]이면 데이터프레임으로</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co">#df.iloc[:,-2:] # int:int, -2번째 행부터 -1번째 행까지(뒤에서 두 개)</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co">#df.iloc[:,1::2] # int:int:int - 스트라이딩, 1번째(두번째) 행부터 2개 단위로 추출</span></span>
@@ -1192,7 +1198,7 @@ Name: date, dtype: object</code></pre>
 <ul>
 <li>4번째 방법 : <code>df.loc[:, ㆍ]</code> &gt; 완전히 새로운 방법</li>
 </ul>
-<div class="cell">
+<div id="cell-29" class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">#df.loc[:,'X1'] # str - 시리즈 | ['X1']이면 데이터프레임으로</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co">#df.loc[:,'X1':'X3'] # 'str':'str' -- 칼럼이름으로 슬라이싱 **</span></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="co">#df.loc[:,'X1'::2] # 'str'::int -- 칼럼이름으로 스트라이딩 **</span></span>
@@ -1204,7 +1210,7 @@ Name: date, dtype: object</code></pre>
 <span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>- <code>'date'</code>행 부터</p>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695194472802,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="16d3218c-4106-4fa4-a149-4dc3e22529f6" data-execution_count="32">
+<div id="cell-31" class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695194472802,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="16d3218c-4106-4fa4-a149-4dc3e22529f6" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>df.loc[:, <span class="st">'date'</span>:]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="32">
 
@@ -1266,7 +1272,6 @@ Name: date, dtype: object</code></pre>
 </tr>
 </tbody>
 </table>
-
 
 </div>
     <div class="colab-df-buttons">
@@ -1475,7 +1480,7 @@ Name: date, dtype: object</code></pre>
 </div>
 </div>
 <p>- <code>True</code>가 입력된 행만</p>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:266,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695194522812,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="569e5ec6-fdb9-447d-cf62-2d343773d733" data-execution_count="33">
+<div id="cell-33" class="cell" data-executioninfo="{&quot;elapsed&quot;:266,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695194522812,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="569e5ec6-fdb9-447d-cf62-2d343773d733" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>df.loc[:, [<span class="va">True</span>, <span class="va">False</span>, <span class="va">True</span>, <span class="va">False</span>, <span class="va">True</span>]]   <span class="co">## columns의 이름에 어떤 조건을 걸어서 True에 해당하는 열만 산출 가능</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="33">
 
@@ -1525,7 +1530,6 @@ Name: date, dtype: object</code></pre>
 </tr>
 </tbody>
 </table>
-
 
 </div>
     <div class="colab-df-buttons">
@@ -1734,7 +1738,7 @@ Name: date, dtype: object</code></pre>
 </div>
 </div>
 <p>- 2칸씩 띄며 스트라이딩</p>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695194609199,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="08df8404-fb5c-4b19-c18a-c611ab2b928b" data-execution_count="6">
+<div id="cell-35" class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695194609199,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="08df8404-fb5c-4b19-c18a-c611ab2b928b" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>df.loc[:, ::<span class="dv">2</span>]  <span class="co">## 2 간격으로 스트라이딩</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <div>
@@ -1792,7 +1796,7 @@ Name: date, dtype: object</code></pre>
 <ul>
 <li>방법1 : <code>df[]</code></li>
 </ul>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695194686769,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="dfc13175-1909-4eef-a7fd-1cca022c9d0b" data-execution_count="38">
+<div id="cell-38" class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695194686769,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="dfc13175-1909-4eef-a7fd-1cca022c9d0b" data-execution_count="38">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>df[:<span class="dv">2</span>]    <span class="co">## int:int -- 슬라이싱 // df.iloc[:2, :], df.iloc[:2] 와 같음</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="38">
 
@@ -1830,7 +1834,6 @@ Name: date, dtype: object</code></pre>
 </tr>
 </tbody>
 </table>
-
 
 </div>
     <div class="colab-df-buttons">
@@ -2038,7 +2041,7 @@ Name: date, dtype: object</code></pre>
   </div>
 </div>
 </div>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695194694785,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="8232492f-d086-4af2-a3c7-72abcd1fc040" data-execution_count="7">
+<div id="cell-39" class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695194694785,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="8232492f-d086-4af2-a3c7-72abcd1fc040" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>df[::<span class="dv">2</span>]  <span class="co">## 스트라이딩, df.iloc[::2]와 같음</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <div>
@@ -2086,7 +2089,7 @@ Name: date, dtype: object</code></pre>
 </div>
 </div>
 </div>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:1,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695194842690,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="40">
+<div id="cell-40" class="cell" data-executioninfo="{&quot;elapsed&quot;:1,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695194842690,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="40">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># df[:2] # int:int -- 슬라이싱 // df.iloc[:2,:], df.iloc[:2] 와 같음</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="co"># df[::2] # int:int -- 스트라이딩</span></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ts['12/30':'01/02'] # str:str -- 슬라이싱 &gt; 인덱스가 문자열 등일 경우</span></span>
@@ -2097,7 +2100,7 @@ Name: date, dtype: object</code></pre>
 <ul>
 <li>방법2 : <code>df.iloc[]</code></li>
 </ul>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:266,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195050080,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="42">
+<div id="cell-42" class="cell" data-executioninfo="{&quot;elapsed&quot;:266,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195050080,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="42">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># df.iloc[0] # int  df.iloc[0, :]에서 생략된 표현</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="co"># df.iloc[-2:] # int:int -- 슬라이싱</span></span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="co"># df.iloc[1::2] # int:int -- 스트라이딩</span></span>
@@ -2107,14 +2110,14 @@ Name: date, dtype: object</code></pre>
 <span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="co"># df.iloc[range(2)] # range</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>- 해당 방법은 리스트나 어레이의 원소를 다루는 것과 완전히 동일해서… 아래를 참고하면 된다.</p>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:387,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195083369,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="8875e9a0-50de-47c0-cec4-6226a32932d0" data-execution_count="43">
+<div id="cell-44" class="cell" data-executioninfo="{&quot;elapsed&quot;:387,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195083369,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="8875e9a0-50de-47c0-cec4-6226a32932d0" data-execution_count="43">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>lst <span class="op">=</span> [[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>], [<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]]</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>lst[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="43">
 <pre><code>[1, 2, 3]</code></pre>
 </div>
 </div>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:1,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195142537,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="286bfe5e-0a90-4a80-a3b9-5f028b94a437" data-execution_count="46">
+<div id="cell-45" class="cell" data-executioninfo="{&quot;elapsed&quot;:1,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195142537,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="286bfe5e-0a90-4a80-a3b9-5f028b94a437" data-execution_count="46">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>ary <span class="op">=</span> np.array(lst)</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>ary[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="46">
@@ -2124,7 +2127,7 @@ Name: date, dtype: object</code></pre>
 <ul>
 <li>방법3 : <code>df.loc[]</code></li>
 </ul>
-<div class="cell">
+<div id="cell-47" class="cell">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># df.loc[0] # int </span></span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ts.loc['12/30'] # str </span></span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="co"># df.loc[:2] # int:int </span></span>
@@ -2134,7 +2137,7 @@ Name: date, dtype: object</code></pre>
 <span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="co"># df.loc[['12' in date for date in df.date]] # [bool,bool] 이 경우는 []와 동일하다.</span></span>
 <span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a><span class="co"># df.loc[df.X1&gt;70] # pd.Series([bool,bool]) </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:4,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195308831,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="73fd4291-b29e-4af9-c120-8c4ebd9a0121" data-execution_count="54">
+<div id="cell-48" class="cell" data-executioninfo="{&quot;elapsed&quot;:4,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195308831,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="73fd4291-b29e-4af9-c120-8c4ebd9a0121" data-execution_count="54">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>df.loc[:<span class="dv">2</span>]  <span class="co">## character와 비슷한 형식이기 때문에 2까지 포함이 된다.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="54">
 
@@ -2180,7 +2183,6 @@ Name: date, dtype: object</code></pre>
 </tr>
 </tbody>
 </table>
-
 
 </div>
     <div class="colab-df-buttons">
@@ -2388,7 +2390,7 @@ Name: date, dtype: object</code></pre>
   </div>
 </div>
 </div>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195450629,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="07b97d52-125c-4725-9ecd-12650032f66e" data-execution_count="57">
+<div id="cell-49" class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195450629,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="07b97d52-125c-4725-9ecd-12650032f66e" data-execution_count="57">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>df.loc[df.X1 <span class="op">&gt;</span> <span class="dv">70</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="57">
 
@@ -2426,7 +2428,6 @@ Name: date, dtype: object</code></pre>
 </tr>
 </tbody>
 </table>
-
 
 </div>
     <div class="colab-df-buttons">
@@ -2634,7 +2635,7 @@ Name: date, dtype: object</code></pre>
   </div>
 </div>
 </div>
-<div class="cell" data-execution_count="13">
+<div id="cell-50" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>df.loc[df.X1 <span class="op">&gt;</span> <span class="dv">70</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
 <div>
@@ -2677,7 +2678,7 @@ Name: date, dtype: object</code></pre>
 <blockquote class="blockquote">
 <p>위처럼 튜플로 넣을 수도 있다. 근데 iloc의 경우 위와 같은 코드로 입력하면 오류가 난다.</p>
 </blockquote>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:281,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195484269,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="482e487e-d401-4705-b7c0-0219f58166c8" data-execution_count="59">
+<div id="cell-52" class="cell" data-executioninfo="{&quot;elapsed&quot;:281,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195484269,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="482e487e-d401-4705-b7c0-0219f58166c8" data-execution_count="59">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co">## df.iloc[df.X1 &gt; 70] &gt; 오류, bool을 받을 수 있으나, 튜플의 형태로 들어가면 반환하지 않는다.</span></span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>df.iloc[<span class="bu">list</span>(df.X1 <span class="op">&gt;</span> <span class="dv">70</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="59">
@@ -2716,7 +2717,6 @@ Name: date, dtype: object</code></pre>
 </tr>
 </tbody>
 </table>
-
 
 </div>
     <div class="colab-df-buttons">
@@ -2928,7 +2928,7 @@ Name: date, dtype: object</code></pre>
 <section id="d.-교수님-방식" class="level3">
 <h3 class="anchored" data-anchor-id="d.-교수님-방식"><strong>D. 교수님 방식</strong></h3>
 <p><code>-</code>가장 안전한 코드</p>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:281,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195566701,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="5760cd7e-ea63-4b86-cc03-bb272b8629e4" data-execution_count="61">
+<div id="cell-55" class="cell" data-executioninfo="{&quot;elapsed&quot;:281,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195566701,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="5760cd7e-ea63-4b86-cc03-bb272b8629e4" data-execution_count="61">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>df.loc[:,:] <span class="co">## 해당 코드를 써놓고 시작, generally</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="61">
 
@@ -2990,7 +2990,6 @@ Name: date, dtype: object</code></pre>
 </tr>
 </tbody>
 </table>
-
 
 </div>
     <div class="colab-df-buttons">
@@ -3201,7 +3200,7 @@ Name: date, dtype: object</code></pre>
 <ol type="1">
 <li>하나의 col을 뽑으려 할 때</li>
 </ol>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:386,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195624179,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="62">
+<div id="cell-57" class="cell" data-executioninfo="{&quot;elapsed&quot;:386,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195624179,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="62">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># df.X1       ## 제일 간단함. 게다가 눌러보면 변수 이름들이 나옴</span></span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="co"># df['X1']</span></span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="co"># df[['X1']]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -3209,18 +3208,18 @@ Name: date, dtype: object</code></pre>
 <ol start="2" type="1">
 <li>row를 슬라이싱</li>
 </ol>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195700408,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="63">
+<div id="cell-59" class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195700408,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="63">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># df[:5]</span></span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ts[:'01/02']  # 시계열일 경우</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="3" type="1">
 <li>조건에 맞는 row를 뽑을 때 좋은 코드</li>
 </ol>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:336,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195823840,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="64">
+<div id="cell-61" class="cell" data-executioninfo="{&quot;elapsed&quot;:336,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195823840,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="64">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># df[df.X1&lt;60]  ## 이게 좋기는 한데, True, False를 직접 만들어야 하는 경우도 많음.</span></span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="co"># df.loc[['12' in date for date in df.date]]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195851556,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="94bf2d34-a514-4e6f-c73b-5c5c5ccbcb32" data-execution_count="68">
+<div id="cell-62" class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195851556,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="94bf2d34-a514-4e6f-c73b-5c5c5ccbcb32" data-execution_count="68">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>[<span class="st">'12'</span> <span class="kw">in</span> date <span class="cf">for</span> date <span class="kw">in</span> df.date]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="68">
 <pre><code>[True, True, False, False, False]</code></pre>
@@ -3229,11 +3228,11 @@ Name: date, dtype: object</code></pre>
 <ol start="4" type="1">
 <li>하나의 row를 뽑으려 할 때 좋은 코드</li>
 </ol>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195892810,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="69">
+<div id="cell-64" class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195892810,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-execution_count="69">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># df.iloc[0]</span></span>
 <span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="co"># df.loc[0]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-executioninfo="{&quot;elapsed&quot;:286,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195932847,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="f4d126d6-3862-4dbe-d6ee-71160f882d83" data-execution_count="72">
+<div id="cell-65" class="cell" data-executioninfo="{&quot;elapsed&quot;:286,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1695195932847,&quot;user&quot;:{&quot;displayName&quot;:&quot;강신성 (Dealer)&quot;,&quot;userId&quot;:&quot;01117960150476567863&quot;},&quot;user_tz&quot;:-540}" data-outputid="f4d126d6-3862-4dbe-d6ee-71160f882d83" data-execution_count="72">
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>ts.iloc[[<span class="dv">0</span>]]</span>
 <span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ts.iloc[0]의 경우 오류가 남(인덱스 이름이 숫자열이 아님</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="72">
@@ -3262,7 +3261,6 @@ Name: date, dtype: object</code></pre>
 </tr>
 </tbody>
 </table>
-
 
 </div>
     <div class="colab-df-buttons">
@@ -3349,7 +3347,7 @@ Name: date, dtype: object</code></pre>
 <ol start="5" type="1">
 <li>(row,col)을 뽑으려 할 때 좋은 코드</li>
 </ol>
-<div class="cell">
+<div id="cell-67" class="cell">
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># df.X1[0]    ## &lt;- pd.Series를 뽑고 인덱스로 접근</span></span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="co"># df['X1'][0]</span></span>
 <span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -3631,10 +3629,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -3644,8 +3641,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -3658,6 +3664,135 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -3701,6 +3836,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -3726,6 +3862,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -3786,6 +3948,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

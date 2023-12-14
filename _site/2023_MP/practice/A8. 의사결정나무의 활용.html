@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.521">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -24,7 +24,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -59,7 +59,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -81,7 +81,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -90,13 +96,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
@@ -107,9 +114,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">RiverFlow</span>
     </a>
@@ -121,33 +128,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../2023_MP.html" rel="" target="">
- <span class="menu-text">2023 MP</span></a>
+    <a class="nav-link" href="../../2023_MP.html"> 
+<span class="menu-text">2023 MP</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../2023_DV.html" rel="" target="">
- <span class="menu-text">2023 DV</span></a>
+    <a class="nav-link" href="../../2023_DV.html"> 
+<span class="menu-text">2023 DV</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/HollyRiver?tab=repositories" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/HollyRiver?tab=repositories"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://blog.naver.com/hc_ssk2800" rel="" target=""><i class="bi bi-book" role="img">
+    <a class="nav-link" href="https://blog.naver.com/hc_ssk2800"> <i class="bi bi-book" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -190,7 +197,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
+
 
 <blockquote class="blockquote">
 <p>의사결정나무를 이용하여 모형을 간단하게 적합해보자!</p>
@@ -200,7 +209,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="라이브러리-imports" class="level2">
 <h2 class="anchored" data-anchor-id="라이브러리-imports">1. 라이브러리 imports</h2>
-<div class="cell" data-execution_count="52">
+<div id="20bc776a-e891-49a8-a4bf-00aba3f3d276" class="cell" data-execution_count="52">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -215,7 +224,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="a.-data" class="level3">
 <h3 class="anchored" data-anchor-id="a.-data"><strong>A. Data</strong></h3>
 <hr>
-<div class="cell" data-execution_count="53">
+<div id="28975232-dac6-4f56-985c-d6acb7b61e19" class="cell" data-execution_count="53">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">43052</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"https://raw.githubusercontent.com/guebin/MP2023/main/posts/employment_multicollinearity.csv"</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'employment_score'</span>] <span class="op">=</span> df.gpa <span class="op">*</span> <span class="fl">1.0</span> <span class="op">+</span> df.toeic<span class="op">*</span> <span class="dv">1</span><span class="op">/</span><span class="dv">100</span> <span class="op">+</span> np.random.randn(<span class="dv">500</span>)</span>
@@ -527,7 +536,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>유사 토익들이 매우 많은, 설명변수에 다중공선성이 존재하는 자료이다.</p>
 </blockquote>
 <p>- 근데 <code>Lasso</code>를 쓰지 않고도, 여러 설명변수를 배제하지 않고도, 자료를 쉽게 적합할 수 있는 방법이 있다면 믿겠는가???</p>
-<div class="cell" data-execution_count="54">
+<div id="bfeadbee-ff43-4051-9348-92fd7ef019b1" class="cell" data-execution_count="54">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">## 1</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df_train, df_test <span class="op">=</span> sklearn.model_selection.train_test_split(df, test_size <span class="op">=</span> <span class="fl">0.3</span>, random_state <span class="op">=</span> <span class="dv">202014107</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -551,7 +560,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>본래 모델은 트리 모형의 작동방식에 따라 정확도가 1이 나오지만, 예측 모델의 성능도 나름 나쁘지 않다.</p>
 </blockquote>
-<div class="cell" data-jupyter="{&quot;outputs_hidden&quot;:true}" data-execution_count="14">
+<div id="929d9b39-dc06-43cb-a71c-106a8b07dda6" class="cell" data-jupyter="{&quot;outputs_hidden&quot;:true}" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">## 1</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df_train, df_test <span class="op">=</span> sklearn.model_selection.train_test_split(df, test_size <span class="op">=</span> <span class="fl">0.3</span>, random_state <span class="op">=</span> <span class="dv">202014107</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -777,7 +786,7 @@ C:\Users\hollyriver\anaconda3\envs\py\lib\site-packages\sklearn\linear_model\_co
        1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2. ]))</pre></div></div></div></div></div>
 </div>
 </div>
-<div class="cell" data-execution_count="15">
+<div id="2f4a968a-3bf7-40ce-a806-4ff4acfa6f97" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>predictr.score(X, y), predictr.score(XX, yy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
 <pre><code>(0.9554916123291357, 0.8733838672032972)</code></pre>
@@ -786,7 +795,7 @@ C:\Users\hollyriver\anaconda3\envs\py\lib\site-packages\sklearn\linear_model\_co
 <blockquote class="blockquote">
 <p>Lasso로 적합한 결과가 더 스코어가 높긴 하지만, 트리 모형은 직관적이고 단순하다. 그리고 하이퍼파라미터도 바꿀 수 있잖아?</p>
 </blockquote>
-<div class="cell" data-execution_count="47">
+<div id="92488d6e-7347-4e1f-87a9-87624eecf45e" class="cell" data-execution_count="47">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">## 1</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>df_train, df_test <span class="op">=</span> sklearn.model_selection.train_test_split(df, test_size <span class="op">=</span> <span class="fl">0.3</span>, random_state <span class="op">=</span> <span class="dv">202014107</span>)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -825,20 +834,20 @@ C:\Users\hollyriver\anaconda3\envs\py\lib\site-packages\sklearn\linear_model\_co
 <ul>
 <li>종속변수와 관련이 없는 변수들을 무작위로 생성하는 함수</li>
 </ul>
-<div class="cell" data-execution_count="15">
+<div id="af0bb3b6-f26a-4ccf-b0d3-5c63cbfb6d90" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> generating_df(n_balance):</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">global</span> df</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/MP2023/main/posts/employment.csv'</span>)</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    df_balance <span class="op">=</span> pd.DataFrame((np.random.randn(<span class="dv">500</span>,n_balance)).reshape(<span class="dv">500</span>,n_balance)<span class="op">*</span><span class="dv">1</span>,columns <span class="op">=</span> [<span class="st">'balance'</span><span class="op">+</span><span class="bu">str</span>(i) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n_balance)])</span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pd.concat([df,df_balance],axis<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="14">
+<div id="c1a928ee-d658-4a4c-b750-daed236ee94b" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">## 물론 해당 함수에 df를 따로 입력하게 하여 length를 조절한 후 아무 df에 사용가능하도록 만들수도 있다.</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> random_generation_df(df, n) :</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    df_random <span class="op">=</span> pd.DataFrame(np.random.randn(<span class="bu">len</span>(df), n), columns <span class="op">=</span> [<span class="st">'random'</span><span class="op">+</span><span class="bu">str</span>(i) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n)])</span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pd.concat([df, df_random], axis <span class="op">=</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="16">
+<div id="abfc36c2-9f12-4c3e-a503-bd18bf6d243a" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>generating_df(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="16">
 <div>
@@ -939,7 +948,7 @@ C:\Users\hollyriver\anaconda3\envs\py\lib\site-packages\sklearn\linear_model\_co
 </div>
 </div>
 </div>
-<div class="cell" data-execution_count="18">
+<div id="df70a465-0b42-4b72-8c65-375e4891a565" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">## 1</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>df_train, df_test <span class="op">=</span> sklearn.model_selection.train_test_split(df, test_size <span class="op">=</span> <span class="fl">0.3</span>, random_state <span class="op">=</span> <span class="dv">202014107</span>)</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> df_train.drop(<span class="st">'employment'</span>, axis <span class="op">=</span> <span class="dv">1</span>)</span>
@@ -952,7 +961,7 @@ C:\Users\hollyriver\anaconda3\envs\py\lib\site-packages\sklearn\linear_model\_co
 <section id="b.-분석" class="level2">
 <h2 class="anchored" data-anchor-id="b.-분석">### <strong>B. 분석</strong></h2>
 <p><strong><code># 1</code> : 의사결정나무</strong></p>
-<div class="cell" data-execution_count="19">
+<div id="d4a510ab-5d5b-4a2d-8499-def65dde34c1" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">## 2</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>predictr <span class="op">=</span> sklearn.tree.DecisionTreeClassifier()  <span class="co">## 범주형일 때 더 유용</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -969,7 +978,7 @@ C:\Users\hollyriver\anaconda3\envs\py\lib\site-packages\sklearn\linear_model\_co
 <p>오버피팅된 상황이다.</p>
 </blockquote>
 <p><code># 2</code> : Lasso(L1 penalty)</p>
-<div class="cell" data-execution_count="20">
+<div id="fdaad29e-34e5-48a4-9b5f-5cf1c4259df5" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">## 2</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>predictr <span class="op">=</span> sklearn.linear_model.LogisticRegressionCV(penalty <span class="op">=</span> <span class="st">'l1'</span>, solver <span class="op">=</span> <span class="st">'liblinear'</span>)</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -992,7 +1001,7 @@ test score = 0.8733</code></pre>
 <p>~역시 Lasso가 최고다~</p>
 </blockquote>
 <p><code># 3</code> : Ridge(L2 penalty)</p>
-<div class="cell" data-execution_count="21">
+<div id="9f3d0e52-11bb-46cf-bcef-4dc2a72080d5" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">## 2</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>predictr <span class="op">=</span> sklearn.linear_model.LogisticRegressionCV(penalty <span class="op">=</span> <span class="st">'l2'</span>)</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1021,7 +1030,7 @@ test score  = 0.88</code></pre>
 <ul>
 <li>데이터프레임과 predictor, 반응변수 열 이름을 넣어주면 fitting하고, 스코어를 배출하는 함수</li>
 </ul>
-<div class="cell" data-execution_count="22">
+<div id="2dd88389-82fd-487f-b70c-4b0bbca0a6dd" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fitting_df(df, predictor, response) :</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    df_train, df_test <span class="op">=</span> sklearn.model_selection.train_test_split(df, test_size <span class="op">=</span> <span class="fl">0.3</span>, random_state <span class="op">=</span> <span class="dv">202014107</span>)</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    X <span class="op">=</span> df_train.drop(response, axis <span class="op">=</span> <span class="dv">1</span>)</span>
@@ -1036,7 +1045,7 @@ test score  = 0.88</code></pre>
 <ul>
 <li>predictor의 리스트와 필요없는 설명변수들이 가득찬 열의 개수를 정의</li>
 </ul>
-<div class="cell" data-execution_count="23">
+<div id="2d3896dd-e780-4982-b5e8-9bcd5ff0c2ed" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>predictrs <span class="op">=</span> [sklearn.tree.DecisionTreeClassifier(),</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>             sklearn.linear_model.LogisticRegressionCV(penalty <span class="op">=</span> <span class="st">'l1'</span>, solver <span class="op">=</span> <span class="st">'liblinear'</span>),</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>             sklearn.linear_model.LogisticRegressionCV(penalty <span class="op">=</span> <span class="st">'l2'</span>)]</span>
@@ -1046,7 +1055,7 @@ test score  = 0.88</code></pre>
 <ul>
 <li>그것들을 기반으로 세 변수들에게서 피팅하면서 나온 점수들을 원소로 하는 리스트를 컴프리헨션</li>
 </ul>
-<div class="cell" data-jupyter="{&quot;outputs_hidden&quot;:true}" data-execution_count="24">
+<div id="d0e8aa3e-aa69-4ece-9efa-00b8430fc13a" class="cell" data-jupyter="{&quot;outputs_hidden&quot;:true}" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>lst <span class="op">=</span> [fitting_df(generating_df(n_balance), predictr, <span class="st">'employment'</span>) <span class="cf">for</span> predictr, n_balance <span class="kw">in</span> [(predictr, n_balance) <span class="cf">for</span> n_balance <span class="kw">in</span> n_balance_list <span class="cf">for</span> predictr <span class="kw">in</span> predictrs]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>C:\Users\hollyriver\anaconda3\envs\py\lib\site-packages\sklearn\svm\_base.py:1242: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
@@ -4542,13 +4551,13 @@ Please also refer to the documentation for alternative solver options:
 <p>좀 오래 걸릴 수밖에 없음…(이중으로 컴프리헨션 하는 게 훨씬 적합한 것 같긴 하다. 나중에 처리를 또 해야되니…)</p>
 </blockquote>
 <p>- 실험결과의 정리</p>
-<div class="cell">
+<div id="3339e74d-3c69-455e-a581-5795b6c0d121" class="cell">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array(lst)</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>tr <span class="op">=</span> arr[:, :, <span class="dv">0</span>]</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>tst <span class="op">=</span> arr[:, :, <span class="dv">1</span>]</span>
 <span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>arr.shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell">
+<div id="5e9d266a-6f60-46d5-ba7c-7f2a5d303977" class="cell">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>ar <span class="op">=</span> np.array(lst)</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> arr.reshape(<span class="dv">100</span>, <span class="dv">3</span>, <span class="dv">2</span>)</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>tr <span class="op">=</span> arr[:, :, <span class="dv">0</span>]</span>
@@ -4558,11 +4567,11 @@ Please also refer to the documentation for alternative solver options:
 <p>전반적으로 관련없는 변수가 많아질수록 스코어가 떨어지기는 하는데, 뒤로 갈수록 tree의 점수는 다른 것들보다 감소폭이 적어 역전되는 상황이다.</p>
 </blockquote>
 <p>- 이를 시각화해보자.</p>
-<div class="cell">
+<div id="f7a905ac-e43a-40e3-9d01-1a8d05dbcc99" class="cell">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(tr, columns <span class="op">=</span> [<span class="st">'tree'</span>, <span class="st">'lasso'</span>, <span class="st">'ridge'</span>])</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>_.assign(dataset <span class="op">=</span> <span class="st">'train'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell">
+<div id="1f7beed9-93cb-495d-a98f-68ad5e1c3495" class="cell">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>tr_score <span class="op">=</span> pd.DataFrame(tr, columns <span class="op">=</span> [<span class="st">'tree'</span>, <span class="st">'lasso'</span>, <span class="st">'ridge'</span>])</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>tst_score <span class="op">=</span> pd.DataFrame(tst, colunms <span class="op">=</span> [<span class="st">'tree'</span>, <span class="st">'lasso'</span>, <span class="st">'ridge'</span>])</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -4575,7 +4584,7 @@ Please also refer to the documentation for alternative solver options:
 </section>
 <section id="a.-데이터" class="level2">
 <h2 class="anchored" data-anchor-id="a.-데이터">### <strong>A. 데이터</strong></h2>
-<div class="cell" data-execution_count="28">
+<div id="5c3519a6-ff6a-4a6b-a2d2-846c39d1f198" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">43052</span>)</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>temp <span class="op">=</span> pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/DV2022/master/posts/temp.csv'</span>).iloc[:<span class="dv">100</span>,<span class="dv">3</span>].to_numpy()</span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>temp.sort()</span>
@@ -4658,11 +4667,15 @@ Please also refer to the documentation for alternative solver options:
 </div>
 </div>
 </div>
-<div class="cell" data-execution_count="31">
+<div id="2367216e-969b-4ac4-bdeb-3595aa600221" class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>plt.plot(df_train.temp, df_train.ice_sales, <span class="st">'o'</span>)</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="A8. 의사결정나무의 활용_files/figure-html/cell-23-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="A8. 의사결정나무의 활용_files/figure-html/cell-23-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <blockquote class="blockquote">
@@ -4672,7 +4685,7 @@ Please also refer to the documentation for alternative solver options:
 <h3 class="anchored" data-anchor-id="b.-분석-1"><strong>B. 분석</strong></h3>
 <hr>
 <p><strong><code># 1</code> 일반적인 선형 회귀</strong></p>
-<div class="cell" data-execution_count="33">
+<div id="438f2bc2-1818-47a2-a315-1670a19a0001" class="cell" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co">## 1</span></span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> df_train[[<span class="st">'temp'</span>]]</span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> df_train.ice_sales</span>
@@ -4686,15 +4699,19 @@ Please also refer to the documentation for alternative solver options:
 <span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a><span class="co">## 4</span></span>
 <span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>df_train <span class="op">=</span> df_train.assign(ice_sales_hat <span class="op">=</span> predictr.predict(X))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="35">
+<div id="6bea1889-4f89-44bf-a702-7c1dd2588a14" class="cell" data-execution_count="35">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>plt.plot(df_train.temp, df_train.ice_sales, <span class="st">'o'</span>)</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>plt.plot(df_train.temp, df_train.ice_sales_hat, <span class="st">'--'</span>, color <span class="op">=</span> <span class="st">'red'</span>)</span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="A8. 의사결정나무의 활용_files/figure-html/cell-25-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="A8. 의사결정나무의 활용_files/figure-html/cell-25-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-execution_count="36">
+</div>
+<div id="cf8e9bf2-faaf-48f7-81a1-3102be417107" class="cell" data-execution_count="36">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>predictr.coef_</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="36">
 <pre><code>array([-0.64479089])</code></pre>
@@ -4706,7 +4723,7 @@ Please also refer to the documentation for alternative solver options:
 </blockquote>
 <p><strong><code># 2</code> 의사결정나무를 사용</strong></p>
 <p><span style="color:red">(주의!)</span> Lasso와 Ridge는 공선성이 있는 모델에서만 잘 작동할 뿐, 그렇지 않은 경우 선형회귀와 유사하게 적합되니 사용하지 말것!(Ridge는 설명변수가 적을 때 특히 똑같게 적합하는 것 같다.)</p>
-<div class="cell" data-execution_count="46">
+<div id="6f52265d-5011-48c0-bf44-a1271714b06b" class="cell" data-execution_count="46">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co">## 1</span></span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> df_train[[<span class="st">'temp'</span>]]</span>
 <span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> df_train.ice_sales</span>
@@ -4720,28 +4737,36 @@ Please also refer to the documentation for alternative solver options:
 <span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a><span class="co">## 4</span></span>
 <span id="cb36-12"><a href="#cb36-12" aria-hidden="true" tabindex="-1"></a>df_train <span class="op">=</span> df_train.assign(ice_sales_hat <span class="op">=</span> predictr.predict(X))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="47">
+<div id="fecc1eef-46b4-496f-bf53-e7c0246b2f4a" class="cell" data-execution_count="47">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>plt.plot(df_train.temp, df_train.ice_sales, <span class="st">'o'</span>)</span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>plt.plot(df_train.temp, df_train.ice_sales_hat, <span class="st">'--'</span>, color <span class="op">=</span> <span class="st">'red'</span>)</span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="A8. 의사결정나무의 활용_files/figure-html/cell-28-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="A8. 의사결정나무의 활용_files/figure-html/cell-28-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-execution_count="48">
+</div>
+<div id="33e396a5-74a6-4d23-a25a-8ad9a391b71f" class="cell" data-execution_count="48">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>predictr.score(X, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="48">
 <pre><code>0.9992029367488545</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="51">
+<div id="eecf799f-99f9-463d-9075-ca82c7afc51c" class="cell" data-execution_count="51">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>_df <span class="op">=</span> df_train.drop(<span class="dv">0</span>, axis <span class="op">=</span> <span class="dv">0</span>)</span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>plt.plot(_df.temp, _df.ice_sales, <span class="st">'o'</span>, label <span class="op">=</span> <span class="st">'observations'</span>)</span>
 <span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>plt.plot(_df.temp, _df.ice_sales_hat, <span class="st">'--'</span>, color <span class="op">=</span> <span class="st">'red'</span>, label <span class="op">=</span> <span class="st">'prediction'</span>)</span>
 <span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
 <span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="A8. 의사결정나무의 활용_files/figure-html/cell-30-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="A8. 의사결정나무의 활용_files/figure-html/cell-30-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <blockquote class="blockquote">
@@ -4833,10 +4858,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -4846,8 +4870,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -4860,6 +4893,135 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -4903,6 +5065,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -4928,6 +5091,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -4988,6 +5177,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
