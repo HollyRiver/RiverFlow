@@ -26,13 +26,17 @@
   },
   {
     "listing": "/index.html",
-    "items": []
+    "items": [
+      "/posts/1. R, 그 위대한 시작.html"
+    ]
   },
   {
     "listing": "/2023_DV.html",
     "items": [
-      "/2023_DV/Review/강신성_1115.html",
-      "/2023_DV/Review/강신성_1123.html",
+      "/2023_DV/Review/B8. plotly와 그래픽 오브젝트.html",
+      "/2023_DV/Review/B9. pandas 매핑.html",
+      "/2023_DV/Review/B7. plotly와 다양한 형태의 차트.html",
+      "/2023_DV/Review/B6. plotly와 월드맵(1).html",
       "/2023_DV/Review/B3. 주식과 yfinance.html",
       "/2023_DV/Review/B5. Folium과 월드맵.html",
       "/2023_DV/Review/B2. 훌륭한 시각화(after midterm).html",

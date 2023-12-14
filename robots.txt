@@ -1,1 +1,1 @@
-Sitemap: https://HollyRiver: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@github.com/HollyRiver/RiverFlow.git/sitemap.xml
+Sitemap: https://HollyRiver.github.io/RiverFlow/sitemap.xml
